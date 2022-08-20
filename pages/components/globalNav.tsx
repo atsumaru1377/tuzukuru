@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
+import Box from "@mui/material/Box"
 
 import {styled , alpha } from "@mui/material/styles"
 import InputBase from '@mui/material/InputBase';
@@ -67,14 +68,18 @@ export default function SideBar() {
       left:0,
       zIndex:"1200",
       position:"fixed",
-      overFlowY:"auto"}}>
+      overflow:'scroll'
+      }}>
       <MenuList>
         <MenuItem>
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
           <div style = {{width:"12px"}}></div>
           <Image src={LogoType} alt= "Tuzukuru LogoType" ></Image>
         </MenuItem>
-        <MenuItem>
+        <Box
+          sx={{
+            margin:"10px"
+          }}>
           <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -84,10 +89,15 @@ export default function SideBar() {
                 inputProps={{ 'aria-label': 'search' }}
               />
           </Search>
-        </MenuItem>
+        </Box>
         <Divider/>
+        <div style={{height:"10px"}}></div>
         <MenuItem>
-          <ListItemText>マイコミュニティ</ListItemText>
+          <ListItemText
+          primaryTypographyProps={{
+            fontSize:20,
+            fontWeight:"bold"
+          }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
@@ -96,7 +106,10 @@ export default function SideBar() {
         </MenuItem>
         <Divider />
         <MenuItem>
-          <ListItemText>レシピ
+          <ListItemText
+          primaryTypographyProps={{
+            fontWeight:"bold"
+          }}>レシピ
           </ListItemText>
         </MenuItem>
         <MenuItem>
@@ -117,7 +130,10 @@ export default function SideBar() {
         </MenuItem>
         <Divider />
         <MenuItem>
-          <ListItemText>つくレポ</ListItemText>
+          <ListItemText
+          primaryTypographyProps={{
+            fontWeight:"bold"
+          }}>つくレポ</ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemText>レシピを投稿する</ListItemText>
@@ -129,7 +145,10 @@ export default function SideBar() {
         </MenuItem>
         <Divider />
         <MenuItem>
-          <ListItemText>困った時は</ListItemText>
+          <ListItemText
+          primaryTypographyProps={{
+            fontWeight:"bold"
+          }}>困った時は</ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemText>デザインを勉強する</ListItemText>
