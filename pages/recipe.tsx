@@ -6,30 +6,28 @@ import Header  from './components/header'
 import SideBar from './components/globalNav'
 import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
-import Tabs from "./components/Tabs"
+import BreadCrumbs from "./components/breadCrumbs"
 
-import {css} from '@emotion/react'
+const boxStyle = {
+  display:"flex",
+  paddingLeft:"280px",
+  position:"fixed",
+  flexWrap:"wrap",
+  height:"100%",
+  overflowY:"auto",
+  right:0,
+  top:0,
+  width:'calc(100% - 280px)'
+}
 
 const Home: NextPage = () => {
   return (
     <>
-      <Box
-        sx={{
-          display:"flex",
-        }}>
+      <Box>
         <SideBar/>
-        <Box
-          sx={{
-            display:"flex",
-            pl:"280px",
-            position:"fixed",
-            flexWrap:"wrap",
-            height:"100%",
-            overflowY:"auto",
-            right:0,
-            top:0,
-            w:"calc(100%-280px)"
-          }}>
+        <Box style={boxStyle}>
+          <BreadCrumbs/>
+          <Box></Box>
         </Box>
         </Box>
     </>
