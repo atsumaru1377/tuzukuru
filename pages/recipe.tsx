@@ -9,8 +9,8 @@ import Box from "@mui/material/Card"
 import BreadCrumbs from "./components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
-
 import Chip from '@mui/material/Chip'
+import Accordion from "./components/accordion"
 
 import Thumbnail from "../public/static/images/sample_thumb.png"
 
@@ -23,6 +23,9 @@ const boxStyle:{[key:string]:string} = {
   right:"0",
   top:"0",
   width:'calc(100% - 280px)'
+}
+const AccordionStyle:{[key:string]:string} = {
+  magin:"32px"
 }
 
 const Home: NextPage = () => {
@@ -77,14 +80,19 @@ const Home: NextPage = () => {
               初心者の方にも簡単に制作をすることができるので、是非やってみてください。</Typography>
             </div>
           </Box>
+          <Box
+            sx={{
+              p:"32px"
+            }}>
+          <Typography variant = {"h3"} sx={{
+                  fontSize:"2rem",
+                  fontWeight:"bold",
+                  mb:"16px"
+                }}>まなぶ</Typography>
+          <Accordion />
+          </Box>
         </Box>
-        <Box>
-        <Typography variant = {"h3"} sx={{
-                fontSize:"2rem",
-                fontWeight:"bold",
-                margin:"8px"
-              }}>おおおおおおおおおお</Typography>
-        </Box>
+
         </Box>
     </>
   )
