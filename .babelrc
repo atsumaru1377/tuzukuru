@@ -3,7 +3,8 @@
       [
         "@babel/preset-react",
         { "runtime": "automatic", "importSource": "@emotion/react" }
-      ]
+      ],
+      ["next/babel"]
     ],
     "plugins": ["@emotion/babel-plugin"]
   }

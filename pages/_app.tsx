@@ -1,6 +1,5 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import SiteHead from "./components/siteHeader"
+import type { AppProps } from 'next/app';
+import SiteHead from "./components/siteHeader";
 
 import Theme from "../plugins/uiTheme"
 import { ThemeProvider } from '@mui/material/styles';
