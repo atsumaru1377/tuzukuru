@@ -19,21 +19,19 @@ export default function MediaCard() {
     const handleClick = () => {
         setIsActive(current => !current);
     };
-
   return (
     <Card sx={{ 
         maxWidth: 345 ,
-        m:"15px",
-        position:"relative"
+        m:"20px",
+        position:"relative",
+        borderRadius:"15px"
     }}>
-
       <CardMedia
         component="img"
         height="140"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
       />
-      
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Blneder リギング入門講座

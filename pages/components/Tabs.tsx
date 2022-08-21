@@ -38,13 +38,15 @@ export default function ScrollableTabsButtonAuto() {
         <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Seven" />
       </Tabs>
       <Button variant="outlined"startIcon={<SortIcon/>} 
-      size = "large" sx={{
-        height:"2rem",
-        padding:'10px',
-        mb:"10px"
-
-      }}>
-        絞り込み
+      size = "large" color="secondary"sx={{
+        height:"48px",
+        padding:'20px',
+        mb:"10px",
+        borderRadius:"20px",
+        fontWeight:"bold"
+      }}
+      >
+        新着順
       </Button>
     </Box>
         <Divider/>
