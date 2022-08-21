@@ -6,6 +6,8 @@ import Header  from './components/header'
 import SideBar from './components/globalNav'
 import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
+import Tabs from "./components/Tabs"
+
 import {css} from '@emotion/react'
 
 const Home: NextPage = () => {
@@ -28,6 +30,7 @@ const Home: NextPage = () => {
             top:0,
             w:"calc(100%-280px)"
           }}>
+          <Tabs/>
           <Card/>
           <Card/>
           <Card/>
