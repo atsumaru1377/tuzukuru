@@ -1,14 +1,14 @@
 import { createTheme } from "@mui/material/styles"
-import {grey}  from "@mui/material/colors"
+import {blue,grey}  from "@mui/material/colors"
 
 // Material UIのテーマ上書き
 const theme = createTheme({
     palette: {
       primary: {
-        main: grey[50],
+        main: blue[400],
       },
       secondary: {
-        main: grey[400],
+        main: grey[800],
       },
     },
   });

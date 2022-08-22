@@ -19,7 +19,7 @@ import Logo from "../../public/logo.svg"
 import LogoType from "../../public/LogoType.svg"
 
 import Image from 'next/image'
-import Link from "next/Link"
+import Link from "next/link"
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -86,12 +86,9 @@ const Header = () => {
   };
 
   return (
-
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Image src = {Logo} alt = "Tuzukuru logo"/>
-          <Image src = {LogoType} alt = "Tuzukuru LogoType"/>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <Menu
               id="menu-appbar"
@@ -118,15 +115,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button

@@ -5,31 +5,55 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip'
+import StarIcon from '@mui/icons-material/Star';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import IconButton from '@mui/material/IconButton'
+
+import {useState} from 'react';
+
+import EditIcon from '@mui/icons-material/Edit';
 
 export default function MediaCard() {
+    const [isActive, setIsActive] = useState(false);
+    const handleClick = () => {
+        setIsActive(current => !current);
+    };
   return (
     <Card sx={{ 
         maxWidth: 345 ,
-        m:"15px"
+        m:"20px",
+        position:"relative",
+        borderRadius:"15px"
     }}>
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
+        image="/static/images/sample_thumb.png"
+        alt="blender tutorial sample"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          Blneder リギング入門講座
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Blender初心者の人のために、リギングがどのようなものになるのかを解説します！
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <Chip label="初心者" component="a" href="#basic-chip" clickable color="primary"/>
+      <Chip label="blender" component="a" href="#basic-chip" clickable />
+      <Chip label="Eevee" component="a" href="#basic-chip" clickable />
+      </CardActions>
+      <CardActions>
+      <Button variant="text"> <EditIcon/> 1000</Button>
+      <Button variant="text"> <StarIcon/> 3000</Button>
+      <div style={{width:"150px"}}></div>
+      <IconButton onClick={handleClick}>
+        <FavoriteIcon sx={{
+            color:isActive?"red":"grey"
+        }}/>
+    </IconButton>
       </CardActions>
     </Card>
   );

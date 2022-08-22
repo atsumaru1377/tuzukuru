@@ -30,16 +30,6 @@ const Home: NextPage = () => {
             top:0,
             w:"calc(100%-280px)"
           }}>
-          <Tabs/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
         </Box>
         </Box>
     </>
