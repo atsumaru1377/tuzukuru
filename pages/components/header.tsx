@@ -19,7 +19,7 @@ import Logo from "../../public/logo.svg"
 import LogoType from "../../public/LogoType.svg"
 
 import Image from 'next/image'
-import Link from "next/Link"
+import Link from "next/link"
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -115,7 +115,7 @@ const Header = () => {
               ))}
             </Menu>
           </Box>
-         
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
