@@ -12,6 +12,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Logo from "../../public/logo.svg"
 import LogoType from "../../public/LogoType.svg"
 import Image from 'next/image'
+import Link from 'next/link'
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
@@ -73,9 +74,12 @@ export default function SideBar() {
       }}>
       <MenuList>
         <MenuItem>
+        <Link href="/">
+          <a >
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
-          <div style = {{width:"12px"}}></div>
           <Image src={LogoType} alt= "Tuzukuru LogoType" ></Image>
+          </a>
+        </Link>
         </MenuItem>
         <Box
           sx={{
