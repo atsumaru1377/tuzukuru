@@ -58,7 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SideBar() {
   return (
-    <Paper       
+    <Paper
     sx={{
       pt:"10px",
       height:"100vh",
