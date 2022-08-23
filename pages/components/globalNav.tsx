@@ -10,7 +10,6 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
 import Logo from "../../public/logo.svg"
-import LogoType from "../../public/LogoType.svg"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -77,7 +76,6 @@ export default function SideBar() {
         <Link href="/">
           <a >
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
-          <Image src={LogoType} alt= "Tuzukuru LogoType" ></Image>
           </a>
         </Link>
         </MenuItem>
