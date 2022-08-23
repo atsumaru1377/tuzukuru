@@ -6,7 +6,7 @@ import Header  from '../components/header'
 import SideBar from '../components/globalNav'
 import Card from "../components/tukurepoCard"
 import Box from "@mui/material/Card"
-import Tabs from "../components/Tabs"
+import Typography from "@mui/material/Typography"
 import {css} from '@emotion/react'
 
 const boxStyle:{[key:string]:string} = {
@@ -29,21 +29,7 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
-            <Tabs/>
-            <Box sx={{
-              display:"flex",
-              flexWrap:"wrap"
-            }}>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            </Box>
+            <Typography variant = "h2">つくレポを投稿する</Typography>
         </Box>
       </Box>
     </>
