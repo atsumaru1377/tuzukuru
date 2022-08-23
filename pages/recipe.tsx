@@ -132,6 +132,7 @@ const Home: NextPage = () => {
                   mt:"32px"
                 }}>つづける</Typography>
           </Box>
+          <Box>
           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
               <RepoCard/>
               <RepoCard/>
@@ -141,7 +142,10 @@ const Home: NextPage = () => {
               <RepoCard/>
               <RepoCard/>
             </div>
+            </Box>
+          <Box>
           <Footer/>
+          </Box>
         </Box>
         </Box>
     </>
