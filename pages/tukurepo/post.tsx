@@ -1,16 +1,13 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header  from '../components/header'
 import SideBar from '../components/globalNav'
-import Card from "../components/tukurepoCard"
 import Box from "@mui/material/Card"
 import Typography from "@mui/material/Typography"
+import TextField from "@mui/material/TextField"
 import {css} from '@emotion/react'
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import ImageIcon from '@mui/icons-material/Image';
-import Button from "@mui/material/Button"
+import Button from "@mui/material/Button";
+import Footer from "../components/footer";
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -30,7 +27,7 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
-            <div style={{height:"100%",  padding:"32px"}}>
+            <div style={{padding:"32px"}}>
             <Typography variant = "h2" sx={{
                 fontSize:"1.5rem",
                 fontWeight:"500",
@@ -65,11 +62,30 @@ const Home: NextPage = () => {
             <Typography  sx={{
                 fontSize:"1rem",
                 my:"16px"
-            }}>プレビュー</Typography>
+            }}>コメント</Typography>
+            <TextField label="参考にしたレシピ" sx={{width:"100%"}}/>
+            <div style={{height:"16px",width:"100%"}}></div>
+            <TextField label="こだわりポイント" sx={{width:"100%"}}/>
+            <Typography  sx={{
+                fontSize:"1rem",
+                my:"16px"
+            }}>困ったところなど</Typography>
+             <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
+            <div style={{height:"16px",width:"100%"}}></div>
+            <TextField label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
+            <div style={{height:"16px",width:"100%"}}></div>
+            <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
+            <div style={{height:"16px",width:"100%"}}></div>
+            <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
             
+            <div style={{width:"100%",paddingTop:"32px",display:"flex",justifyContent:"flex-end"}}>
+                <Button variant="contained"sx={{mx:"8px" ,color:"white"}}>投稿する</Button>
+                <Button variant="outlined" sx={{mx:"8px"}}>キャンセル</Button>
             </div>
-
+            </div>
+            <Footer/>  
         </Box>
+        
       </Box>
     </>
   )

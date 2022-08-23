@@ -1,23 +1,23 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 
-import SideBar from './components/globalNav'
+import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
-import BreadCrumbs from "./components/breadCrumbs"
+import BreadCrumbs from "../components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
-import Accordion from "./components/accordion"
-import TukuCard from "./components/tukurepoCard"
-import RepoCard from "./components/repoCard"
+import Accordion from "../components/accordion"
+import TukuCard from "../components/tukurepoCard"
+import RepoCard from "../components/repoCard"
 import Divider from '@mui/material/Divider';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import Footer from "./components/footer";
-import Comment from "./components/comment";
+import Footer from "../components/footer";
+import Comment from "../components/comment";
 
 import Link from "next/link"
 
-import Thumbnail from "../public/static/images/sample_thumb.png"
+import Thumbnail from "../../public/static/images/sample_thumb.png"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
