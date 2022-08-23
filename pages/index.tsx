@@ -7,9 +7,18 @@ import SideBar from './components/globalNav'
 import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
 import Tabs from "./components/Tabs"
-
-
 import {css} from '@emotion/react'
+
+const boxStyle:{[key:string]:string} = {
+  paddingLeft:"280px",
+  position:"fixed",
+  height:"100%",
+  overflowY:"auto",
+  p:"32px",
+  right:"0",
+  top:"0",
+  width:'calc(100% - 280px)',
+}
 
 const Home: NextPage = () => {
   return (
@@ -19,30 +28,24 @@ const Home: NextPage = () => {
           display:"flex",
         }}>
         <SideBar/>
-        <Box
-          sx={{
-            display:"flex",
-            pl:"280px",
-            position:"fixed",
-            flexWrap:"wrap",
-            height:"100%",
-            overflowY:"auto",
-            right:0,
-            top:0,
-            w:"calc(100%-280px)"
-          }}>
-          <Tabs/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+        <Box style={boxStyle}>
+            <Tabs/>
+            <Box sx={{
+              display:"flex",
+              flexWrap:"wrap"
+            }}>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            </Box>
         </Box>
-        </Box>
+      </Box>
     </>
   )
 }

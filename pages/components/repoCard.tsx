@@ -22,6 +22,7 @@ export default function MediaCard() {
   return (
     <Card sx={{ 
         maxWidth: 345 ,
+        minWidth:320,
         m:"20px",
         position:"relative",
         borderRadius:"15px"

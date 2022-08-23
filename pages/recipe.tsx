@@ -1,16 +1,19 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header  from './components/header'
+
 import SideBar from './components/globalNav'
-import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
 import BreadCrumbs from "./components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
 import Accordion from "./components/accordion"
+import TukuCard from "./components/tukurepoCard"
+import RepoCard from "./components/repoCard"
+import Divider from '@mui/material/Divider';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Footer from "./components/footer";
+import Comment from "./components/comment";
 
 import Thumbnail from "../public/static/images/sample_thumb.png"
 
@@ -90,9 +93,56 @@ const Home: NextPage = () => {
                   mb:"16px"
                 }}>まなぶ</Typography>
           <Accordion />
+          <Typography variant = {"h3"} sx={{
+                  fontSize:"2rem",
+                  fontWeight:"bold",
+                  mt:"64px"
+                }}>つくる</Typography>
+          <div style ={{display:"flex"}}>
+            <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll",marginRight:"16px"}}>
+              <TukuCard/>
+              <TukuCard/>
+              <TukuCard/>
+              <TukuCard/>
+              <TukuCard/>
+              <TukuCard/>
+              <TukuCard/>
+            </div>
+            <Divider orientation="vertical" flexItem/>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center",width:"20%",margin:"16px"}}>
+              <div style={{width:"216px",height:"268px",backgroundColor:"lightgrey",borderRadius:"15px",textAlign:"center"}}>
+                <AddCircleOutlineIcon sx={{fontSize:"64px",mt:"64px"}}/>
+                <Typography sx={{m:"16px"}}>あなたもつくレポを投稿しよう</Typography>
+              </div>
+            </div>
+          </div>
+          <Typography variant = {"h3"} sx={{
+                  fontSize:"2rem",
+                  fontWeight:"bold",
+                  mt:"32px"
+                }}>きく</Typography>
+          <Typography variant = {"h3"} sx={{
+            fontSize:"1.5rem",
+            mt:"32px"
+          }}>10件のコメント</Typography>
+          <Comment/>
+          <Typography variant = {"h3"} sx={{
+                  fontSize:"2rem",
+                  fontWeight:"bold",
+                  mt:"32px"
+                }}>つづける</Typography>
           </Box>
+          <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+              <RepoCard/>
+              <RepoCard/>
+              <RepoCard/>
+              <RepoCard/>
+              <RepoCard/>
+              <RepoCard/>
+              <RepoCard/>
+            </div>
+          <Footer/>
         </Box>
-
         </Box>
     </>
   )
