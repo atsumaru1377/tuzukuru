@@ -47,7 +47,7 @@ export default function MediaCard() {
         </div>
         <div style={{display:"flex",paddingTop:"16px"}}>
             <Avatar alt="Remy Sharp" sx={{mx:"8px"}} src="/static/images/avatar/1.jpg" />
-            <Divider sx={{mx:"8px"}} orientation="vertical"/>
+            <Divider sx={{mx:"8px"}} orientation="vertical" flexItem />
             <AvatarGroup total={24}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                 <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
