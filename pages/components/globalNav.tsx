@@ -15,19 +15,20 @@ export default function SideBar() {
   return (
     <Paper       
     sx={{
-      pt:"10px",
+      pl:"32px",
       height:"100vh",
-      width:"280px",
+      width:"256px",
       top:0,
       left:0,
       zIndex:"1200",
       position:"fixed",
       overflow:'scroll'
       }}>
+      <div style={{height:"16px"}}></div>
       <MenuList>
         <MenuItem>
         <Link href="/">
-          <a >
+          <a>
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
           </a>
         </Link>
@@ -37,18 +38,20 @@ export default function SideBar() {
             margin:"10px"
           }}>
         </Box>
-        
-        <div style={{height:"10px"}}></div>
+
+        <div style={{height:"8px"}}></div>
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
-            fontSize:20,
+            fontSize:16,
             fontWeight:"bold"
           }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>コミュニティを探す</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -60,19 +63,27 @@ export default function SideBar() {
           </ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>みんなのレシピ</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>キーワードで探す</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>キーワードで探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>お気に入りのレシピ</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>レシピを投稿する</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -83,11 +94,15 @@ export default function SideBar() {
           }}>つくレポ</ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>みんなのつくレポを見る</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>みんなのつくレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>つくレポを投稿する</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>つくレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -98,19 +113,24 @@ export default function SideBar() {
           }}>困った時は</ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>デザインを勉強する</ListItemText>
+          <ListItemText  primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>ツールの使い方を見る</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>よくある質問</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>よくある質問</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
       </MenuList>
-      
     </Paper>
   );
 }
