@@ -7,6 +7,7 @@ import SideBar from './components/globalNav'
 import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
 import Tabs from "./components/Tabs"
+import SearchBar from "./components/searchBar"
 import {css} from '@emotion/react'
 
 const boxStyle:{[key:string]:string} = {
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
+            <SearchBar/>
             <Tabs/>
             <Box sx={{
               display:"flex",

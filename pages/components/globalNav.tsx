@@ -24,7 +24,7 @@ export default function SideBar() {
       position:"fixed",
       overflow:'scroll'
       }}>
-      <div style={{height:"16px"}}></div>
+      <div style={{height:"32px"}}></div>
       <MenuList>
         <MenuItem>
         <Link href="/">
