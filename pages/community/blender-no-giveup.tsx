@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import SideBar from '../components/globalNav'
-import Card from "../components/repoCard"
 import Box from "@mui/material/Card"
 import {css} from '@emotion/react'
 import SearchBar from "../components/searchBar"
@@ -13,6 +12,7 @@ import Divider from "@mui/material/Divider"
 import AvatarGroup from "@mui/material/AvatarGroup"
 import TukuCard from "../components/tukurepoCard"
 import Comment from "../components/comment"
+import Footer from "../components/footer"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -108,6 +108,7 @@ const Home: NextPage = () => {
                   pl:"16px"
                 }}>スレッド</Typography>
               <Comment/>
+              <Footer/>
           </Box>
         </Box>
       </Box>
