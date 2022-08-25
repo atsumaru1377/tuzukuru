@@ -5,76 +5,30 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import Box from "@mui/material/Box"
 
-import {styled , alpha } from "@mui/material/styles"
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-
 import Logo from "../../public/logo.svg"
 import Image from 'next/image'
 import Link from 'next/link'
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: "20px",
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  border:"1px solid grey",
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
-    },
-  },
-}));
-
 export default function SideBar() {
   return (
     <Paper
     sx={{
-      pt:"10px",
+      pl:"32px",
       height:"100vh",
-      width:"280px",
+      width:"256px",
       top:0,
       left:0,
       zIndex:"1200",
       position:"fixed",
       overflow:'scroll'
       }}>
+      <div style={{height:"16px"}}></div>
       <MenuList>
         <MenuItem>
         <Link href="/">
-          <a >
+          <a>
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
           </a>
         </Link>
@@ -83,28 +37,21 @@ export default function SideBar() {
           sx={{
             margin:"10px"
           }}>
-          <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-          </Search>
         </Box>
-        <Divider/>
-        <div style={{height:"10px"}}></div>
+
+        <div style={{height:"8px"}}></div>
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
-            fontSize:20,
+            fontSize:16,
             fontWeight:"bold"
           }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>コミュニティを探す</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -116,19 +63,27 @@ export default function SideBar() {
           </ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>みんなのレシピ</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>キーワードを探す</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>キーワードで探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>お気に入りのレシピ</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>レシピを投稿する</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -139,11 +94,15 @@ export default function SideBar() {
           }}>つくレポ</ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>レシピを投稿する</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>みんなのつくレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>レシピを投稿する</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>つくレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <Divider />
@@ -154,15 +113,21 @@ export default function SideBar() {
           }}>困った時は</ListItemText>
         </MenuItem>
         <MenuItem>
-          <ListItemText>デザインを勉強する</ListItemText>
+          <ListItemText  primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>ツールの使い方を見る</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         <MenuItem>
-          <ListItemText>よくある質問</ListItemText>
+          <ListItemText primaryTypographyProps={{
+            fontSize:14
+          }}sx={{py:"4px"}}>よくある質問</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
       </MenuList>

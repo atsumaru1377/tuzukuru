@@ -10,7 +10,7 @@ import Tabs from "../components/Tabs"
 import {css} from '@emotion/react'
 
 const boxStyle:{[key:string]:string} = {
-  paddingLeft:"280px",
+  paddingLeft:"256px",
   position:"fixed",
   height:"100%",
   overflowY:"auto",
