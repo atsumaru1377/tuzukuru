@@ -13,7 +13,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function SideBar() {
   return (
-    <Paper       
+    <Paper
     sx={{
       pl:"32px",
       height:"100vh",
@@ -24,7 +24,7 @@ export default function SideBar() {
       position:"fixed",
       overflow:'scroll'
       }}>
-      <div style={{height:"16px"}}></div>
+      <div style={{height:"32px"}}></div>
       <MenuList>
         <MenuItem>
         <Link href="/">
