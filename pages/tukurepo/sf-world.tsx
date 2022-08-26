@@ -128,8 +128,8 @@ const Home: NextPage = () => {
                     Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
                     Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
                  </Typography>
-        </Box>
-          <Typography variant = {"h3"} sx={{
+            </Box>
+            <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
@@ -148,28 +148,6 @@ const Home: NextPage = () => {
                 <TukuCard></TukuCard>
             </div>
           </Box>
-          <Box sx={{width:"100%",p:"16px"}}>
-                 <Typography sx={{mt:"16px"}}>疑問点1</Typography>
-                 <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                 </Typography>
-                 <Divider sx={{my:"16px"}}/>
-                 <Typography>疑問点2</Typography>
-                 <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                 </Typography>
-                 <Divider sx={{my:"16px"}}/>
-                 <Typography>疑問点3</Typography>
-                 <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                 </Typography>
-        </Box>
           <Box>
           <Footer/>
           </Box>

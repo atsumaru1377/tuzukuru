@@ -40,6 +40,7 @@ export default function SideBar() {
         </Box>
 
         <div style={{height:"8px"}}></div>
+        <Link href ="./mypage">
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
@@ -48,12 +49,15 @@ export default function SideBar() {
           }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
+        <Link href="./community">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
         <Divider />
         <MenuItem>
           <ListItemText
@@ -62,30 +66,30 @@ export default function SideBar() {
           }}>レシピ
           </ListItemText>
         </MenuItem>
+        <Link href="./recipe">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
-        <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>キーワードで探す</ListItemText>
-          <KeyboardArrowRightIcon/>
-        </MenuItem>
+        </Link>
+        <Link href="./mypage">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
+        <Link href="/">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
         <Divider />
         <MenuItem>
           <ListItemText
@@ -93,43 +97,55 @@ export default function SideBar() {
             fontWeight:"bold"
           }}>つくレポ</ListItemText>
         </MenuItem>
+        <Link href="./tukurepo">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>みんなのつくレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
+        <Link href="./tukurepo/post">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>つくレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
         <Divider />
+        <Link href="/">
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
             fontWeight:"bold"
           }}>困った時は</ListItemText>
         </MenuItem>
+        </Link>
+        <Link href="/">
         <MenuItem>
           <ListItemText  primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
+        <Link href="/">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+        </Link>
+        <Link href="/">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
           }}sx={{py:"4px"}}>よくある質問</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
+         </Link>
       </MenuList>
     </Paper>
   );
