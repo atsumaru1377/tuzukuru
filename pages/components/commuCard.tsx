@@ -23,9 +23,10 @@ export default function MediaCard() {
     }}>
       <CardMedia
         component="img"
-        height="170"
+        height="170px"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
+        sx={{width:"50%"}}
       />
       <CardContent>
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
