@@ -26,26 +26,23 @@ const boxStyle:{[key:string]:string} = {
 }
 
 const Home: NextPage = () => {
-  const { control, handleSubmit } = useForm({
+  const { control, handleSubmit } = useForm<ReportItemModel>({
     mode : 'onSubmit',
-
     defaultValues: {
         recipe_id : 0,
         point : "",
-        questions : {
-          comment : "",
-          post_date : 20220830,
-          author : ""
-        },
+        q_who : "",
+        q_where : "",
+        q_when : "",
+        q_how : "",
         likes: 0,
-        comments: {
-          who : "",
-          where : "",
-          when : "",
-          how : ""
-        },
+        comments: {},
     },
   });
+
+  const onSubmit = (data:ReportItemModel):void => {
+    addReport(data);
+  }
 
   return (
     <>
@@ -123,7 +120,7 @@ const Home: NextPage = () => {
               }}>困ったところなど</Typography>
               <Controller
                 control={control}
-                name="comments.who"
+                name="q_who"
                 render={({field}) => (
                   <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
@@ -131,7 +128,7 @@ const Home: NextPage = () => {
               <div style={{height:"16px",width:"100%"}}></div>
               <Controller
                 control={control}
-                name="comments.where"
+                name="q_where"
                 render={({field}) => (
                   <TextField label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
@@ -139,7 +136,7 @@ const Home: NextPage = () => {
               <div style={{height:"16px",width:"100%"}}></div>
               <Controller
                 control={control}
-                name="comments.when"
+                name="q_when"
                 render={({field}) => (
                   <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
@@ -147,7 +144,7 @@ const Home: NextPage = () => {
               <div style={{height:"16px",width:"100%"}}></div>
               <Controller
                 control={control}
-                name="comments.how"
+                name="q_how"
                 render={({field}) => (
                   <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
