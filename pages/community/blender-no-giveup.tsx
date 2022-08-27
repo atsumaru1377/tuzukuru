@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <SearchBar/>
             <MyPage/>
             <div style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden"}}>
-              <Image src="/static/images/sample_thumb.png"　layout="fill" alt="community cover"objectFit="cover"/>
+              <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" style={{objectFit:"cover"}} />
             </div>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
                 }}>blenderを諦めない</Typography>
             <div style={{display:"flex",padding:"16px",alignItems:"center",flexWrap:"wrap"}}>
               <div style={{display:"flex"}}>
-                  <Chip label="blender" color="primary" sx={{mx:"4px"}}></Chip> 
+                  <Chip label="blender" color="primary" sx={{mx:"4px"}}></Chip>
                   <Chip label="初心者歓迎"  sx={{mx:"4px"}}></Chip>
               </div>
               <Typography variant = {"h3"} sx={{
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                   mt:"16px",
                   pl:"16px",
                   mr:"16px"
-                }}>3582人のメンバー  1.1万人のフォロワー</Typography> 
+                }}>3582人のメンバー  1.1万人のフォロワー</Typography>
                 <div style={{display:"flex"}}>
                   <Avatar sx={{mx:"16px"}}/>
                   <Divider orientation="vertical" flexItem></Divider>
