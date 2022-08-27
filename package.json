@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +17,7 @@
     "linaria": "^3.0.0-beta.18",
     "next": "12.2.5",
     "next-linaria": "^1.0.0-beta",
+    "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
