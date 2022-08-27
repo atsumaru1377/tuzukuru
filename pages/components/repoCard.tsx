@@ -18,7 +18,7 @@ export default function MediaCard() {
         setIsActive(current => !current);
     };
   return (
-    <Card sx={{ 
+    <Card sx={{
         width : {lg:"40%",sm:"70%",xs:"95%"},
         m:"24px",
         position:"relative",
