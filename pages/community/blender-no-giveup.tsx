@@ -36,9 +36,7 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
-          <Box sx={{
-                padding:"32px"
-            }}>
+        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
             <MyPage/>
             <div style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden"}}>
@@ -92,7 +90,7 @@ const Home: NextPage = () => {
                   mb:"16px",
                   mt:"32px",
                   pl:"16px"
-                }}>作った報告</Typography>
+                }}>みんなの作った報告</Typography>
                <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
                 <TukuCard/>
                 <TukuCard/>
@@ -111,7 +109,7 @@ const Home: NextPage = () => {
                 }}>スレッド</Typography>
               <Comment/>
               <Footer/>
-          </Box>
+          </div>
         </Box>
       </Box>
     </>

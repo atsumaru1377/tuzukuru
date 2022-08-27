@@ -27,16 +27,14 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
-      <SiteHeader title="Tuzukuru 続くを作る | my page"></SiteHeader>
+      <SiteHeader title="Tuzukuru 続くを作る。 | My Page"></SiteHeader>
       <Box
         sx={{
           display:"flex",
         }}>
         <SideBar/>
         <Box style={boxStyle}>
-            <Box sx={{
-                padding:"32px"
-            }}>
+             <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
             <MyPage/>
             <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}> 
@@ -107,7 +105,8 @@ const Home: NextPage = () => {
                 }}>公開したレシピ</Typography>
                 <div style={{
                 display:"flex",
-                flexWrap:"wrap"
+                flexWrap:"nowrap",
+                overflowY:"scroll"
                 }}>
                     <RecipeCard/>
                     <RecipeCard/>
@@ -116,9 +115,9 @@ const Home: NextPage = () => {
                     <RecipeCard/>
                 </div>
             <Footer/>
+            </div>
             </Box>
         </Box>
-      </Box>
     </>
   )
 }
