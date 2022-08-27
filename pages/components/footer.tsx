@@ -14,7 +14,7 @@ export default function AlignItemsList() {
                         <Box sx={{display:"flex",justifyContent:"center",alignItems:"end"}}>
                         <img src={Logo} alt="logo" />
                         <Divider orientation="vertical" sx={{mx:"16px"}}/>
-                        はじめて続く、作るサイクル
+                        続くを作る。
                         </Box>
                         </a>
                     </Link>
