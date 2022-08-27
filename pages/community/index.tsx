@@ -4,7 +4,7 @@ import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
 import Tabs from "../components/Tabs"
 import Card from "../components/commuCard"
-
+import Grid from "@mui/material/Grid"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -27,20 +27,41 @@ const Home: NextPage = () => {
       <Box>
         <SideBar/>
         <Box style={boxStyle}>
+        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <Tabs/>
-            <Box>
+            <Grid container>
+            <Grid item md={12}lg= {12}xl={6} >
                 <Card/>
+            </Grid>
+            <Grid item sm={12}lg= {12} xl={6}>
                 <Card/>
+            </Grid>
+            <Grid item md={12}lg= {12}xl={6} >
                 <Card/>
+            </Grid>
+            <Grid item sm={12}lg= {12} xl={6}>
                 <Card/>
+            </Grid>
+            <Grid item md={12}lg= {12}xl={6} >
                 <Card/>
+            </Grid>
+            <Grid item sm={12}lg= {12} xl={6}>
                 <Card/>
+            </Grid>
+            <Grid item md={12}lg= {12}xl={6} >
                 <Card/>
+            </Grid>
+            <Grid item sm={12}lg= {12} xl={6}>
                 <Card/>
+            </Grid>
+            <Grid item md={12}lg= {12}xl={6} >
                 <Card/>
+            </Grid>
+            <Grid item sm={12}lg= {12} xl={6}>
                 <Card/>
-            </Box>
-         
+            </Grid>
+            </Grid>
+          </div>
         </Box>
     </Box>
     </>

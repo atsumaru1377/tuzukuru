@@ -1,5 +1,5 @@
 import Comments from "./comments";
-import Questions from "./questions";
+import Questions from "./questions";4
 
 type ReportItemModel = {
 	recipe_id : number;
