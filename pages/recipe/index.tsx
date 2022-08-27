@@ -46,9 +46,7 @@ const Home: NextPage = () => {
               display:"flex",
               maxHeight:"360px"
             }}>
-            <div>
-            <img src="../../public/sample_thumb.png" alt = "thumbnail" height={368}  objectFit="cover"/>
-            </div>
+            <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" height="368" style={{objectFit:"cover"}} />
             <div style={{
               width:"calc(80% - 320px)",
               padding:"16px"

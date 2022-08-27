@@ -12,7 +12,7 @@ export default function AlignItemsList() {
                     <Link href="/">
                         <a>
                         <Box sx={{display:"flex",justifyContent:"center",alignItems:"end"}}>
-                        <Image src={Logo} alt="logo" />
+                        <img src={Logo} alt="logo" />
                         <Divider orientation="vertical" sx={{mx:"16px"}}/>
                         続くを作る。
                         </Box>

@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             <SearchBar/>
             <MyPage/>
             <div style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden"}}>
-              <Image src="/static/images/sample_thumb.png" layout="fill" alt="community cover" objectFit="cover"/>
+              <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" style={{objectFit:"cover"}} />
             </div>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",

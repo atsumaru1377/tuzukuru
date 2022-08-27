@@ -41,7 +41,7 @@ const Home: NextPage = () => {
               display:"flex",
               maxHeight:"360px"
             }}>
-            <Image src={Thumbnail} alt = "thumbnail" height={368}  objectFit="cover"/>
+            <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" height="368" style={{objectFit:"cover"}} />
             <div style={{
               width:"calc(80% - 320px)",
               padding:"16px"
@@ -86,19 +86,19 @@ const Home: NextPage = () => {
           <div style ={{display:"flex"}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginRight:"8px"}}>
-                <Image src="/static/images/sample_tukurepo.jpg" alt="tukurepo image" height={250} width={250}/>
+                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <Image src="/static/images/sample_tukurepo.jpg" alt="tukurepo image" height={250} width={250}/>
+                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <Image src="/static/images/sample_tukurepo.jpg" alt="tukurepo image" height={250} width={250}/>
+                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <Image src="/static/images/sample_tukurepo.jpg" alt="tukurepo image" height={250} width={250}/>
+                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <Image src="/static/images/sample_tukurepo.jpg" alt="tukurepo image" height={250} width={250}/>
+                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
             </div>
           </div>

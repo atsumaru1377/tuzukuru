@@ -29,7 +29,7 @@ export default function SideBar() {
         <MenuItem>
         <Link href="/">
           <a>
-          <img src={Logo} alt= "Tuzukuru Logo"/>
+          <img src={Logo} alt= "Tuzukuru Logo" ></img>
           </a>
         </Link>
         </MenuItem>
