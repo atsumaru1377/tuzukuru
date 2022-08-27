@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
@@ -11,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 export default function ImgMediaCard() {
   return (
-    <Card role="tukurepo card" sx={{ minWidth: 216,maxWidth:264 ,m:"16px",borderRadius:"15px"}}>
+    <Card role="tukurepo card" sx={{ minWidth: 216,m:"16px",borderRadius:"15px"}}>
       <CardMedia
         component="img"
         alt="tukurepo sample"
@@ -35,7 +34,6 @@ export default function ImgMediaCard() {
             <FavoriteIcon sx={{h:"8px",w:"8px",mr:"4px"}}/> 
             <Typography sx={{fontSize:"0.8rem"}}>3000</Typography>
         </Button>
-        
       </CardActions>
     </Card>
   );

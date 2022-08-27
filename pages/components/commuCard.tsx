@@ -16,8 +16,6 @@ export default function MediaCard() {
     };
   return (
     <Card sx={{ 
-        maxWidth: "100%",
-        minWidth:"90%",
         m:"15px",
         position:"relative",
         borderRadius:"20px",
@@ -25,9 +23,10 @@ export default function MediaCard() {
     }}>
       <CardMedia
         component="img"
-        height="170"
+        height="170px"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
+        sx={{width:"50%"}}
       />
       <CardContent>
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
