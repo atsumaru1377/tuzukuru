@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
 import {styled , alpha } from "@mui/material/styles"
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
@@ -10,7 +9,7 @@ const Search = styled('div')(({ theme }) => ({
     borderRadius: "20px",
     backgroundColor: alpha(theme.palette.common.white, 1),
     filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
-    marginLeft: 0,
+    marginLeft: "0",
     width:"calc(100% - 72px)",
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
@@ -36,8 +35,8 @@ const Search = styled('div')(({ theme }) => ({
   
 export default function ScrollableTabsButtonAuto() {
   return (
-    <Box sx={{width:"100%"}}>
-    <Box sx={{ bgcolor: 'white',py:"16px",pr:"16px",pl:"32px",display:'flex',justifyContent:"space-between",alignItems:'end'}}>
+    <Box sx={{width:"100%",mt:"32px",ml:"32px"}}>
+    <Box sx={{ bgcolor: 'white',py:"16px",pr:"16px",pl:"32px",display:'flex',justifyContent:"space-between",alignItems:'center'}}>
         <Search sx={{mr:"16px"}}>
             <SearchIconWrapper>
             <SearchIcon />
@@ -45,7 +44,7 @@ export default function ScrollableTabsButtonAuto() {
             <StyledInputBase
             placeholder="コミュニティ、レシピを探す…"
             inputProps={{ 'aria-label': 'search' }}
-            sx={{width:"100%"}}
+            sx={{width:"100%",height:"48px"}}
             />
         </Search>
         <IconButton/>

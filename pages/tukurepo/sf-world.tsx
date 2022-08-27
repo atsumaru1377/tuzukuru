@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-
+import SiteHeader from "../components/siteHeader"
 import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
 import BreadCrumbs from "../components/breadCrumbs"
@@ -31,6 +31,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+     <SiteHeader title="Tuzukuru 続くを作る | tukurepo of sf-world"></SiteHeader>
       <Box>
         <SideBar/>
         <Box style={boxStyle}>

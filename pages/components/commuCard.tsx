@@ -35,10 +35,10 @@ export default function MediaCard() {
           Blnederを諦めない
         </Typography>
         <div style={{width:"100%"}}>   
-            <Chip label="初心者" sx={{mx:"8px"}} color="primary"></Chip>
-            <Chip label="blender"sx={{mx:"8px"}}></Chip>
-            <Chip label="blender"sx={{mx:"8px"}}></Chip>
-            <Chip label="blender"sx={{mx:"8px"}}></Chip>
+            <Chip label="初心者" sx={{mx:"8px"}}  color="success"></Chip>
+            <Chip label="blender"sx={{mx:"8px"}} color="warning"></Chip>
+            <Chip label="SF"sx={{mx:"8px"}} color = "info"></Chip>
+            <Chip label="CG"sx={{mx:"8px"}} color = "info"></Chip>
         </div>
         <div style={{display:"flex",paddingTop:"16px"}}>
             <Avatar alt="Remy Sharp" sx={{mx:"8px"}} src="/static/images/avatar/1.jpg" />

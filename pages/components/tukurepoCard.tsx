@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 
 export default function ImgMediaCard() {
   return (
-    <Card sx={{ minWidth: 216,maxWidth:264 ,m:"16px"}}>
+    <Card role="tukurepo card" sx={{ minWidth: 216,maxWidth:264 ,m:"16px",borderRadius:"15px"}}>
       <CardMedia
         component="img"
         alt="tukurepo sample"

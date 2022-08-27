@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-
+import SiteHeader from "../components/siteHeader"
 import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
 import BreadCrumbs from "../components/breadCrumbs"
@@ -27,7 +27,8 @@ const boxStyle:{[key:string]:string} = {
   p:"32px",
   right:"0",
   top:"0",
-  width:'calc(100% - 280px)'
+  width:'calc(100% - 280px)',
+  justifyContent:"center"
 }
 const AccordionStyle:{[key:string]:string} = {
   magin:"32px"
@@ -36,6 +37,7 @@ const AccordionStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+    <SiteHeader title="Tuzukuru 続くを作る | recipe top page"></SiteHeader>
       <Box>
         <SideBar/>
         <Box style={boxStyle}>

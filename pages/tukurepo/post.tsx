@@ -8,6 +8,7 @@ import UploadFileIcon from '@mui/icons-material/UploadFile';
 import ImageIcon from '@mui/icons-material/Image';
 import Button from "@mui/material/Button";
 import Footer from "../components/footer";
+import SiteHeader from "../components/siteHeader"
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -21,6 +22,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+     <SiteHeader title="Tuzukuru 続くを作る | tukurepo post page"></SiteHeader>
       <Box
         sx={{
           display:"flex",

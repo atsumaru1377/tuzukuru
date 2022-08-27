@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import SideBar from './components/globalNav'
-import Card from "./components/repoCard"
+import SiteHeader from "./components/siteHeader"
 import Box from "@mui/material/Card"
-import {css} from '@emotion/react'
 import SearchBar from "./components/searchBar"
 import MyPage from "./components/breadCrumbs"
 import Avatar from "@mui/material/Avatar"
@@ -13,6 +12,7 @@ import CommuCard from "./components/commuCard"
 import RepoCard from "./components/tukurepoCard"
 import RecipeCard from "./components/repoCard"
 import Footer from "./components/footer"
+
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
   position:"fixed",
@@ -27,6 +27,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+      <SiteHeader title="Tuzukuru 続くを作る | my page"></SiteHeader>
       <Box
         sx={{
           display:"flex",
