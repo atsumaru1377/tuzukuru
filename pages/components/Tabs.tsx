@@ -20,8 +20,8 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-    <Box>
-    <Box sx={{ bgcolor: 'background.paper',p:"16px",w:"100%",display:'flex',alignItems:'end'}}>
+    <Box sx={{margin:"0 auto",maxWidth:"1560px"}}>
+    <Box sx={{ bgcolor: 'background.paper',p:"16px",display:'flex',alignItems:'end'}}>
       <Tabs
         value={value}
         sx={{
@@ -32,16 +32,16 @@ export default function ScrollableTabsButtonAuto() {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       > 
-        <Tab icon = {<LocalFireDepartmentIcon/>} label="人気" /> 
-        <Tab icon= { <Img src={AfterEffects} alt = "aftereffects logo"/>} label="After Effects" /> 
-        <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Three" />
-        <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Four" />
-        <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Five" />
-        <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Six" />
-        <Tab icon = {<LocalFireDepartmentIcon/>}label="Item Seven" />
+        <Tab icon = {<LocalFireDepartmentIcon sx={{color:"red"}}/>} label="人気" /> 
+        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo"/>} label="After Effects" /> 
+        <Tab icon = {<img src="/static/images/adobelogo/illustrator.png" alt = "illustrator logo"/>} label="illustrator" />
+        <Tab icon = {<img src="/static/images/adobelogo/indesign.png" alt = "indesign logo"/>} label="indesign" />
+        <Tab icon = {<img src="/static/images/adobelogo/photoshop.png" alt = "photoshop logo"/>} label="photoshop" />
+        <Tab icon = {<img src="/static/images/adobelogo/Premiere.png" alt = "Premiere logo"/>} label="Premiere" />
+        <Tab icon = {<img src="/static/images/adobelogo/xd.png" alt = "xd logo"/>} label="XD" />
       </Tabs>
       <Button startIcon={<SortIcon/>} 
-      size = "large" color="secondary"sx={{
+        size = "large" color="secondary"sx={{
         height:"48px",
         padding:'20px',
         mb:"10px",

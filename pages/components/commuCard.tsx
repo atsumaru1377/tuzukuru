@@ -25,7 +25,6 @@ export default function MediaCard() {
     }}>
       <CardMedia
         component="img"
-        sx={{width:"50%"}}
         height="170"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
