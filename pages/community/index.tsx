@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
-
+import SiteHeader from "../components/siteHeader"
 import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
 import Tabs from "../components/Tabs"
@@ -24,6 +23,7 @@ const AccordionStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+    <SiteHeader title="Tuzukuru 続くを作る | community top page "></SiteHeader>
       <Box>
         <SideBar/>
         <Box style={boxStyle}>

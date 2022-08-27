@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import SideBar from './components/globalNav'
-import Card from "./components/repoCard"
+import SiteHeader from "./components/siteHeader"
 import Box from "@mui/material/Card"
-import {css} from '@emotion/react'
 import SearchBar from "./components/searchBar"
 import MyPage from "./components/breadCrumbs"
 import Avatar from "@mui/material/Avatar"
@@ -13,6 +12,7 @@ import CommuCard from "./components/commuCard"
 import RepoCard from "./components/tukurepoCard"
 import RecipeCard from "./components/repoCard"
 import Footer from "./components/footer"
+
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
   position:"fixed",
@@ -27,6 +27,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+      <SiteHeader title="Tuzukuru 続くを作る | my page"></SiteHeader>
       <Box
         sx={{
           display:"flex",
@@ -38,8 +39,8 @@ const Home: NextPage = () => {
             }}>
             <SearchBar/>
             <MyPage/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
-                <Avatar sx={{width:130,height:130}}>M</Avatar>
+            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}> 
+                <Avatar sx={{width:130,height:130}}>M</Avatar> 
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
                     <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
@@ -68,7 +69,7 @@ const Home: NextPage = () => {
                         <Typography>いいね数</Typography>
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>100</Typography>
                     </div>
-
+                    
                 </div>
             </div>
             <Divider/>
@@ -79,8 +80,8 @@ const Home: NextPage = () => {
                   my:"32px",
                   pl:"16px"
                 }}>マイコミュニティ</Typography>
-            <CommuCard/>
-            <CommuCard/>
+            <CommuCard/>    
+            <CommuCard/>    
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
