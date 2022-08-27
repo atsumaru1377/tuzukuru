@@ -14,7 +14,7 @@ const boxStyle:{[key:string]:string} = {
   p:"32px",
   right:"0",
   top:"0",
-  width:'calc(100% - 280px)'
+  width:'calc(100% - 280px)',
 }
 
 const Home: NextPage = () => {
@@ -27,13 +27,16 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
+            <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 32px"}}>
             <SearchBar/>
             <Tabs/>
             <div style={{display:"flex",justifyContent:"center",width:"100%",height:"100%"}}>
             <Box sx={{
               display:"flex",
               flexWrap:"wrap",
-              justifyContent:"center"
+              justifyContent:"center",
+              border:"0px",
+              boxShadow:"none"
             }}>
             <Card/>
             <Card/>
@@ -41,10 +44,8 @@ const Home: NextPage = () => {
             <Card/>
             <Card/>
             <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
             </Box>
+            </div>
             </div>
         </Box>
 

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip'
-import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton'
 
@@ -21,40 +19,40 @@ export default function MediaCard() {
     };
   return (
     <Card sx={{ 
-        maxWidth: 345 ,
-        minWidth:320,
-        m:"20px",
+        width : {lg:"40%",sm:"70%",xs:"95%"},
+        m:"24px",
         position:"relative",
-        borderRadius:"20px"
+        borderRadius:"24px",
+        pb:"0"
     }}>
       <CardMedia
         component="img"
-        height="140"
+        height="50%"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
       />
-      <CardContent>
+      <CardContent sx={{px:"16px",pb:"0"}}>
         <Typography gutterBottom variant="h5" component="div">
           Blneder リギング入門講座
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Blender初心者の人のために、リギングがどのようなものになるのかを解説します！
-        </Typography>
       </CardContent>
-      <CardActions>
-      <Chip label="初心者" component="a" href="#basic-chip" clickable color="primary"/>
-      <Chip label="blender" component="a" href="#basic-chip" clickable />
-      <Chip label="Eevee" component="a" href="#basic-chip" clickable />
+      <CardActions sx={{px:"16px"}}>
+      <Chip label="初心者" component="a" href="#basic-chip" clickable color="success" sx={{color:"white"}}/>
+      <Chip label="blender" component="a" href="#basic-chip" clickable color="warning" sx={{color:"white"}}/>
+      <Chip label="VR" component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
+      <Chip label="3D" component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
+      <Chip label="CG" component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
       </CardActions>
-      <CardActions>
-      <Button variant="text"> <EditIcon/> 1000</Button>
-      <Button variant="text"> <StarIcon/> 3000</Button>
-      <div style={{width:"150px"}}></div>
+      <CardActions sx={{display:"flex",justifyContent:"space-between",pb:"0"}}>
+      <div>
+      <Button variant="text" > <EditIcon sx={{mx:"8px"}}/> 書き込み:62</Button>
+      <Button variant="text"> <FavoriteIcon sx={{mx:"8px"}}/> いいね:652</Button>
+      </div>
       <IconButton onClick={handleClick}>
         <FavoriteIcon sx={{
             color:isActive?"red":"grey"
         }}/>
-    </IconButton>
+      </IconButton>
       </CardActions>
     </Card>
   );

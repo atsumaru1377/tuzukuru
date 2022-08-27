@@ -17,6 +17,7 @@ export default function SideBar() {
     aria-label="global navigation"
     sx={{
       pl:"32px",
+      pr:"16px",
       height:"100vh",
       width:"256px",
       top:0,
