@@ -35,7 +35,7 @@ const Search = styled('div')(({ theme }) => ({
   
 export default function ScrollableTabsButtonAuto() {
   return (
-    <Box sx={{width:"100%",mt:"32px",ml:"32px"}}>
+    <Box sx={{width:"100%",mt:"32px",ml:"32px",maxWidth:"1560px"}}>
     <Box sx={{ bgcolor: 'white',py:"16px",pr:"16px",pl:"32px",display:'flex',justifyContent:"space-between",alignItems:'center'}}>
         <Search sx={{mr:"16px"}}>
             <SearchIconWrapper>
