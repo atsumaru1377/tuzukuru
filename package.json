@@ -19,7 +19,8 @@
     "next-linaria": "^1.0.0-beta",
     "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.2"
   },
   "devDependencies": {
     "@types/node": "18.7.4",
