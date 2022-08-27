@@ -20,12 +20,13 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-    <Box sx={{margin:"0 auto",maxWidth:"1560px"}}>
-    <Box sx={{ bgcolor: 'background.paper',p:"16px",display:'flex',alignItems:'end'}}>
+    <Box>
+    <Box sx={{ bgcolor: 'background.paper',p:"16px",pb:"0",display:'flex',alignItems:'center',marginLeft:" calc(10% - 24px)"}} >
       <Tabs
         value={value}
         sx={{
-            width:"50%"
+            width:"70%",
+            mb:"0"
         }}
         onChange={handleChange}
         variant="scrollable"
@@ -44,7 +45,7 @@ export default function ScrollableTabsButtonAuto() {
         size = "large" color="secondary"sx={{
         height:"48px",
         padding:'20px',
-        mb:"10px",
+        mb:"0",
         borderRadius:"8px",
         fontWeight:"bold",
         border:"none",
@@ -54,7 +55,7 @@ export default function ScrollableTabsButtonAuto() {
         新着順
       </Button>
     </Box>
-        <Divider/>
+        <Divider sx={{mb:"16px"}}/>
     </Box>
   );
 }

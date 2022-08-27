@@ -35,11 +35,11 @@ const Search = styled('div')(({ theme }) => ({
   
 export default function ScrollableTabsButtonAuto() {
   return (
-    <Box sx={{width:"100%",mt:"32px",ml:"32px",maxWidth:"1560px"}}>
-    <Box sx={{ bgcolor: 'white',py:"16px",pr:"16px",pl:"32px",display:'flex',justifyContent:"space-between",alignItems:'center'}}>
-        <Search sx={{mr:"16px"}}>
+    <Box sx={{width:"100%",mt:"32px",maxWidth:"1560px"}}>
+    <Box sx={{ bgcolor: 'white',py:"16px",pr:"16px",pl:"32px",display:'flex',justifyContent:"space-between",alignItems:'center',ml:"calc(10% - 48px)"}}>
+        <Search sx={{mr:"16px",ml:"calc(10% - 24px)"}}>
             <SearchIconWrapper>
-            <SearchIcon />
+            <SearchIcon/>
             </SearchIconWrapper>
             <StyledInputBase
             placeholder="コミュニティ、レシピを探す…"
