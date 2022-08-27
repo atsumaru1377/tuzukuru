@@ -1,7 +1,10 @@
 import { createTheme } from "@mui/material/styles"
 import {blue,grey}  from "@mui/material/colors"
 
-// Material UIのテーマ上書き
+interface Theme {
+  
+}
+
 const theme = createTheme({
     palette: {
       primary: {

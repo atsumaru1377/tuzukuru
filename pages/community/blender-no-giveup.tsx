@@ -13,6 +13,7 @@ import AvatarGroup from "@mui/material/AvatarGroup"
 import TukuCard from "../components/tukurepoCard"
 import Comment from "../components/comment"
 import Footer from "../components/footer"
+import SiteHeader from "../components/siteHeader"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -28,6 +29,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
+     <SiteHeader title="Tuzukuru 続くを作る | community page of blender no give up "></SiteHeader>
       <Box
         sx={{
           display:"flex",

@@ -14,6 +14,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 export default function SideBar() {
   return (
     <Paper
+    aria-label="global navigation"
     sx={{
       pl:"32px",
       height:"100vh",
@@ -26,7 +27,7 @@ export default function SideBar() {
       }}>
       <div style={{height:"32px"}}></div>
       <MenuList>
-        <MenuItem>
+        <MenuItem aria-label="logo">
         <Link href="/">
           <a>
           <Image src={Logo} alt= "Tuzukuru Logo" ></Image>
@@ -41,7 +42,7 @@ export default function SideBar() {
 
         <div style={{height:"8px"}}></div>
         <Link href ="./mypage">
-        <MenuItem>
+        <MenuItem alia-label="マイコミュニティ">
           <ListItemText
           primaryTypographyProps={{
             fontSize:16,
@@ -50,7 +51,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="./community">
+        <Link href="/community">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -66,7 +67,7 @@ export default function SideBar() {
           }}>レシピ
           </ListItemText>
         </MenuItem>
-        <Link href="./recipe">
+        <Link href="/recipe">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -74,7 +75,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="./mypage">
+        <Link href="/mypage">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -97,7 +98,7 @@ export default function SideBar() {
             fontWeight:"bold"
           }}>つくレポ</ListItemText>
         </MenuItem>
-        <Link href="./tukurepo">
+        <Link href="/tukurepo">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -105,7 +106,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="./tukurepo/post">
+        <Link href="/tukurepo/post">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14

@@ -1,14 +1,10 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header  from './components/header'
+import SiteHeader from "./components/siteHeader"
 import SideBar from './components/globalNav'
 import Card from "./components/repoCard"
 import Box from "@mui/material/Card"
 import Tabs from "./components/Tabs"
 import SearchBar from "./components/searchBar"
-import {css} from '@emotion/react'
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
@@ -18,12 +14,13 @@ const boxStyle:{[key:string]:string} = {
   p:"32px",
   right:"0",
   top:"0",
-  width:'calc(100% - 280px)',
+  width:'calc(100% - 280px)'
 }
 
 const Home: NextPage = () => {
   return (
     <>
+     <SiteHeader title="Tuzukuru 続くを作る | top page"></SiteHeader>
       <Box
         sx={{
           display:"flex",
@@ -32,9 +29,11 @@ const Home: NextPage = () => {
         <Box style={boxStyle}>
             <SearchBar/>
             <Tabs/>
+            <div style={{display:"flex",justifyContent:"center",width:"100%",height:"100%"}}>
             <Box sx={{
               display:"flex",
-              flexWrap:"wrap"
+              flexWrap:"wrap",
+              justifyContent:"center"
             }}>
             <Card/>
             <Card/>
@@ -46,7 +45,9 @@ const Home: NextPage = () => {
             <Card/>
             <Card/>
             </Box>
+            </div>
         </Box>
+
       </Box>
     </>
   )
