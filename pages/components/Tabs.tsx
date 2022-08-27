@@ -17,7 +17,7 @@ export default function ScrollableTabsButtonAuto() {
 
   return (
     <Box>
-    <Box sx={{ bgcolor: 'background.paper',p:"16px",pb:"0",display:'flex',justifyContent:"space-between",alignItems:'center',margin:"0 calc(12.5% - 32px)"}} >
+    <Box sx={{ bgcolor: 'background.paper',pb:"0",display:'flex',justifyContent:"space-between",alignItems:'center'}} >
       <Tabs
         value={value}
         sx={{

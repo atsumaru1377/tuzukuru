@@ -16,8 +16,6 @@ export default function MediaCard() {
     };
   return (
     <Card sx={{ 
-        maxWidth: "100%",
-        minWidth:"90%",
         m:"15px",
         position:"relative",
         borderRadius:"20px",

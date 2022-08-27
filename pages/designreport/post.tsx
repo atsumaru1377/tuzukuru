@@ -29,9 +29,9 @@ const Home: NextPage = () => {
         }}>
         <SideBar/>
         <Box style={boxStyle}>
+        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar></SearchBar>
-            <div style={{padding:"0px 80px"}}>
-            <div style={{padding:"32px"}}>
+            <div style={{paddingTop:"32px"}}>
             <Typography variant = "h2" sx={{
                 fontSize:"1.5rem",
                 fontWeight:"500",
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
             </div>
             </div>
             <Footer/>  
-            </div>
+          </div>
         </Box>
         
       </Box>

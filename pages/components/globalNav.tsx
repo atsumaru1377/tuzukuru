@@ -99,7 +99,7 @@ export default function SideBar() {
             fontWeight:"bold"
           }}>つくレポ</ListItemText>
         </MenuItem>
-        <Link href="/tukurepo">
+        <Link href="/designreport">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -107,7 +107,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="/tukurepo/post">
+        <Link href="/designreport/post">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14

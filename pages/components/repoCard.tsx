@@ -18,11 +18,11 @@ export default function MediaCard() {
         setIsActive(current => !current);
     };
   return (
-    <Card sx={{ 
-        width : {xl:"25%",lg:"45%",xs:"80%"},
+    <Card sx={{   
         m:"16px",
         position:"relative",
         borderRadius:"24px",
+        minWidth:"256px"
     }}>
       <CardMedia
         component="img"
@@ -48,7 +48,7 @@ export default function MediaCard() {
       </div>
       <IconButton onClick={handleClick}>
         <FavoriteIcon sx={{
-            color:isActive?"red":"grey"
+            color:isActive?"#2196f3":"grey"
         }}/>
       </IconButton>
       </CardActions>

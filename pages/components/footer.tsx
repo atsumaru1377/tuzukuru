@@ -1,7 +1,7 @@
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import Logo from "../../public/logo.svg"
+import Logo from "../../public/logo_Footer.svg"
 import Image from "next/image"
 import Link from "next/link"
 export default function AlignItemsList() {
@@ -14,7 +14,6 @@ export default function AlignItemsList() {
                         <Box sx={{display:"flex",justifyContent:"center",alignItems:"end"}}>
                         <Image src={Logo} alt="logo" />
                         <Divider orientation="vertical" sx={{mx:"16px"}}/>
-                        続くを作る。
                         </Box>
                         </a>
                     </Link>

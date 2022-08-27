@@ -7,13 +7,11 @@ import BreadCrumbs from "../components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
-import Accordion from "../components/accordion"
 import TukuCard from "../components/tukurepoCard"
-import RepoCard from "../components/repoCard"
 import Footer from "../components/footer";
-import Comment from "../components/comment";
+import SearchBar from "../components/searchBar"
 import Divider from "@mui/material/Divider"
-import Link from "next/link"
+
 
 import Thumbnail from "../../public/static/images/sample_thumb.png"
 
@@ -35,10 +33,12 @@ const Home: NextPage = () => {
       <Box>
         <SideBar/>
         <Box style={boxStyle}>
+        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+          <SearchBar/>
           <BreadCrumbs/>
-          <Box
-            sx={{
-              p:"32px",
+          <div
+            style={{
+              paddingBottom:"32px",
               display:"flex",
               maxHeight:"360px"
             }}>
@@ -79,10 +79,10 @@ const Home: NextPage = () => {
                 my:"16px"
               }}>レシピを参考にSFワールドを作成しました。いまいちクオリティがわからず多くの方からフィードバックを受けたいです。よろしくお願いします！！</Typography>
             </div>
-          </Box>
-          <Box
-            sx={{
-              p:"32px"
+          </div>
+          <div
+            style={{
+              paddingTop:"32px"
             }}>
           <div style ={{display:"flex"}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
@@ -148,10 +148,11 @@ const Home: NextPage = () => {
                 <TukuCard></TukuCard>
                 <TukuCard></TukuCard>
             </div>
-          </Box>
+          </div>
           <Box>
           <Footer/>
           </Box>
+          </div>
         </Box>
         </Box>
     </>
