@@ -42,7 +42,7 @@ export default function SideBar() {
         </Box>
 
         <div style={{height:"8px"}}></div>
-        <Link href ="./mypage">
+        <Link href ="/mypage">
         <MenuItem alia-label="マイコミュニティ">
           <ListItemText
           primaryTypographyProps={{

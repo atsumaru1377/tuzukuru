@@ -3,12 +3,12 @@ import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
 import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
-import {css} from '@emotion/react'
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import ImageIcon from '@mui/icons-material/Image';
 import Button from "@mui/material/Button";
 import Footer from "../components/footer";
 import SiteHeader from "../components/siteHeader"
+import SearchBar from "../components/searchBar"
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -22,18 +22,20 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
-     <SiteHeader title="Tuzukuru 続くを作る | tukurepo post page"></SiteHeader>
+     <SiteHeader title="Tuzukuru 続くを作る | Tukurepo Post Page"></SiteHeader>
       <Box
         sx={{
           display:"flex",
         }}>
         <SideBar/>
         <Box style={boxStyle}>
+            <SearchBar></SearchBar>
+            <div style={{padding:"0px 80px"}}>
             <div style={{padding:"32px"}}>
             <Typography variant = "h2" sx={{
                 fontSize:"1.5rem",
                 fontWeight:"500",
-                my:"32px"
+                mb:"32px"
             }}>つくレポを投稿する</Typography>
             <Typography  sx={{
                 fontSize:"1rem",
@@ -86,6 +88,7 @@ const Home: NextPage = () => {
             </div>
             </div>
             <Footer/>  
+            </div>
         </Box>
         
       </Box>

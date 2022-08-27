@@ -44,6 +44,12 @@ const Home: NextPage = () => {
             <Card/>
             <Card/>
             <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
             </Box>
             </div>
             </div>

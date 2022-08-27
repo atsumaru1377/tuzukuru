@@ -19,19 +19,17 @@ export default function MediaCard() {
     };
   return (
     <Card sx={{ 
-        width : {lg:"40%",sm:"70%",xs:"95%"},
-        m:"24px",
+        width : {xl:"25%",lg:"45%",xs:"80%"},
+        m:"16px",
         position:"relative",
         borderRadius:"24px",
-        pb:"0"
     }}>
       <CardMedia
         component="img"
-        height="50%"
         image="/static/images/sample_thumb.png"
         alt="blender tutorial sample"
       />
-      <CardContent sx={{px:"16px",pb:"0"}}>
+      <CardContent sx={{px:"16px",pb:"0",pt:"16px"}}>
         <Typography gutterBottom variant="h5" component="div">
           Blneder リギング入門講座
         </Typography>
@@ -43,7 +41,7 @@ export default function MediaCard() {
       <Chip label="3D" component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
       <Chip label="CG" component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
       </CardActions>
-      <CardActions sx={{display:"flex",justifyContent:"space-between",pb:"0"}}>
+      <CardActions sx={{display:"flex",justifyContent:"space-between",pb:"16px"}}>
       <div>
       <Button variant="text" > <EditIcon sx={{mx:"8px"}}/> 書き込み:62</Button>
       <Button variant="text"> <FavoriteIcon sx={{mx:"8px"}}/> いいね:652</Button>

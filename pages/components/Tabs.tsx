@@ -3,12 +3,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import Img from "next/image"
-
 import Button from '@mui/material/Button'
 import SortIcon from '@mui/icons-material/Sort';
-
-import AfterEffects from "../../public/static/images/adobelogo/AfterEffects.png"
 
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 
@@ -21,11 +17,11 @@ export default function ScrollableTabsButtonAuto() {
 
   return (
     <Box>
-    <Box sx={{ bgcolor: 'background.paper',p:"16px",pb:"0",display:'flex',alignItems:'center',marginLeft:" calc(10% - 24px)"}} >
+    <Box sx={{ bgcolor: 'background.paper',p:"16px",pb:"0",display:'flex',justifyContent:"space-between",alignItems:'center',margin:"0 calc(12.5% - 32px)"}} >
       <Tabs
         value={value}
         sx={{
-            width:"70%",
+            width:"80%",
             mb:"0"
         }}
         onChange={handleChange}
@@ -46,6 +42,7 @@ export default function ScrollableTabsButtonAuto() {
         height:"48px",
         padding:'20px',
         mb:"0",
+        ml:"16px",
         borderRadius:"8px",
         fontWeight:"bold",
         border:"none",
