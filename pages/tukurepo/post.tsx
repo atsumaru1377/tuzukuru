@@ -48,7 +48,7 @@ const Home: NextPage = () => {
                     <div style={{textAlign:"center"}}>
                     <UploadFileIcon sx={{fontSize:"32px"}}/>
                 <Typography variant="body1">Click to upload or drag and drop</Typography>
-                <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography> 
+                <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
                     </div>
                 </div>
             </Button>
@@ -79,15 +79,15 @@ const Home: NextPage = () => {
             <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
             <div style={{height:"16px",width:"100%"}}></div>
             <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            
+
             <div style={{width:"100%",paddingTop:"32px",display:"flex",justifyContent:"flex-end"}}>
                 <Button variant="contained"sx={{mx:"8px" ,color:"white"}}>投稿する</Button>
                 <Button variant="outlined" sx={{mx:"8px"}}>キャンセル</Button>
             </div>
             </div>
-            <Footer/>  
+            <Footer/>
         </Box>
-        
+
       </Box>
     </>
   )
