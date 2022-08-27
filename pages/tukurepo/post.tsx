@@ -11,7 +11,7 @@ import Footer from "../components/footer";
 import SiteHeader from "../components/siteHeader";
 import SearchBar from "../components/searchBar";
 import {hash} from "../../database/hash";
-import {addReport} from '../../database/addReport';
+import {readReportCount, addReport} from '../../database/addReport';
 import Questions from '../../database/questions';
 import ReportItemModel from '../../database/reportItemModel';
 import ReportModel from '../../database/reportModel';
@@ -43,7 +43,9 @@ const Home: NextPage = () => {
   });
 
   const onSubmit = (data:ReportItemModel):void => {
-    addReport(data);
+    const repo_id:number = readReportCount();
+    const newReport:ReportModel = {[repo_id]: data};
+    addReport(newReport);
   }
 
   return (
