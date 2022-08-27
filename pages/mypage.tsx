@@ -38,8 +38,8 @@ const Home: NextPage = () => {
             }}>
             <SearchBar/>
             <MyPage/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}> 
-                <Avatar sx={{width:130,height:130}}>M</Avatar> 
+            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
+                <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
                     <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                         <Typography>いいね数</Typography>
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>100</Typography>
                     </div>
-                    
+
                 </div>
             </div>
             <Divider/>
@@ -79,8 +79,8 @@ const Home: NextPage = () => {
                   my:"32px",
                   pl:"16px"
                 }}>マイコミュニティ</Typography>
-            <CommuCard/>    
-            <CommuCard/>    
+            <CommuCard/>
+            <CommuCard/>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
