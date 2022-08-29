@@ -28,6 +28,7 @@ import {addReport} from '../../database/addReport';
 import ReportItemModel from '../../database/reportItemModel';
 import ReportModel from '../../database/reportModel';
 import { useForm, Controller } from "react-hook-form";
+import { BaseSyntheticEvent } from 'react'
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -38,26 +39,29 @@ const boxStyle:{[key:string]:string} = {
   width:'calc(100% - 280px)',
 }
 
+const defaultValue:ReportItemModel = {
+  photo_url : "",
+  recipe_id : null,
+  point : "",
+  q_who : "",
+  q_where : "",
+  q_when : "",
+  q_how : "",
+  likes: 0,
+  comments: {},
+}
+
 const Home: NextPage = () => {
-  const { control, handleSubmit } = useForm<ReportItemModel>({
+  const { control, handleSubmit, reset } = useForm<ReportItemModel>({
     mode : 'onSubmit',
-    defaultValues: {
-        photo_url : "",
-        recipe_id : 0,
-        point : "",
-        q_who : "",
-        q_where : "",
-        q_when : "",
-        q_how : "",
-        likes: 0,
-        comments: {},
-    },
+    defaultValues: defaultValue
   });
 
   const onSubmit = (data:ReportItemModel):void => {
     data.recipe_id = hash(String(data.recipe_id));
     console.log(data);
     addReport(data);
+    reset();
   }
 
   return (
@@ -78,44 +82,47 @@ const Home: NextPage = () => {
                   my:"32px"
               }}>でざレポを投稿する</Typography>
 
-              <Typography  sx={{
-                  fontWeight:"bold",
-                  fontSize:"1.5rem",
-                  my:"16px"
-              }}>作品</Typography>
-
-              <div style={{display:"flex"}}>
-                <Button component="label" sx={{
-                  width:"100%",
-                  borderRadius:"15px",
-                  border:"solid 1px grey"
-                }}>
-                  <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <div style={{textAlign:"center"}}>
-                    <Controller
-                      control={control}
-                      name="photo_url"
-                      render={({field}) => (
-                        <div>
-                          <input {...field} type="file" accept="image/*,.png,.jpg,.jpeg,.gif,.svg" hidden/>
-                        </div>
-                      )}
-                    />
-                    <UploadFileIcon sx={{fontSize:"32px"}}/>
-                    <Typography variant="body1">Click to upload or drag and drop</Typography>
-                    <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
+              <div style={{display:"flex", justifyContent:"space-between"}}>
+                <div style={{width:"48%"}}>
+                  <Typography  sx={{
+                      fontWeight:"bold",
+                      fontSize:"1.5rem",
+                      my:"16px"
+                  }}>作品</Typography>
+                  <Button component="label" sx={{
+                    width:"100%",
+                    borderRadius:"15px",
+                    border:"solid 1px grey"
+                  }}>
+                    <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                      <div style={{textAlign:"center"}}>
+                      <Controller
+                        control={control}
+                        name="photo_url"
+                        render={({field}) => (
+                          <div>
+                            <input {...field} type="file" accept="image/*,.png,.jpg,.jpeg,.gif,.svg" hidden/>
+                          </div>
+                        )}
+                      />
+                      <UploadFileIcon sx={{fontSize:"32px"}}/>
+                      <Typography variant="body1">Click to upload or drag and drop</Typography>
+                      <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB)</Typography>
+                      </div>
                     </div>
-                  </div>
-                </Button>
+                  </Button>
+                </div>
 
-              <Typography  sx={{
-                  fontWeight:"bold",
-                  fontSize:"1.5rem",
-                  my:"16px"
-              }}>プレビュー</Typography>
-                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
-                  <div style={{textAlign:"center"}}>
-                  <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
+                <div style={{width:"48%"}}>
+                  <Typography  sx={{
+                    fontWeight:"bold",
+                    fontSize:"1.5rem",
+                    my:"16px"
+                  }}>プレビュー</Typography>
+                  <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px", padding:"6px 8px"}}>
+                    <div style={{textAlign:"center", height:"64px"}}>
+                    <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -187,7 +194,7 @@ const Home: NextPage = () => {
               <FormControlLabel control={<Checkbox defaultChecked />} label="全体公開" />
               <div style={{width:"100%",padding:"32px 0",display:"flex",justifyContent:"center"}}>
                   <Button variant="contained" sx={{mx:"8px" ,color:"white"}} type="submit">投稿する</Button>
-                  <Button variant="outlined" sx={{mx:"8px"}}>キャンセル</Button>
+                  <Button variant="outlined" sx={{mx:"8px"}} type="reset">キャンセル</Button>
               </div>
             </div>
             <Footer/>

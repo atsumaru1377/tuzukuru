@@ -3,7 +3,7 @@ import Questions from "./questions";4
 
 type ReportItemModel = {
 	photo_url : string;
-	recipe_id : number;
+	recipe_id : number | null;
 	point : string;
 	q_who : string;
 	q_where : string;
