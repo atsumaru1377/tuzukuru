@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <SideBar/>
         <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
-            <SearchBar></SearchBar>
+            <SearchBar/>
             <Tabs/>
             <Typography variant = "h2" sx={{
                 fontSize:"1.5rem",
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
               {datas.map((data: designReport,index:number) => {
               return (
                 <Grid item xs={12} md= {12} lg={6} xl={4} key={index}>
-                  <Card 
+                  <Card
                   src = {data.src}
                   />
                 </Grid>

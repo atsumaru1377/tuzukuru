@@ -16,7 +16,7 @@ export default function ChipsArray(props:ChipArray) {
 
 	const handleClick = (chipOnClick:ChipData) => {
     setChipData((chips) => (chips.map(chip => {
-			if (chip.key == chipOnClick.key){
+			if (chip.key == chipOnClick.key || chipOnClick.key == 0){
 				chip.variant === "filled" ? chip.variant="outlined" : chip.variant="filled";
 			};
 			return chip;

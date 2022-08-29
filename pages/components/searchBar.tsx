@@ -36,23 +36,24 @@ const Search = styled('div')(({ theme }) => ({
       width: '10px',
     },
   }));
-  
+
 export default function ScrollableTabsButtonAuto() {
   return (
     <Box sx={{width:"100%",mt:"32px",maxWidth:"1560px"}}>
     <Box sx={{ bgcolor: 'white',py:"16px",display:'flex',justifyContent:"space-between",alignItems:'center'}}>
-        <Search sx={{mr:"16px"}}>
-            <SearchIconWrapper>
-            <SearchIcon/>
-            </SearchIconWrapper>
-            <StyledInputBase
-            placeholder="コミュニティ、レシピを探す…"
-            inputProps={{ 'aria-label': 'search' }}
-            sx={{width:"100%",height:"48px"}}
-            />
-        </Search>
-        <IconButton/>
-    </Box>    
+      <Search sx={{mr:"16px"}}>
+        <SearchIconWrapper>
+        <SearchIcon/>
+        </SearchIconWrapper>
+        <StyledInputBase
+          placeholder="コミュニティ、レシピを探す…"
+          inputProps={{ 'aria-label': 'search' }}
+          sx={{width:"100%",height:"48px"}}
+          onClick={()=>{window.location.href = "/search"}}
+        />
+      </Search>
+      <IconButton/>
+    </Box>
     </Box>
 
   );
