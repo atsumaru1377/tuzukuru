@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import { breadCrumbs } from './type';
+import { breadCrumbs } from '../../plugins/type';
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   event.preventDefault();;

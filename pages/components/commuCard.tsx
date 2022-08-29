@@ -8,7 +8,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import Divider from "@mui/material/Divider"
 import {useState} from 'react';
 import Link from "next/link"
-import {CommuCardType} from "./type"
+import {CommuCardType} from "../../plugins/type"
 
 export default function MediaCard(props:CommuCardType) {
     const [isActive, setIsActive] = useState(false);
@@ -17,7 +17,7 @@ export default function MediaCard(props:CommuCardType) {
     };
   return (
 
-    <Card sx={{ 
+    <Card sx={{
         m:"15px",
         position:"relative",
         borderRadius:"20px",
@@ -35,7 +35,7 @@ export default function MediaCard(props:CommuCardType) {
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
           {props.title}
         </Typography>
-        <div style={{maxWidth:"100%",overflowY:"scroll",display:"flex"}}>   
+        <div style={{maxWidth:"100%",overflowY:"scroll",display:"flex"}}>
             <Chip label="初心者" sx={{mx:"8px"}}  color="success"></Chip>
             <Chip label="blender"sx={{mx:"8px"}} color="warning"></Chip>
             <Chip label="SF"sx={{mx:"8px"}} color = "info"></Chip>
