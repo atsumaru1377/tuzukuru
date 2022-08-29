@@ -24,8 +24,7 @@ const style = {
 };
 
 import {hash} from "../../database/hash";
-import {readReportCount, addReport} from '../../database/addReport';
-import Questions from '../../database/questions';
+import {addReport} from '../../database/addReport';
 import ReportItemModel from '../../database/reportItemModel';
 import ReportModel from '../../database/reportModel';
 import { useForm, Controller } from "react-hook-form";
@@ -43,6 +42,7 @@ const Home: NextPage = () => {
   const { control, handleSubmit } = useForm<ReportItemModel>({
     mode : 'onSubmit',
     defaultValues: {
+        photo_url : "",
         recipe_id : 0,
         point : "",
         q_who : "",
@@ -56,6 +56,7 @@ const Home: NextPage = () => {
 
   const onSubmit = (data:ReportItemModel):void => {
     data.recipe_id = hash(String(data.recipe_id));
+    console.log(data);
     addReport(data);
   }
 
@@ -84,19 +85,28 @@ const Home: NextPage = () => {
               }}>作品</Typography>
 
               <div style={{display:"flex"}}>
-                <Button sx={{
-                    width:"100%",
-                    borderRadius:"15px",
-                    border:"solid 1px grey"
+                <Button component="label" sx={{
+                  width:"100%",
+                  borderRadius:"15px",
+                  border:"solid 1px grey"
                 }}>
-                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                  <div style={{textAlign:"center"}}>
+                  <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <div style={{textAlign:"center"}}>
+                    <Controller
+                      control={control}
+                      name="photo_url"
+                      render={({field}) => (
+                        <div>
+                          <input {...field} type="file" accept="image/*,.png,.jpg,.jpeg,.gif,.svg" hidden/>
+                        </div>
+                      )}
+                    />
                     <UploadFileIcon sx={{fontSize:"32px"}}/>
                     <Typography variant="body1">Click to upload or drag and drop</Typography>
                     <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
+                    </div>
                   </div>
-                </div>
-              </Button>
+                </Button>
 
               <Typography  sx={{
                   fontWeight:"bold",
