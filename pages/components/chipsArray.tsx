@@ -48,7 +48,7 @@ export default function ChipsArray(props:ChipArray) {
 						label={data.label}
 						variant={data.variant}
 						onClick={() => handleClick(data)}
-					/>
+						/>
 				</ListItem>
 			);
 		})}
