@@ -149,7 +149,7 @@ const Home: NextPage = () => {
               })}
             </Grid>
             <div style={{display:"flex",justifyContent:"center",marginBottom:"16px"}}>
-            <Button href="/recipe">もっと見る</Button>
+            <Button href="/designreport">もっと見る</Button>
             </div>
             <Footer></Footer>
             </div>
