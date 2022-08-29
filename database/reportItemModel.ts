@@ -2,6 +2,7 @@ import Comments from "./comments";
 import Questions from "./questions";4
 
 type ReportItemModel = {
+	photo_url : string;
 	recipe_id : number;
 	point : string;
 	q_who : string;
