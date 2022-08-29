@@ -12,7 +12,7 @@ import TukuCard from "../components/tukurepoCard"
 import Comment from "../components/comment"
 import Footer from "../components/footer"
 import SiteHeader from "../components/siteHeader"
-import { DesignCardType } from '../components/type'
+import { DesignCardType } from '../../plugins/type'
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -103,7 +103,7 @@ const Home: NextPage = () => {
                <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
                {designData.map((data: DesignCardType,index:number) => {
             return (
-                <TukuCard 
+                <TukuCard
                 src = {data.src}
                 key={index}
                 />

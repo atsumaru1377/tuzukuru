@@ -13,7 +13,7 @@ import RepoCard from "./components/tukurepoCard"
 import RecipeCard from "./components/repoCard"
 import Footer from "./components/footer"
 import Grid from "@mui/material/Grid"
-import {CommuCardType,DesignCardType,RecipeCardType} from "./components/type"
+import {CommuCardType,DesignCardType,RecipeCardType} from "../plugins/type"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",

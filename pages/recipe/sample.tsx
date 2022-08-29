@@ -16,7 +16,7 @@ import Comment from "../components/comment";
 import SearchBar from "../components/searchBar"
 import Link from "next/link"
 import Button from "@mui/material/Button"
-import { DesignCardType ,RecipeCardType} from '../components/type'
+import { DesignCardType ,RecipeCardType} from '../../plugins/type'
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
       <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
         <SideBar/>
-        <SearchBar/>    
+        <SearchBar/>
         <BreadCrumbs
           second = "レシピ"
           secondHref ="/recipe"
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
               display:"flex",
               maxHeight:"360px"
             }}>
-            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover",borderRadius:"15px"}}/> 
+            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover",borderRadius:"15px"}}/>
             <div style={{
               width:"calc(80% - 320px)",
               minWidth:"400px",
@@ -130,7 +130,7 @@ const Home: NextPage = () => {
             <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
-                <TukuCard 
+                <TukuCard
                 src = {data.src}
                 key={index}
                 />
@@ -182,7 +182,7 @@ const Home: NextPage = () => {
               })}
             </div>
           <Footer/>
-        </div>  
+        </div>
         </Box>
         </Box>
     </>

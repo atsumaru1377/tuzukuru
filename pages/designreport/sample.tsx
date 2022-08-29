@@ -12,7 +12,7 @@ import Footer from "../components/footer";
 import SearchBar from "../components/searchBar"
 import Divider from "@mui/material/Divider"
 import Thumbnail from "../../public/static/images/sample_thumb.png"
-import { DesignCardType } from '../components/type'
+import { DesignCardType } from '../../plugins/type'
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -152,7 +152,7 @@ const Home: NextPage = () => {
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
-                <RepoCard 
+                <RepoCard
                 src = {data.src}
                 key={index}
                 />
