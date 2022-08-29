@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
-import { breadCrumbs } from '../../plugins/type';
+import { BreadCrumbs } from '../../plugins/type';
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   event.preventDefault();;
 }
 
 
-export default function ActiveLastBreadcrumb(props:breadCrumbs) {
+export default function ActiveLastBreadcrumb(props:BreadCrumbs) {
   return (
     <div role="presentation" onClick={handleClick} style={{
       position:"relative",width:"100%",padding:"20px"

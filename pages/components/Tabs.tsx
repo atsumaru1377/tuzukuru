@@ -28,10 +28,10 @@ export default function ScrollableTabsButtonAuto() {
         variant="scrollable"
         scrollButtons="auto"
         aria-label="design tools tabs"
-      > 
-        <Tab icon = {<LocalFireDepartmentIcon sx={{color:"red"}}/>} label="人気" sx={{width:"144px"}}/> 
-        <Tab icon = {<img src="/static/images/adobelogo/figma_logo.svg" alt = "blender logo" style={{width:"24px",height:"24px"}}/>} label="figma"sx={{width:"144px"}} />
-        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo"/>} label="After Effects" sx={{width:"144px"}}/> 
+      >
+        <Tab icon = {<LocalFireDepartmentIcon sx={{color:"red"}}/>} label="人気" sx={{width:"144px"}}/>
+        <Tab icon = {<img src="/static/images/adobelogo/figma.svg" alt = "figma logo" style={{width:"24px",height:"24px"}}/>} label="figma"sx={{width:"144px"}} />
+        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo"/>} label="After Effects" sx={{width:"144px"}}/>
         <Tab icon = {<img src="/static/images/adobelogo/illustrator.png" alt = "illustrator logo"/>} label="illustrator" sx={{width:"144px"}}/>
         <Tab icon = {<img src="/static/images/adobelogo/indesign.png" alt = "indesign logo"/>} label="indesign"sx={{width:"144px"}} />
         <Tab icon = {<img src="/static/images/adobelogo/photoshop.png" alt = "photoshop logo"/>} label="photoshop" sx={{width:"144px"}}/>
@@ -39,7 +39,7 @@ export default function ScrollableTabsButtonAuto() {
         <Tab icon = {<img src="/static/images/adobelogo/xd.png" alt = "xd logo"/>} label="XD"sx={{width:"144px"}} />
         <Tab icon = {<img src="/static/images/adobelogo/blender.svg" alt = "blender logo" style={{width:"32px",height:"32px"}}/>} label="blender"sx={{width:"144px"}} />
       </Tabs>
-      <Button startIcon={<SortIcon/>} 
+      <Button startIcon={<SortIcon/>}
         size = "large" sx={{
         height:"48px",
         padding:'20px',
