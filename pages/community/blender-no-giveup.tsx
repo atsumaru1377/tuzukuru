@@ -5,7 +5,6 @@ import {css} from '@emotion/react'
 import SearchBar from "../components/searchBar"
 import MyPage from "../components/breadCrumbs"
 import Avatar from "@mui/material/Avatar"
-import Image from "next/image"
 import Typography from "@mui/material/Typography"
 import Chip from "@mui/material/Chip"
 import Divider from "@mui/material/Divider"

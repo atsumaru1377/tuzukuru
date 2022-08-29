@@ -17,6 +17,9 @@ const boxStyle:{[key:string]:string} = {
   top:"0",
   width:'calc(100% - 280px)'
 }
+type designReport = {
+  src:string;
+}
 
 const Home: NextPage = () => {
   return (
