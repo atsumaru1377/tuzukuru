@@ -10,7 +10,7 @@ const ListItem = styled('li')(({ theme }) => ({
 }));
 
 export default function chipsArray(props:ChipArray) {
-	const [chipData, setChipData] = useState<readonly ChipData[]>(
+	const [chipData, setChipData] = useState<ChipData[]>(
 		props.chips
 	);
 
