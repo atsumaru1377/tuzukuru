@@ -11,7 +11,6 @@ import SiteHeader from "../components/siteHeader"
 import SearchBar from "../components/searchBar"
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
@@ -24,6 +23,12 @@ const style = {
   p: 4,
 };
 
+import {hash} from "../../database/hash";
+import {addReport} from '../../database/addReport';
+import Questions from '../../database/questions';
+import ReportItemModel from '../../database/reportItemModel';
+import ReportModel from '../../database/reportModel';
+
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
   height:"100%",
@@ -34,6 +39,7 @@ const boxStyle:{[key:string]:string} = {
 }
 
 const Home: NextPage = () => {
+
   return (
     <>
      <SiteHeader title="Tuzukuru 続くを作る | Tukurepo Post Page"></SiteHeader>
@@ -62,13 +68,13 @@ const Home: NextPage = () => {
                 borderRadius:"15px",
                 border:"solid 1px grey"
             }}>
-            <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                <div style={{textAlign:"center"}}>
-                <UploadFileIcon sx={{fontSize:"32px"}}/>
-            <Typography variant="body1">Click to upload or drag and drop</Typography>
-            <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography> 
+                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                    <div style={{textAlign:"center"}}>
+                    <UploadFileIcon sx={{fontSize:"32px"}}/>
+                <Typography variant="body1">Click to upload or drag and drop</Typography>
+                <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
+                    </div>
                 </div>
-            </div>
             </Button>
             <Typography  sx={{
               fontWeight:"bold",
@@ -112,10 +118,10 @@ const Home: NextPage = () => {
                 <Button variant="outlined"size="large" sx={{mx:"8px"}}>キャンセル</Button>
             </div>
             </div>
-            <Footer/>  
+            <Footer/>
           </div>
         </Box>
-        
+
       </Box>
     </>
   )

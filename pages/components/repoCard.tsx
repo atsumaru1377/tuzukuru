@@ -28,7 +28,7 @@ export default function MediaCard(props:Props) {
         setIsActive(current => !current);
     };
   return (
-    <Card sx={{   
+    <Card sx={{
         m:"16px",
         position:"relative",
         borderRadius:"24px",
