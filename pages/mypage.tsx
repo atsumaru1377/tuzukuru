@@ -77,9 +77,13 @@ const Home: NextPage = () => {
         <Box style={boxStyle}>
              <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
-            <MyPage/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}> 
-                <Avatar sx={{width:130,height:130}}>M</Avatar> 
+            <MyPage
+              second = "マイページ"
+              secondHref ="/mypage"
+              third = ""
+              thirdHref=''/>
+            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
+                <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
                     <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
@@ -108,7 +112,7 @@ const Home: NextPage = () => {
                         <Typography>いいね数</Typography>
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>100</Typography>
                     </div>
-                    
+
                 </div>
             </div>
             <Divider/>
@@ -123,7 +127,7 @@ const Home: NextPage = () => {
             {commuData.map((data: CommuCardType,index:number) => {
             return (
               <Grid item md={12}lg= {12}xl={6} key={index}>
-                <CommuCard 
+                <CommuCard
                 src = {data.src}
                 title={data.title}
                 tool={data.tool}
@@ -135,7 +139,7 @@ const Home: NextPage = () => {
               </Grid>
               );
             })}
-            </Grid> 
+            </Grid>
 
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
@@ -147,7 +151,7 @@ const Home: NextPage = () => {
                           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
-                <RepoCard 
+                <RepoCard
                 src = {data.src}
                 key={index}
                 />
