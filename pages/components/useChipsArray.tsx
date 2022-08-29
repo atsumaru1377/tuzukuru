@@ -9,7 +9,7 @@ const ListItem = styled('li')(({ theme }) => ({
 	margin: theme.spacing(0.5),
 }));
 
-export default function chipsArray(props:ChipArray) {
+export default function useChipsArray(props:ChipArray) {
 	const [chipData, setChipData] = useState<ChipData[]>(
 		props.chips
 	);
