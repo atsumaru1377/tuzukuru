@@ -6,33 +6,36 @@ import Chip from '@mui/material/Chip'
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Divider from "@mui/material/Divider"
-
 import {useState} from 'react';
+import Link from "next/link"
+import {CommuCardType} from "./type"
 
-export default function MediaCard() {
+export default function MediaCard(props:CommuCardType) {
     const [isActive, setIsActive] = useState(false);
     const handleClick = () => {
         setIsActive(current => !current);
     };
   return (
+
     <Card sx={{ 
         m:"15px",
         position:"relative",
         borderRadius:"20px",
-        display:"flex"
+        display:{lg:"flex"}
     }}>
+      <Link href="/community/sample">
       <CardMedia
         component="img"
-        height="170px"
-        image="/static/images/sample_thumb.png"
-        alt="blender tutorial sample"
-        sx={{width:"50%"}}
+        image={props.src}
+        alt={props.title}
+        sx={{width:{lg:"50%"},objectFit:"cover",cursor:"pointer"}}
       />
+      </Link>
       <CardContent>
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
-          Blnederを諦めない
+          {props.title}
         </Typography>
-        <div style={{width:"100%"}}>   
+        <div style={{maxWidth:"100%",overflowY:"scroll",display:"flex"}}>   
             <Chip label="初心者" sx={{mx:"8px"}}  color="success"></Chip>
             <Chip label="blender"sx={{mx:"8px"}} color="warning"></Chip>
             <Chip label="SF"sx={{mx:"8px"}} color = "info"></Chip>
@@ -49,6 +52,7 @@ export default function MediaCard() {
             </AvatarGroup>
         </div>
       </CardContent>
+
     </Card>
   );
 }

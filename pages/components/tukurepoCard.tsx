@@ -7,16 +7,21 @@ import Avatar from '@mui/material/Avatar';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import Typography from '@mui/material/Typography';
-
-export default function ImgMediaCard() {
+import Link from "next/link"
+type Card = {
+  src:string
+}
+export default function ImgMediaCard(props:Card) {
   return (
-    <Card role="tukurepo card" sx={{ minWidth: 216,m:"16px",borderRadius:"15px"}}>
+    <Card role="tukurepo card" sx={{ minWidth: 216,m:"16px",borderRadius:"15px",cursor:"pointer"}}>
+      <Link href="/designreport/sample">
       <CardMedia
         component="img"
         alt="tukurepo sample"
         height="216"
-        image="/static/images/sample_tukurepo.jpg"
+        image={props.src}
       />
+      </Link>
       <CardActions sx={{
         p:"8px"
       }}>

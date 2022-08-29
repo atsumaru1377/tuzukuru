@@ -7,13 +7,19 @@ import BreadCrumbs from "../components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
-import TukuCard from "../components/tukurepoCard"
+import RepoCard from "../components/tukurepoCard"
 import Footer from "../components/footer";
 import SearchBar from "../components/searchBar"
 import Divider from "@mui/material/Divider"
-
-
 import Thumbnail from "../../public/static/images/sample_thumb.png"
+import { DesignCardType } from '../components/type'
+
+const designData:DesignCardType[] =[
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+]
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -25,7 +31,6 @@ const boxStyle:{[key:string]:string} = {
   width:'calc(100% - 280px)'
 }
 
-
 const Home: NextPage = () => {
   return (
     <>
@@ -35,16 +40,21 @@ const Home: NextPage = () => {
         <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
           <SearchBar/>
-          <BreadCrumbs/>
+          <BreadCrumbs
+            second = "でざレポ"
+            secondHref ="/designreport"
+            third = "SFワールドを作る"
+            thirdHref='/designreport/sample'/>
           <div
             style={{
               paddingBottom:"32px",
               display:"flex",
               maxHeight:"360px"
             }}>
-            <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" height="368" style={{objectFit:"cover"}} />
+            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail" height="368" width="50%" style={{objectFit:"cover",borderRadius:"15px"}} />
             <div style={{
               width:"calc(80% - 320px)",
+              minWidth:"400px",
               padding:"16px"
             }}>
               <Typography variant = {"h2"} sx={{
@@ -82,24 +92,23 @@ const Home: NextPage = () => {
           </div>
           <div
             style={{
-              paddingTop:"32px"
             }}>
           <div style ={{display:"flex"}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginRight:"8px"}}>
-                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
+                <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
+                <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
+                <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
+                <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
                 <div style={{minWidth:"250px",borderRadius:"15px",overflow:"hidden",marginLeft:"8px",marginRight:"8px"}}>
-                <img src="../../public/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
+                <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250"/>
                 </div>
             </div>
           </div>
@@ -108,7 +117,7 @@ const Home: NextPage = () => {
                   fontWeight:"bold",
                   mt:"32px"
                 }}>疑問点</Typography>
-        <Box sx={{width:"100%",p:"16px"}}>
+        <div style={{width:"100%",padding:"16px"}}>
                  <Typography sx={{mt:"16px"}}>疑問点1</Typography>
                  <Typography>
                     Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
@@ -129,7 +138,7 @@ const Home: NextPage = () => {
                     Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
                     Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
                  </Typography>
-            </Box>
+            </div>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
@@ -141,17 +150,17 @@ const Home: NextPage = () => {
             mt:"32px"
             }}>他のつくレポ</Typography>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
+            {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <RepoCard 
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
             </div>
           </div>
-          <Box>
           <Footer/>
-          </Box>
           </div>
         </Box>
         </Box>

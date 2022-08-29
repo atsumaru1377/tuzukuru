@@ -31,7 +31,7 @@ export default function SideBar() {
         <MenuItem aria-label="logo">
         <Link href="/">
           <a>
-          <img src="logo.svg" alt= "Tuzukuru Logo" ></img>
+          <img src="/logo.svg" alt= "Tuzukuru Logo" ></img>
           </a>
         </Link>
         </MenuItem>
@@ -97,13 +97,13 @@ export default function SideBar() {
           <ListItemText
           primaryTypographyProps={{
             fontWeight:"bold"
-          }}>つくレポ</ListItemText>
+          }}>でざレポ</ListItemText>
         </MenuItem>
         <Link href="/designreport">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}>みんなのつくレポを見る</ListItemText>
+          }}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -111,7 +111,7 @@ export default function SideBar() {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}>つくレポを投稿する</ListItemText>
+          }}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
