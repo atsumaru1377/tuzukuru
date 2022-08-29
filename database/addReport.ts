@@ -18,7 +18,7 @@ export const readReportCount: ()=>number = () => {
 	return Object.keys(data).length;
 };
 
-export const addReport = (newData : ReportModel):void => {
+export const addReport = (newData : ReportItemModel):void => {
 	const database = getDatabase(firebaseApp);
 	const pathRef = ref(database, '/report/');
 	push(pathRef, newData);
