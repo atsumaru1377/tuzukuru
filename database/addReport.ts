@@ -4,21 +4,22 @@ import firebaseApp from "../firebase";
 import ReportModel from './reportModel';
 import ReportItemModel from './reportItemModel';
 
-const readReportCount: ()=>number = () => {
+export const readReportCount: ()=>number = () => {
 	let data = 0;
-	get(child(ref(getDatabase()), `/report/report_count`)).then((snapshot) => {
+	get(child(ref(getDatabase()), `/report`)).then((snapshot) => {
 		if (snapshot.exists()) {
 			data = snapshot.val();
+			console.log(data);
+			console.log("length " + Object.keys(data).length);
 		} else {
-			console.log("No data available");
+			return 1;
 		}
 	});
-	return data;
+	return Object.keys(data).length;
 };
 
-export const addReport = (newData : ReportItemModel):void => {
-	const database = getDatabase();
-	const path = readReportCount() + 1;
-	const pathRef = ref(database, '/report/' + path);
+export const addReport = (newData : ReportModel):void => {
+	const database = getDatabase(firebaseApp);
+	const pathRef = ref(database, '/report/');
 	push(pathRef, newData);
 };

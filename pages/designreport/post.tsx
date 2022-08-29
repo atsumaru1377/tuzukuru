@@ -28,6 +28,7 @@ import {addReport} from '../../database/addReport';
 import Questions from '../../database/questions';
 import ReportItemModel from '../../database/reportItemModel';
 import ReportModel from '../../database/reportModel';
+import { useForm, Controller } from "react-hook-form";
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -39,6 +40,23 @@ const boxStyle:{[key:string]:string} = {
 }
 
 const Home: NextPage = () => {
+  const { control, handleSubmit } = useForm<ReportItemModel>({
+    mode : 'onSubmit',
+    defaultValues: {
+        recipe_id : 0,
+        point : "",
+        q_who : "",
+        q_where : "",
+        q_when : "",
+        q_how : "",
+        likes: 0,
+        comments: {},
+    },
+  });
+
+  const onSubmit = (data:ReportItemModel):void => {
+    addReport(data);
+  }
 
   return (
     <>
@@ -48,78 +66,121 @@ const Home: NextPage = () => {
           display:"flex",
         }}>
         <SideBar/>
+
         <Box style={boxStyle}>
-        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
-            <SearchBar></SearchBar>
-            <div style={{paddingTop:"32px"}}>
-            <Typography variant = "h2" sx={{
-                fontSize:"2rem",
-                fontWeight:"500",
-                mb:"32px"
-            }}>でざレポを投稿する</Typography>
-            <Typography  sx={{
-              fontWeight:"bold",
-                fontSize:"1.5rem",
-                my:"16px"
-            }}>作品</Typography>
-            <div style={{display:"flex"}}>
-            <Button sx={{
-                width:"100%",
-                borderRadius:"15px",
-                border:"solid 1px grey"
-            }}>
-                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <div style={{textAlign:"center"}}>
-                    <UploadFileIcon sx={{fontSize:"32px"}}/>
-                <Typography variant="body1">Click to upload or drag and drop</Typography>
-                <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
-                    </div>
-                </div>
-            </Button>
-            <Typography  sx={{
-              fontWeight:"bold",
-                fontSize:"1.5rem",
-                my:"16px"
-            }}>プレビュー</Typography>
-            <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
-                    <div style={{textAlign:"center"}}>
-                    <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
-                    </div>
-            </div>
-            </div>
-            <Typography  sx={{
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div style={{padding:"32px"}}>
+              <Typography variant = "h2" sx={{
+                  fontSize:"2rem",
+                  fontWeight:"500",
+                  my:"32px"
+              }}>でざレポを投稿する</Typography>
+
+              <Typography  sx={{
+                  fontWeight:"bold",
+                  fontSize:"1.5rem",
+                  my:"16px"
+              }}>作品</Typography>
+              
+              <div style{{display:"flex"}}>
+              <Button sx={{
+                  width:"100%",
+                  borderRadius:"15px",
+                  border:"solid 1px grey"
+              }}>
+                  <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                      <div style={{textAlign:"center"}}>
+                      <UploadFileIcon sx={{fontSize:"32px"}}/>
+                  <Typography variant="body1">Click to upload or drag and drop</Typography>
+                  <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
+                      </div>
+                  </div>
+              </Button>
+
+              <Typography  sx={{
+                  fontWeight:"bold",
+                  fontSize:"1.5rem",
+                  my:"16px"
+              }}>プレビュー</Typography>
+              <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
+                      <div style={{textAlign:"center"}}>
+                      <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
+                      </div>
+              </div>
+              </div>
+
+              <Typography  sx={{
+                  fontWeight:"bold",
+                  fontSize:"1.5rem",
+                  my:"16px"
+              }}>コメント</Typography>
+              <Controller
+                control={control}
+                name="recipe_id"
+                render={({field}) => (
+                  <TextField label="参考にしたレシピ" sx={{width:"100%"}}/>
+                )}
+              />
+
+              <div style={{height:"16px",width:"100%"}}></div>
+              <Controller
+                control={control}
+                name="point"
+                render={({field}) => (
+                  <TextField label="こだわりポイント" sx={{width:"100%"}}/>
+                )}
+              />
+
+
+              <Typography  sx={{
                 fontWeight:"bold",
                 fontSize:"1.5rem",
                 my:"16px"
-            }}>コメント</Typography>
-            <TextField label="参考にしたレシピ" sx={{width:"100%"}}/>
-            <div style={{height:"16px",width:"100%"}}></div>
-            <TextField label="こだわりポイント" sx={{width:"100%"}}/>
-            <Typography  sx={{
-                fontWeight:"bold",
-                fontSize:"1.5rem",
-                my:"16px"
-            }}>困ったところなど</Typography>
-             <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            <div style={{height:"16px",width:"100%"}}></div>
-            <TextField label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            <div style={{height:"16px",width:"100%"}}></div>
-            <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            <div style={{height:"16px",width:"100%"}}></div>
-            <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            <Typography  sx={{
+              }}>困ったところなど</Typography>
+              <Controller
+                control={control}
+                name="q_who"
+                render={({field}) => (
+                  <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                )}
+              />
+              <div style={{height:"16px",width:"100%"}}></div>
+              <Controller
+                control={control}
+                name="q_where"
+                render={({field}) => (
+                  <TextField label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                )}
+              />
+              <div style={{height:"16px",width:"100%"}}></div>
+              <Controller
+                control={control}
+                name="q_when"
+                render={({field}) => (
+                  <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                )}
+              />
+              <div style={{height:"16px",width:"100%"}}></div>
+              <Controller
+                control={control}
+                name="q_how"
+                render={({field}) => (
+                  <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                )}
+              />
+              <Typography  sx={{
                 fontSize:"1rem",
                 mt:"32px",
                 mb:"16px"
-            }}>公開範囲を設定する</Typography>
-            <FormControlLabel control={<Checkbox defaultChecked />} label="全体公開" />
-            <div style={{width:"100%",padding:"32px 0",display:"flex",justifyContent:"center"}}>
-                <Button variant="contained"size="large"sx={{mx:"8px" ,color:"white"}}>投稿する</Button>
-                <Button variant="outlined"size="large" sx={{mx:"8px"}}>キャンセル</Button>
-            </div>
+              }}>公開範囲を設定する</Typography>
+              <FormControlLabel control={<Checkbox defaultChecked />} label="全体公開" />
+              <div style={{width:"100%",padding:"32px 0",display:"flex",justifyContent:"center"}}>
+                  <Button variant="contained" sx={{mx:"8px" ,color:"white"}} type="submit">投稿する</Button>
+                  <Button variant="outlined" sx={{mx:"8px"}}>キャンセル</Button>
+              </div>
             </div>
             <Footer/>
-          </div>
+          </form>
         </Box>
 
       </Box>
