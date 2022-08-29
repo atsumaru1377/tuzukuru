@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             {datas.map((data: RecipeCardType,index:number) => {
             return (
               <Grid item md= {12} lg={6} xl={4} key={index}>
-                <Card 
+                <Card
                 src = {data.src}
                 title={data.title}
                 tool={data.tool}
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
               {design.map((data: DesignCardType,index:number) => {
               return (
                 <Grid item xs={12} md= {12} lg={6} xl={4} key={index}>
-                  <RepoCard 
+                  <RepoCard
                   src = {data.src}
                   />
                 </Grid>
