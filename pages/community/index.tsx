@@ -6,6 +6,7 @@ import Tabs from "../components/Tabs"
 import Card from "../components/commuCard"
 import SearchBar from "../components/searchBar"
 import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography";
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -73,8 +74,6 @@ const datas : CardData[] = [
   theme2:"優しい",
   theme3:"LP"},
 ]
-
-
 const Home: NextPage = () => {
   return (
     <>
@@ -85,6 +84,13 @@ const Home: NextPage = () => {
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar></SearchBar>
             <Tabs/>
+            <Typography variant = "h2" sx={{
+                fontSize:"1.5rem",
+                fontWeight:"500",
+                mt:"32px",
+                mb:"16px",
+                ml:"16px"
+            }}>コミュニティを探す</Typography>
             <Grid container>
             {datas.map((data: CardData,index:number) => {
             return (

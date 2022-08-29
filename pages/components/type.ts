@@ -19,3 +19,10 @@ export type RecipeCardType = {
 export type DesignCardType = {
     src:string;
 }
+
+export type breadCrumbs ={
+    second : string;
+    secondHref : string;
+    third :string;
+    thirdHref : string;
+}

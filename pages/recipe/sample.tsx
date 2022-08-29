@@ -61,13 +61,17 @@ const Home: NextPage = () => {
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
         <SideBar/>
         <SearchBar/>    
-        <BreadCrumbs/>
+        <BreadCrumbs
+          second = "レシピ"
+          secondHref ="/recipe"
+          third = "SFワールドを作る"
+          thirdHref='/recipe/sample'/>
           <div
             style={{
               display:"flex",
               maxHeight:"360px"
             }}>
-            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover"}}/> 
+            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover",borderRadius:"15px"}}/> 
             <div style={{
               width:"calc(80% - 320px)",
               minWidth:"400px",

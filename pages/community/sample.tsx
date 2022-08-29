@@ -44,7 +44,11 @@ const Home: NextPage = () => {
         <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
-            <MyPage/>
+            <MyPage
+            second = "community"
+            secondHref ="/community"
+            third = "blenderを諦めない"
+            thirdHref='community/sample'/>
             <div role="image" style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden",backgroundImage:"url('/static/images/community/commu_1.png')",backgroundSize:"cover"}}>
             </div>
             <Typography variant = {"h3"} sx={{
