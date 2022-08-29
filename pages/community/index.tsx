@@ -7,6 +7,7 @@ import Card from "../components/commuCard"
 import SearchBar from "../components/searchBar"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography";
+import SearchWindow from '../components/searchWindow'
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -95,7 +96,7 @@ const Home: NextPage = () => {
             {datas.map((data: CardData,index:number) => {
             return (
               <Grid item md={12}lg= {12}xl={6} key={index}>
-                <Card 
+                <Card
                 src = {data.src}
                 title={data.title}
                 tool={data.tool}
