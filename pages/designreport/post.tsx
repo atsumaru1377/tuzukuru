@@ -81,8 +81,8 @@ const Home: NextPage = () => {
                   fontSize:"1.5rem",
                   my:"16px"
               }}>作品</Typography>
-              
-              <div style{{display:"flex"}}>
+
+              <div style={{display:"flex"}}>
               <Button sx={{
                   width:"100%",
                   borderRadius:"15px",
