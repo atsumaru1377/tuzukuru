@@ -9,6 +9,20 @@ import Button from "@mui/material/Button";
 import Footer from "../components/footer";
 import SiteHeader from "../components/siteHeader"
 import SearchBar from "../components/searchBar"
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 const boxStyle:{[key:string]:string} = {
   position:"fixed",
@@ -33,29 +47,32 @@ const Home: NextPage = () => {
             <SearchBar></SearchBar>
             <div style={{paddingTop:"32px"}}>
             <Typography variant = "h2" sx={{
-                fontSize:"1.5rem",
+                fontSize:"2rem",
                 fontWeight:"500",
                 mb:"32px"
-            }}>つくレポを投稿する</Typography>
+            }}>でざレポを投稿する</Typography>
             <Typography  sx={{
-                fontSize:"1rem",
+              fontWeight:"bold",
+                fontSize:"1.5rem",
                 my:"16px"
             }}>作品</Typography>
+            <div style={{display:"flex"}}>
             <Button sx={{
                 width:"100%",
                 borderRadius:"15px",
                 border:"solid 1px grey"
             }}>
-                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                    <div style={{textAlign:"center"}}>
-                    <UploadFileIcon sx={{fontSize:"32px"}}/>
-                <Typography variant="body1">Click to upload or drag and drop</Typography>
-                <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography> 
-                    </div>
+            <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                <div style={{textAlign:"center"}}>
+                <UploadFileIcon sx={{fontSize:"32px"}}/>
+            <Typography variant="body1">Click to upload or drag and drop</Typography>
+            <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography> 
                 </div>
+            </div>
             </Button>
             <Typography  sx={{
-                fontSize:"1rem",
+              fontWeight:"bold",
+                fontSize:"1.5rem",
                 my:"16px"
             }}>プレビュー</Typography>
             <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
@@ -63,15 +80,18 @@ const Home: NextPage = () => {
                     <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
                     </div>
             </div>
+            </div>
             <Typography  sx={{
-                fontSize:"1rem",
+                fontWeight:"bold",
+                fontSize:"1.5rem",
                 my:"16px"
             }}>コメント</Typography>
             <TextField label="参考にしたレシピ" sx={{width:"100%"}}/>
             <div style={{height:"16px",width:"100%"}}></div>
             <TextField label="こだわりポイント" sx={{width:"100%"}}/>
             <Typography  sx={{
-                fontSize:"1rem",
+                fontWeight:"bold",
+                fontSize:"1.5rem",
                 my:"16px"
             }}>困ったところなど</Typography>
              <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
@@ -81,10 +101,15 @@ const Home: NextPage = () => {
             <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
             <div style={{height:"16px",width:"100%"}}></div>
             <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
-            
-            <div style={{width:"100%",paddingTop:"32px",display:"flex",justifyContent:"flex-end"}}>
-                <Button variant="contained"sx={{mx:"8px" ,color:"white"}}>投稿する</Button>
-                <Button variant="outlined" sx={{mx:"8px"}}>キャンセル</Button>
+            <Typography  sx={{
+                fontSize:"1rem",
+                mt:"32px",
+                mb:"16px"
+            }}>公開範囲を設定する</Typography>
+            <FormControlLabel control={<Checkbox defaultChecked />} label="全体公開" />
+            <div style={{width:"100%",padding:"32px 0",display:"flex",justifyContent:"center"}}>
+                <Button variant="contained"size="large"sx={{mx:"8px" ,color:"white"}}>投稿する</Button>
+                <Button variant="outlined"size="large" sx={{mx:"8px"}}>キャンセル</Button>
             </div>
             </div>
             <Footer/>  

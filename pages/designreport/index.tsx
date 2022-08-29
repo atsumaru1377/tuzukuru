@@ -7,6 +7,7 @@ import SiteHeader from "../components/siteHeader"
 import SearchBar from "../components/searchBar"
 import Grid from "@mui/material/Grid"
 import Footer from "../components/footer"
+import Typography from "@mui/material/Typography"
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
   position:"fixed",
@@ -30,6 +31,13 @@ const Home: NextPage = () => {
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar></SearchBar>
             <Tabs/>
+            <Typography variant = "h2" sx={{
+                fontSize:"1.5rem",
+                fontWeight:"500",
+                mt:"32px",
+                mb:"16px",
+                ml:"16px"
+            }}>みんなのでざレポ</Typography>
             <Grid container>
               <Grid item md= {6} lg={4} xl={3} >
                 <Card/>

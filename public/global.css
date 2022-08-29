@@ -8,3 +8,6 @@ a {
 a:after{
     color:black
 }
+.MuiCardMedia-img{
+    object-fit: cover;
+}

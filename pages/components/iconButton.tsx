@@ -10,6 +10,7 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
+import Link from "next/link"
 
 export default function AlignItemsList() {
     const [value, setValue] = React.useState(0);
@@ -74,9 +75,11 @@ export default function AlignItemsList() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        <Link href="/mypage">
         <MenuItem>
           <Avatar /> Profile
         </MenuItem>
+        </Link>
         <Divider />
         <MenuItem>
           <ListItemIcon>
