@@ -84,11 +84,11 @@ const Home: NextPage = () => {
               }}>作品</Typography>
 
               <div style={{display:"flex"}}>
-              <Button sx={{
-                  width:"100%",
-                  borderRadius:"15px",
-                  border:"solid 1px grey"
-              }}>
+                <Button sx={{
+                    width:"100%",
+                    borderRadius:"15px",
+                    border:"solid 1px grey"
+                }}>
                 <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
                   <div style={{textAlign:"center"}}>
                     <UploadFileIcon sx={{fontSize:"32px"}}/>
@@ -103,11 +103,11 @@ const Home: NextPage = () => {
                   fontSize:"1.5rem",
                   my:"16px"
               }}>プレビュー</Typography>
-              <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
-                      <div style={{textAlign:"center"}}>
-                      <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
-                      </div>
-              </div>
+                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center",backgroundColor:"lightgrey",borderRadius:"15px"}}>
+                  <div style={{textAlign:"center"}}>
+                  <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
+                  </div>
+                </div>
               </div>
 
               <Typography  sx={{
