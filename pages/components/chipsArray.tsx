@@ -9,7 +9,7 @@ const ListItem = styled('li')(({ theme }) => ({
 	margin: theme.spacing(0.5),
 }));
 
-export default function useChipsArray(props:ChipArray) {
+export default function ChipsArray(props:ChipArray) {
 	const [chipData, setChipData] = useState<ChipData[]>(
 		props.chips
 	);
@@ -36,7 +36,7 @@ export default function useChipsArray(props:ChipArray) {
 		}}
 		component="ul"
 	>
-		{chipData.map((data) => {
+		{props.chips?.map((data) => {
 			let icon;
 			if (data.icon !== "") {icon = <img src={data.icon} alt={data.label} style={{width:"18px",height:"18px"}} />};
 

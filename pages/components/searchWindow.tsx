@@ -1,4 +1,4 @@
-import UseChipsArray from "./useChipsArray";
+import ChipsArray from "./chipsArray";
 import { ChipData } from '../../plugins/type';
 import Typography from "@mui/material/Typography";
 
@@ -51,7 +51,7 @@ export default function searchWindow(){
 					mt:"16px",
 					ml:"16px"
 			}}>ジャンル</Typography>
-			<UseChipsArray chips={categoryChipData} color="error"></UseChipsArray>
+			<ChipsArray chips={categoryChipData} color="error"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
 					fontSize:"1.5rem",
@@ -59,7 +59,7 @@ export default function searchWindow(){
 					mt:"16px",
 					ml:"16px"
 			}}>ツール</Typography>
-			<UseChipsArray chips={toolChipData} color="warning"></UseChipsArray>
+			<ChipsArray chips={toolChipData} color="warning"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
 					fontSize:"1.5rem",
@@ -67,7 +67,7 @@ export default function searchWindow(){
 					mt:"16px",
 					ml:"16px"
 			}}>制作難易度</Typography>
-			<UseChipsArray chips={difficultyChipData} color="success"></UseChipsArray>
+			<ChipsArray chips={difficultyChipData} color="success"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
 					fontSize:"1.5rem",
@@ -75,7 +75,7 @@ export default function searchWindow(){
 					mt:"16px",
 					ml:"16px"
 			}}>制作物</Typography>
-			<UseChipsArray chips={outputChipData} color="info"></UseChipsArray>
+			<ChipsArray chips={outputChipData} color="info"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
 					fontSize:"1.5rem",
@@ -83,7 +83,7 @@ export default function searchWindow(){
 					mt:"16px",
 					ml:"16px"
 			}}>その他タグ</Typography>
-			<UseChipsArray chips={otherChipData} color="default"></UseChipsArray>
+			<ChipsArray chips={otherChipData} color="default"></ChipsArray>
 		</div>
 	)
 }
