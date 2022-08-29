@@ -17,6 +17,10 @@ const toolChipData:ChipData[] = [
 	{ key: 6, label: "Premiere", variant: "outlined", icon: "/static/images/adobelogo/Premiere.png"},
 	{ key: 7, label: "XD", variant: "outlined", icon: "/static/images/adobelogo/xd.png"},
 	{ key: 8, label: "blender", variant: "outlined", icon: "/static/images/adobelogo/blender.svg"},
+	{ key: 9, label: "word", variant: "outlined", icon: "/static/images/adobelogo/word.svg"},
+	{ key:10, label: "excel", variant: "outlined", icon: "/static/images/adobelogo/excel.svg"},
+	{ key:11, label: "powerpoint", variant: "outlined", icon: "/static/images/adobelogo/powerpoint.svg"},
+	{ key:12, label: "canva", variant: "outlined", icon: "/static/images/adobelogo/canva.svg"},
 ];
 const difficultyChipData:ChipData[] = [
 	{ key: 1, label: "初心者", variant: "outlined", icon: ""},
@@ -46,42 +50,42 @@ export default function searchWindow(){
 	return (
 		<div style={{maxWidth:"100%"}}>
 			<Typography variant = "h2" sx={{
-					fontSize:"1.5rem",
-					fontWeight:"500",
-					mt:"16px",
-					ml:"16px"
+				fontSize:"1.5rem",
+				fontWeight:"500",
+				mt:"16px",
+				ml:"16px"
 			}}>ジャンル</Typography>
 			<ChipsArray chips={categoryChipData} color="error"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
-					fontSize:"1.5rem",
-					fontWeight:"500",
-					mt:"16px",
-					ml:"16px"
+				fontSize:"1.5rem",
+				fontWeight:"500",
+				mt:"16px",
+				ml:"16px"
 			}}>ツール</Typography>
 			<ChipsArray chips={toolChipData} color="warning"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
-					fontSize:"1.5rem",
-					fontWeight:"500",
-					mt:"16px",
-					ml:"16px"
+				fontSize:"1.5rem",
+				fontWeight:"500",
+				mt:"16px",
+				ml:"16px"
 			}}>制作難易度</Typography>
 			<ChipsArray chips={difficultyChipData} color="success"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
-					fontSize:"1.5rem",
-					fontWeight:"500",
-					mt:"16px",
-					ml:"16px"
+				fontSize:"1.5rem",
+				fontWeight:"500",
+				mt:"16px",
+				ml:"16px"
 			}}>制作物</Typography>
 			<ChipsArray chips={outputChipData} color="info"></ChipsArray>
 
 			<Typography variant = "h2" sx={{
-					fontSize:"1.5rem",
-					fontWeight:"500",
-					mt:"16px",
-					ml:"16px"
+				fontSize:"1.5rem",
+				fontWeight:"500",
+				mt:"16px",
+				ml:"16px"
 			}}>その他タグ</Typography>
 			<ChipsArray chips={otherChipData} color="default"></ChipsArray>
 		</div>

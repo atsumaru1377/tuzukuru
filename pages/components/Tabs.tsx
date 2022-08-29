@@ -31,13 +31,17 @@ export default function ScrollableTabsButtonAuto() {
       >
         <Tab icon = {<LocalFireDepartmentIcon sx={{color:"red"}}/>} label="人気" sx={{width:"144px"}}/>
         <Tab icon = {<img src="/static/images/adobelogo/figma.svg" alt = "figma logo" style={{width:"24px",height:"24px"}}/>} label="figma"sx={{width:"144px"}} />
-        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo"/>} label="After Effects" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/illustrator.png" alt = "illustrator logo"/>} label="illustrator" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/indesign.png" alt = "indesign logo"/>} label="indesign"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/photoshop.png" alt = "photoshop logo"/>} label="photoshop" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/Premiere.png" alt = "Premiere logo"/>} label="Premiere" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/xd.png" alt = "xd logo"/>} label="XD"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/blender.svg" alt = "blender logo" style={{width:"32px",height:"32px"}}/>} label="blender"sx={{width:"144px"}} />
+        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo" style={{width:"24px",height:"24px"}}/>} label="After Effects" sx={{width:"144px"}}/>
+        <Tab icon = {<img src="/static/images/adobelogo/illustrator.png" alt = "illustrator logo" style={{width:"24px",height:"24px"}}/>} label="illustrator" sx={{width:"144px"}}/>
+        <Tab icon = {<img src="/static/images/adobelogo/indesign.png" alt = "indesign logo" style={{width:"24px",height:"24px"}}/>} label="indesign"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/photoshop.png" alt = "photoshop logo" style={{width:"24px",height:"24px"}}/>} label="photoshop" sx={{width:"144px"}}/>
+        <Tab icon = {<img src="/static/images/adobelogo/Premiere.png" alt = "Premiere logo" style={{width:"24px",height:"24px"}}/>} label="Premiere" sx={{width:"144px"}}/>
+        <Tab icon = {<img src="/static/images/adobelogo/xd.png" alt = "xd logo" style={{width:"24px",height:"24px"}}/>} label="XD"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/blender.svg" alt = "blender logo" style={{width:"24px",height:"24px"}}/>} label="blender"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/word.svg" alt = "word logo" style={{width:"24px",height:"24px"}}/>} label="word"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/excel.svg" alt = "excel logo" style={{width:"24px",height:"24px"}}/>} label="excel"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/powerpoint.svg" alt = "powerpoint logo" style={{width:"24px",height:"24px"}}/>} label="powerpoint"sx={{width:"144px"}} />
+        <Tab icon = {<img src="/static/images/adobelogo/canva.svg" alt = "canva logo" style={{width:"24px",height:"24px"}}/>} label="canva"sx={{width:"144px"}} />
       </Tabs>
       <Button startIcon={<SortIcon/>}
         size = "large" sx={{
