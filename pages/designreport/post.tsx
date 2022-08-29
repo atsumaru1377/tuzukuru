@@ -24,7 +24,7 @@ const style = {
 };
 
 import {hash} from "../../database/hash";
-import {addReport} from '../../database/addReport';
+import {readReportCount, addReport} from '../../database/addReport';
 import Questions from '../../database/questions';
 import ReportItemModel from '../../database/reportItemModel';
 import ReportModel from '../../database/reportModel';
@@ -55,6 +55,7 @@ const Home: NextPage = () => {
   });
 
   const onSubmit = (data:ReportItemModel):void => {
+    data.recipe_id = hash(String(data.recipe_id));
     addReport(data);
   }
 
@@ -88,13 +89,13 @@ const Home: NextPage = () => {
                   borderRadius:"15px",
                   border:"solid 1px grey"
               }}>
-                  <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                      <div style={{textAlign:"center"}}>
-                      <UploadFileIcon sx={{fontSize:"32px"}}/>
-                  <Typography variant="body1">Click to upload or drag and drop</Typography>
-                  <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
-                      </div>
+                <div style = {{height:"152px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                  <div style={{textAlign:"center"}}>
+                    <UploadFileIcon sx={{fontSize:"32px"}}/>
+                    <Typography variant="body1">Click to upload or drag and drop</Typography>
+                    <Typography variant="subtitle2">SVG,PNG,JPG or GIF (max 3MB )</Typography>
                   </div>
+                </div>
               </Button>
 
               <Typography  sx={{
@@ -118,7 +119,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="recipe_id"
                 render={({field}) => (
-                  <TextField label="参考にしたレシピ" sx={{width:"100%"}}/>
+                  <TextField {...field} label="参考にしたレシピ" sx={{width:"100%"}}/>
                 )}
               />
 
@@ -127,7 +128,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="point"
                 render={({field}) => (
-                  <TextField label="こだわりポイント" sx={{width:"100%"}}/>
+                  <TextField {...field} label="こだわりポイント" sx={{width:"100%"}}/>
                 )}
               />
 
@@ -141,7 +142,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="q_who"
                 render={({field}) => (
-                  <TextField label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                  <TextField {...field} label="誰に向けた作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
               />
               <div style={{height:"16px",width:"100%"}}></div>
@@ -149,7 +150,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="q_where"
                 render={({field}) => (
-                  <TextField label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                  <TextField {...field} label="どんなところで使う作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
               />
               <div style={{height:"16px",width:"100%"}}></div>
@@ -157,7 +158,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="q_when"
                 render={({field}) => (
-                  <TextField label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                  <TextField {...field} label="いつ見せる作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
               />
               <div style={{height:"16px",width:"100%"}}></div>
@@ -165,7 +166,7 @@ const Home: NextPage = () => {
                 control={control}
                 name="q_how"
                 render={({field}) => (
-                  <TextField label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
+                  <TextField {...field} label="どのようにしようする作品ですか？" size = "medium" sx={{width:"100%"}}/>
                 )}
               />
               <Typography  sx={{
