@@ -131,7 +131,7 @@ const Home: NextPage = () => {
                 mt:"32px",
                 mb:"16px",
                 ml:"16px"
-            }}>みんなのでざレポ</Typography>
+            }}>みんなのレシピ</Typography>
             <Grid container>
             {datas.map((data: CardData,index:number) => {
             return (

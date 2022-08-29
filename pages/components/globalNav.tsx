@@ -31,7 +31,7 @@ export default function SideBar() {
         <MenuItem aria-label="logo">
         <Link href="/">
           <a>
-          <img src="logo.svg" alt= "Tuzukuru Logo" ></img>
+          <img src="/logo.svg" alt= "Tuzukuru Logo" ></img>
           </a>
         </Link>
         </MenuItem>

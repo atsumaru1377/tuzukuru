@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
-import {css} from '@emotion/react'
 import SearchBar from "../components/searchBar"
 import MyPage from "../components/breadCrumbs"
 import Avatar from "@mui/material/Avatar"
@@ -13,6 +12,14 @@ import TukuCard from "../components/tukurepoCard"
 import Comment from "../components/comment"
 import Footer from "../components/footer"
 import SiteHeader from "../components/siteHeader"
+import { DesignCardType } from '../components/type'
+
+const designData:DesignCardType[] =[
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+]
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -38,8 +45,7 @@ const Home: NextPage = () => {
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
             <MyPage/>
-            <div style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden"}}>
-              <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" style={{objectFit:"cover"}} />
+            <div role="image" style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden",backgroundImage:"url('/static/images/community/commu_1.png')",backgroundSize:"cover"}}>
             </div>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
@@ -91,13 +97,14 @@ const Home: NextPage = () => {
                   pl:"16px"
                 }}>みんなの作った報告</Typography>
                <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
-                <TukuCard/>
-                <TukuCard/>
-                <TukuCard/>
-                <TukuCard/>
-                <TukuCard/>
-                <TukuCard/>
-                <TukuCard/>
+               {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <TukuCard 
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
               </div>
               <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",

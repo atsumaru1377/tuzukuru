@@ -7,18 +7,10 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Divider from "@mui/material/Divider"
 import {useState} from 'react';
+import Link from "next/link"
+import {CommuCardType} from "./type"
 
-type CardData = {
-  src:string;
-  title:string;
-  tool:string;
-  feature:string;
-  theme1:string;
-  theme2:string;
-  theme3:string;
-};
-
-export default function MediaCard(props:CardData) {
+export default function MediaCard(props:CommuCardType) {
     const [isActive, setIsActive] = useState(false);
     const handleClick = () => {
         setIsActive(current => !current);
@@ -31,12 +23,14 @@ export default function MediaCard(props:CardData) {
         borderRadius:"20px",
         display:{lg:"flex"}
     }}>
+      <Link href="/community/sample">
       <CardMedia
         component="img"
         image={props.src}
         alt={props.title}
-        sx={{width:{lg:"50%"},objectFit:"cover"}}
+        sx={{width:{lg:"50%"},objectFit:"cover",cursor:"pointer"}}
       />
+      </Link>
       <CardContent>
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
           {props.title}
@@ -58,6 +52,7 @@ export default function MediaCard(props:CardData) {
             </AvatarGroup>
         </div>
       </CardContent>
+
     </Card>
   );
 }

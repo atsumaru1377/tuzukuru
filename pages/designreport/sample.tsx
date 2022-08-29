@@ -7,13 +7,19 @@ import BreadCrumbs from "../components/breadCrumbs"
 import  Typography  from '@mui/material/Typography'
 import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
-import TukuCard from "../components/tukurepoCard"
+import RepoCard from "../components/tukurepoCard"
 import Footer from "../components/footer";
 import SearchBar from "../components/searchBar"
 import Divider from "@mui/material/Divider"
-
-
 import Thumbnail from "../../public/static/images/sample_thumb.png"
+import { DesignCardType } from '../components/type'
+
+const designData:DesignCardType[] =[
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+]
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -24,7 +30,6 @@ const boxStyle:{[key:string]:string} = {
   top:"0",
   width:'calc(100% - 280px)'
 }
-
 
 const Home: NextPage = () => {
   return (
@@ -42,7 +47,7 @@ const Home: NextPage = () => {
               display:"flex",
               maxHeight:"360px"
             }}>
-            <img src="../../public/static/images/sample_thumb.png" alt = "thumbnail" height="368" style={{objectFit:"cover"}} />
+            <img src="/static/images/recipe/sample_1.png" alt = "thumbnail" height="368" style={{objectFit:"cover"}} />
             <div style={{
               width:"calc(80% - 320px)",
               padding:"16px"
@@ -141,12 +146,14 @@ const Home: NextPage = () => {
             mt:"32px"
             }}>他のつくレポ</Typography>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
-                <TukuCard></TukuCard>
+            {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <RepoCard 
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
             </div>
           </div>
           <Box>

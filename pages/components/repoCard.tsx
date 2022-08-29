@@ -35,7 +35,7 @@ export default function MediaCard(props:Props) {
         minWidth:"256px",
         cursor:"pointer"
     }}>
-      <Link href="/recipe/illustrator">
+      <Link href="/recipe/sample">
       <CardMedia
         component="img"
         image={props.src}

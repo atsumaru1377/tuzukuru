@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import SiteHeader from "../components/siteHeader"
 import SideBar from '../components/globalNav'
 import Box from "@mui/material/Card"
@@ -9,7 +8,7 @@ import  Avatar  from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
 import Accordion from "../components/accordion"
 import TukuCard from "../components/tukurepoCard"
-import RepoCard from "../components/repoCard"
+import RecipeCard from "../components/repoCard"
 import Divider from '@mui/material/Divider';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import Footer from "../components/footer";
@@ -17,9 +16,30 @@ import Comment from "../components/comment";
 import SearchBar from "../components/searchBar"
 import Link from "next/link"
 import Button from "@mui/material/Button"
+import { DesignCardType ,RecipeCardType} from '../components/type'
 
-
-
+const designData:DesignCardType[] =[
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+]
+const recipeData:RecipeCardType[] =[
+  { src:"/static/images/recipe_thumb/sample_1.png",
+  title:"illustratorで柔らかいグラフィックを制作",
+  tool:"illustrator",
+  feature:"丸い",
+  theme1:"ポスター",
+  theme2:"HP",
+  theme3:"LP"},
+  { src:"/static/images/recipe_thumb/sample_2.png",
+  title:"blenderでかわいいシューズを作る",
+  tool:"blender",
+  feature:"グラフィック",
+  theme1:"3D",
+  theme2:"CG",
+  theme3:"可愛い"},
+]
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"500px",
@@ -47,9 +67,10 @@ const Home: NextPage = () => {
               display:"flex",
               maxHeight:"360px"
             }}>
-            {/* <Image src={Thumbnail} alt = "thumbnail" height={368}  objectFit="cover"/> */}
+            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover"}}/> 
             <div style={{
               width:"calc(80% - 320px)",
+              minWidth:"400px",
               padding:"32px"
             }}>
               <Typography variant = {"h2"} sx={{
@@ -103,13 +124,14 @@ const Home: NextPage = () => {
                 }}>デザレポ</Typography>
           <div style ={{display:"flex"}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll",marginRight:"16px"}}>
-              <TukuCard/>
-              <TukuCard/>
-              <TukuCard/>
-              <TukuCard/>
-              <TukuCard/>
-              <TukuCard/>
-              <TukuCard/>
+            {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <TukuCard 
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
             </div>
             <Divider orientation="vertical" flexItem/>
             <Link href="/tukurepo/post">
@@ -137,16 +159,23 @@ const Home: NextPage = () => {
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
-                }}>他のデザレポ</Typography>
+                }}>他のデザレポも見る</Typography>
           </div>
           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
+          {recipeData.map((data: RecipeCardType,index:number) => {
+              return (
+                  <RecipeCard
+                  src = {data.src}
+                  title={data.title}
+                  tool={data.tool}
+                  feature={data.feature}
+                  theme1={data.theme1}
+                  theme2={data.theme2}
+                  theme3={data.theme3}
+                  key={index}
+                  />
+                );
+              })}
             </div>
           <Footer/>
         </div>  

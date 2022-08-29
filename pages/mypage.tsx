@@ -12,6 +12,8 @@ import CommuCard from "./components/commuCard"
 import RepoCard from "./components/tukurepoCard"
 import RecipeCard from "./components/repoCard"
 import Footer from "./components/footer"
+import Grid from "@mui/material/Grid"
+import {CommuCardType,DesignCardType,RecipeCardType} from "./components/type"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
@@ -23,6 +25,45 @@ const boxStyle:{[key:string]:string} = {
   top:"0",
   width:'calc(100% - 280px)',
 }
+
+const commuData:CommuCardType[] =[
+  { src:"/static/images/community/commu_1.png",
+  title:"初心者イラレコミュニティ",
+  tool:"illustrator",
+  feature:"丸い",
+  theme1:"ゆるゆる",
+  theme2:"優しい",
+  theme3:"LP"},
+  { src:"/static/images/community/commu_2.png",
+  title:"CADを極めたい高校生",
+  tool:"illustrator",
+  feature:"丸い",
+  theme1:"ゆるゆる",
+  theme2:"優しい",
+  theme3:"LP"},
+]
+const designData:DesignCardType[] =[
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+]
+const recipeData:RecipeCardType[] =[
+  { src:"/static/images/recipe_thumb/sample_1.png",
+  title:"illustratorで柔らかいグラフィックを制作",
+  tool:"illustrator",
+  feature:"丸い",
+  theme1:"ポスター",
+  theme2:"HP",
+  theme3:"LP"},
+  { src:"/static/images/recipe_thumb/sample_2.png",
+  title:"blenderでかわいいシューズを作る",
+  tool:"blender",
+  feature:"グラフィック",
+  theme1:"3D",
+  theme2:"CG",
+  theme3:"可愛い"},
+]
 
 const Home: NextPage = () => {
   return (
@@ -78,8 +119,24 @@ const Home: NextPage = () => {
                   my:"32px",
                   pl:"16px"
                 }}>マイコミュニティ</Typography>
-            <CommuCard/>    
-            <CommuCard/>    
+            <Grid container>
+            {commuData.map((data: CommuCardType,index:number) => {
+            return (
+              <Grid item md={12}lg= {12}xl={6} key={index}>
+                <CommuCard 
+                src = {data.src}
+                title={data.title}
+                tool={data.tool}
+                feature={data.feature}
+                theme1={data.theme1}
+                theme2={data.theme2}
+                theme3={data.theme3}
+                />
+              </Grid>
+              );
+            })}
+            </Grid> 
+
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
@@ -88,13 +145,14 @@ const Home: NextPage = () => {
                   pl:"16px"
                 }}>自分のつくレポ</Typography>
                           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
-              <RepoCard/>
+            {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <RepoCard 
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
             </div>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
@@ -108,12 +166,21 @@ const Home: NextPage = () => {
                 flexWrap:"nowrap",
                 overflowY:"scroll"
                 }}>
-                    <RecipeCard/>
-                    <RecipeCard/>
-                    <RecipeCard/>
-                    <RecipeCard/>
-                    <RecipeCard/>
-                </div>
+              {recipeData.map((data: RecipeCardType,index:number) => {
+              return (
+                  <RecipeCard
+                  src = {data.src}
+                  title={data.title}
+                  tool={data.tool}
+                  feature={data.feature}
+                  theme1={data.theme1}
+                  theme2={data.theme2}
+                  theme3={data.theme3}
+                  key={index}
+                  />
+                );
+              })}
+              </div>
             <Footer/>
             </div>
             </Box>

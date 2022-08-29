@@ -20,7 +20,24 @@ const boxStyle:{[key:string]:string} = {
 type designReport = {
   src:string;
 }
-
+const datas : designReport[] = [
+  {src:"/static/images/designReport/tuku_1.png"},
+  {src:"/static/images/designReport/tuku_2.png"},
+  {src:"/static/images/designReport/tuku_3.png"},
+  {src:"/static/images/designReport/tuku_4.png"},
+  {src:"/static/images/designReport/tuku_5.png"},
+  {src:"/static/images/designReport/tuku_6.png"},
+  {src:"/static/images/designReport/tuku_7.png"},
+  {src:"/static/images/designReport/tuku_8.png"},
+  {src:"/static/images/designReport/tuku_9.png"},
+  {src:"/static/images/designReport/tuku_10.png"},
+  {src:"/static/images/designReport/tuku_11.png"},
+  {src:"/static/images/designReport/tuku_12.png"},
+  {src:"/static/images/designReport/tuku_13.png"},
+  {src:"/static/images/designReport/tuku_14.png"},
+  {src:"/static/images/designReport/tuku_15.png"},
+  {src:"/static/images/designReport/tuku_16.png"},
+]
 const Home: NextPage = () => {
   return (
     <>
@@ -42,43 +59,15 @@ const Home: NextPage = () => {
                 ml:"16px"
             }}>みんなのでざレポ</Typography>
             <Grid container>
-              <Grid item md= {6} lg={4} xl={3} >
-                <Card/>
-              </Grid>
-              <Grid item md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>            
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item md= {6} lg={4} xl={3} >
-                <Card/>
-              </Grid>
-              <Grid item md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>            
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              <Grid item  md= {6} lg={4} xl={3}>
-                <Card/>
-              </Grid>
-              
+              {datas.map((data: designReport,index:number) => {
+              return (
+                <Grid item xs={12} md= {12} lg={6} xl={4} key={index}>
+                  <Card 
+                  src = {data.src}
+                  />
+                </Grid>
+                );
+              })}
             </Grid>
             <Footer></Footer>
         </div>
