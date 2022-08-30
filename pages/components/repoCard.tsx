@@ -63,10 +63,10 @@ export default function MediaCard(props:Props) {
 
       <CardActions sx={{display:"flex",justifyContent:"space-between",pb:"16px"}}>
       <div>
-      <Button variant="text" > <EditIcon sx={{mx:"8px"}}/> 書き込み:62</Button>
-      <Button variant="text"> <FavoriteIcon sx={{mx:"8px"}}/> いいね:652</Button>
+      <Button role="button" variant="text" > <EditIcon sx={{mx:"8px"}}/> 書き込み:62</Button>
+      <Button role="button" variant="text"> <FavoriteIcon sx={{mx:"8px"}}/> いいね:652</Button>
       </div>
-      <IconButton onClick={handleClick}>
+      <IconButton role="button" onClick={handleClick}>
         <FavoriteIcon sx={{
             color:isActive?"#2196f3":"grey"
         }}/>
