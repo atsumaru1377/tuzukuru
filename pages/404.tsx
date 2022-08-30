@@ -7,6 +7,7 @@ import Footer from "./components/footer"
 import Typography from "@mui/material/Typography"
 import Link from 'next/link';
 import Divider from "@mui/material/Divider"
+import Button from "@mui/material/Button"
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
@@ -31,11 +32,13 @@ const Home: NextPage = () => {
 					<div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
 					<SearchBar/>
 					<Box sx={{height:"60vh", display:"flex",justifyContent:"center",alignItems:"center", boxShadow:"none"}}>
-						<div>
-							<Typography variant='h3' sx={{fontSize:"6rem"}} style={{textAlign:"center"}}>404</Typography>
-							<Typography variant='h4' style={{textAlign:"center"}}>not found</Typography>
+						<div style={{textAlign:"center"}}>
+							<Typography variant='h3' sx={{fontSize:"4rem"}} >404</Typography>
+							<Typography variant='h4'sx={{fontSize:"2rem"}}>not found</Typography>
 							<Divider sx={{my:"16px"}}/>
-							<Link href="/"><Typography variant='h5' color="primary" style={{textAlign:"center"}}>Topへ戻る</Typography></Link>
+              <div style={{display:"flex",justifyContent:"center"}}>
+							<Button href="/" color="primary" sx={{margin:"0 auto",fontSize:"1rem"}}>Topへ戻る</Button>
+              </div>
 						</div>
 					</Box>
 					<Footer></Footer>

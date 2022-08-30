@@ -82,7 +82,7 @@ const Home: NextPage = () => {
               secondHref ="/mypage"
               third = ""
               thirdHref=''/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
+            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}} id="#">
                 <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
