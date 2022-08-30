@@ -12,7 +12,8 @@ import Button from "@mui/material/Button"
 import Divider from "@mui/material/Divider"
 import RepoCard from "./components/tukurepoCard"
 import {CommuCardType,DesignCardType,RecipeCardType} from "../plugins/type"
-import {recipeData} from "../database/recipeData"
+import { getDatabase, ref, push, child, get, onValue, update} from "firebase/database";
+import firebaseApp from "../firebase";
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
@@ -32,7 +33,34 @@ const design : DesignCardType[] = [
   {src:"/static/images/designReport/tuku_5.png"},
   {src:"/static/images/designReport/tuku_6.png"},
 ]
+
+const recipeDatabase = ():RecipeCardType[] => {
+  let recipeData:RecipeCardType[] = [];
+  const database = getDatabase(firebaseApp);
+  const recipeRef = ref(database, '/recipe/');
+  onValue(recipeRef, (snapshot) => {
+    const data = snapshot.val();
+    for (const key in data) {
+      if (data[key].available) {
+        recipeData.push({
+          available: true,
+          src:data[key].src,
+          title:data[key].title,
+          tool:data[key].tool,
+          feature:data[key].feature,
+          theme1:data[key].theme1,
+          theme2:data[key].theme2,
+          theme3:data[key].theme3
+        })
+			}
+		};
+  });
+  console.log(recipeData);
+  return recipeData;
+}
+
 const Home: NextPage = () => {
+
   return (
     <>
      <SiteHeader title="Tuzukuru 続くを作る | top page"></SiteHeader>
@@ -53,22 +81,20 @@ const Home: NextPage = () => {
                 ml:"16px"
             }}>みんなのレシピ</Typography>
             <Grid container>
-            {recipeData.map((data: RecipeCardType,index:number) => {
-              if (data.available) {
-                return (
-                  <Grid item md= {12} lg={6} xl={4} key={index}>
-                    <Card
-                    src = {data.src}
-                    title={data.title}
-                    tool={data.tool}
-                    feature={data.feature}
-                    theme1={data.theme1}
-                    theme2={data.theme2}
-                    theme3={data.theme3}
-                    />
-                  </Grid>
-                );
-              }
+            {recipeDatabase().map((data: RecipeCardType,index:number) => {
+              return (
+                <Grid item md= {12} lg={6} xl={4} key={index}>
+                  <Card
+                  src = {data.src}
+                  title={data.title}
+                  tool={data.tool}
+                  feature={data.feature}
+                  theme1={data.theme1}
+                  theme2={data.theme2}
+                  theme3={data.theme3}
+                  />
+                </Grid>
+              );
             })}
             </Grid>
             <div style={{display:"flex",justifyContent:"center",marginBottom:"16px"}}>

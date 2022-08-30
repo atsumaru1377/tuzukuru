@@ -7,6 +7,7 @@ import Button from '@mui/material/Button'
 import SortIcon from '@mui/icons-material/Sort';
 import {recipeData} from '../../database/recipeData';
 import { RecipeCardType } from '../../plugins/type';
+import { updateAvailability } from '../../database/addReport';
 
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 
@@ -17,12 +18,12 @@ type ToolID = {
 }
 
 const toolList:ToolID[] = [
-  {key:0, tool_name:"人気", extension:""},
+  {key:0, tool_name:"popular", extension:""},
   {key:1, tool_name:"figma", extension:".svg"},
   {key:2, tool_name:"AfterEffects", extension:".png"},
   {key:3, tool_name:"illustrator", extension:".png"},
   {key:4, tool_name:"indesign", extension:".png"},
-  {key:5, tool_name:"photoshop", extension:".png"},
+  {key:5, tool_name:"Photoshop", extension:".png"},
   {key:6, tool_name:"Premiere", extension:".png"},
   {key:7, tool_name:"xd", extension:".png"},
   {key:8, tool_name:"blender", extension:".svg"},
@@ -41,13 +42,7 @@ export default function ScrollableTabsButtonAuto() {
   )
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    console.log(newValue);
-    setData((data)=>(data.map((element)=>{
-      (element.tool == toolList[newValue].tool_name) ? element.available = true : element.available = false;
-      (newValue == 0) ? element.available = true : element.available = false;
-      console.log(element.available);
-      return element
-    })))
+    updateAvailability(toolList[newValue].tool_name);
     setValue(newValue);
   };
 
