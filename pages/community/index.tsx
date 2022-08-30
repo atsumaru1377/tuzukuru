@@ -80,7 +80,7 @@ const Home: NextPage = () => {
     <>
     <SiteHeader title="Tuzukuru 続くを作る | community top page "></SiteHeader>
       <Box>
-        <SideBar page="community"/>
+        <SideBar/>
         <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar></SearchBar>
