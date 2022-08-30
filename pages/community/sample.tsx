@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                 }}>blenderを諦めない</Typography>
             <div style={{display:"flex",padding:"16px",alignItems:"center",flexWrap:"wrap"}}>
               <div style={{display:"flex"}}>
-                  <Chip label="blender" color="primary" sx={{mx:"4px"}}></Chip>
+                  <Chip label="blender" color="warning" sx={{color:"white", mx:"4px"}}></Chip>
                   <Chip label="初心者歓迎"  sx={{mx:"4px"}}></Chip>
               </div>
               <Typography variant = {"h3"} sx={{

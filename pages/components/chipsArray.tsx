@@ -19,8 +19,10 @@ export default function ChipsArray(props:ChipArray) {
  			if (chip.key == chipOnClick.key){
 				if (chip.variant === "filled") {
 					chip.variant="outlined";
+					chip.sx={}
 				} else {
 					chip.variant="filled";
+					chip.sx={color:"white"}
 				}
 			}
 			if (chipOnClick.key === 0) {chip.variant = chipOnClick.variant;}
@@ -52,6 +54,7 @@ export default function ChipsArray(props:ChipArray) {
 						color={props.color}
 						label={data.label}
 						variant={data.variant}
+						sx={(props.color == "default") ? undefined: data.sx}
 						onClick={() => handleClick(data)}
 						/>
 				</ListItem>

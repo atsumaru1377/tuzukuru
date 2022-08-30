@@ -98,8 +98,8 @@ const Home: NextPage = () => {
                 display:"flex",
                 alignItems:"center"
               }}>
-              <Chip label="初心者" component="a" href="#basic-chip" clickable color="primary" sx={{mx:"4px"}}/>
-              <Chip label="blender" component="a" href="#basic-chip" clickable sx={{mx:"4px"}}/>
+              <Chip label="初心者" component="a" href="#basic-chip" clickable color="success" sx={{color:"white", mx:"4px"}}/>
+              <Chip label="blender" component="a" href="#basic-chip" clickable color="warning" sx={{color:"white",mx:"4px"}}/>
               <Chip label="Eevee" component="a" href="#basic-chip" clickable sx={{mx:"4px"}}/>
               </div>
               <Typography sx={{

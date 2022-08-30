@@ -88,8 +88,8 @@ const Home: NextPage = () => {
                 <div style={{padding:"16px"}}>
                     <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
                     <div style={{overflow:"scroll",paddingTop:"16px"}}>
-                    <Chip label="After Effects" color = "primary" sx={{margin:"4px"}}></Chip>
-                    <Chip label="blender" color = "primary" sx={{margin:"4px"}}></Chip>
+                    <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
+                    <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                     <Chip label="ガンプラ"sx={{margin:"4px"}}></Chip>
                     </div>
                 </div>
