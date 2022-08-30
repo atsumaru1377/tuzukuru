@@ -13,6 +13,7 @@ export default function ChipsArray(props:ChipArray) {
 	const [chipData, setChipData] = useState<ChipData[]>(
 		props.chips
 	);
+
 	const handleClick = (chipOnClick:ChipData) => {
     setChipData((chips) => (chips.map(chip => {
  			if (chip.key == chipOnClick.key){
@@ -55,7 +56,6 @@ export default function ChipsArray(props:ChipArray) {
 						variant={data.variant}
 						sx={(props.color == "default") ? undefined: data.sx}
 						onClick={() => handleClick(data)}
-						
 						/>
 				</ListItem>
 			);

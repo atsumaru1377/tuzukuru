@@ -11,11 +11,7 @@ import Link from 'next/link'
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-type Page = {
-  page:string
-}
-
-export default function SideBar(props:Page) {
+export default function SideBar() {
   return (
     <Paper
     aria-label="global navigation"
@@ -46,15 +42,13 @@ export default function SideBar(props:Page) {
         </Box>
 
         <div style={{height:"8px"}}></div>
-        <Link href ="/mycommunity">
+        <Link href ="/mypage">
         <MenuItem alia-label="マイコミュニティ">
           <ListItemText
           primaryTypographyProps={{
             fontSize:16,
             fontWeight:"bold"
-          }}
-          style={{"color":props.page==="mycommunity"?"#2196f3":"black"}}
-          >マイコミュニティ</ListItemText>
+          }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -62,8 +56,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="community"?"#2196f3":"black"}}>コミュニティを探す</ListItemText>
+          }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -79,8 +72,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="recipe"?"#2196f3":"black"}}>みんなのレシピ</ListItemText>
+          }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -88,8 +80,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="mypage"?"#2196f3":"black"}}>お気に入りのレシピ</ListItemText>
+          }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -97,8 +88,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="recipePost"?"#2196f3":"black"}}>レシピを投稿する</ListItemText>
+          }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -113,8 +103,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="design"?"#2196f3":"black"}}>みんなのでざレポを見る</ListItemText>
+          }}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -122,9 +111,7 @@ export default function SideBar(props:Page) {
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
-          }}sx={{py:"4px"}}
-          style={{"color":props.page==="designPost"?"#2196f3":"black"}}
-          >でざレポを投稿する</ListItemText>
+          }}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>

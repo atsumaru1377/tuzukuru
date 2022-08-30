@@ -55,7 +55,8 @@ export default function searchWindow(){
 				mt:"16px",
 				ml:"16px"
 			}}>ジャンル</Typography>
-			<ChipsArray chips={categoryChipData} color="secondary"></ChipsArray>
+			<ChipsArray chips={categoryChipData} color="error"></ChipsArray>
+
 			<Typography variant = "h2" sx={{
 				fontSize:"1.5rem",
 				fontWeight:"500",
