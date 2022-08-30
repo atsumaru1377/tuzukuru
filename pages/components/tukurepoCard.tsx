@@ -13,7 +13,11 @@ type Card = {
 }
 export default function ImgMediaCard(props:Card) {
   return (
-    <Card role="tukurepo card" sx={{ minWidth: 216,m:"16px",borderRadius:"15px",cursor:"pointer"}}>
+    <Card role="tukurepo card" sx={{ minWidth: 216,m:"16px",borderRadius:"15px",cursor:"pointer",        filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
+    transition: "all .1s ease-out",
+    "&:hover":{
+      filter:"drop-shadow(0 0 10px rgba(0,0,0,.2))",
+    }}}>
       <Link href="/designreport/sample">
       <CardMedia
         component="img"

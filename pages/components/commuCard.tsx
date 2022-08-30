@@ -21,7 +21,13 @@ export default function MediaCard(props:CommuCardType) {
         m:"15px",
         position:"relative",
         borderRadius:"20px",
-        display:{lg:"flex"}
+        display:{lg:"flex"},
+        cursor:"pointer",
+        filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
+        transition: "all .1s ease-out",
+        "&:hover":{
+          filter:"drop-shadow(0 0 10px rgba(0,0,0,.2))",
+        }
     }}>
       <Link href="/community/sample">
       <CardMedia
