@@ -40,3 +40,10 @@ export type ChipArray = {
     chips: ChipData[];
     color: Color
 }
+
+export type FBCommentType = {
+	user: string;
+	time: string;
+	positive: string;
+	negative: string;
+}
