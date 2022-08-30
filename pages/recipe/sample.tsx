@@ -16,7 +16,7 @@ import Comment from "../components/comment";
 import SearchBar from "../components/searchBar"
 import Link from "next/link"
 import Button from "@mui/material/Button"
-import { DesignCardType ,RecipeCardType} from '../../plugins/type'
+import { DesignCardType , RecipeCardType } from '../../plugins/type'
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -51,7 +51,6 @@ const boxStyle:{[key:string]:string} = {
   width:'calc(100% - 300px)',
   justifyContent:"center"
 }
-
 const Home: NextPage = () => {
   return (
     <>

@@ -12,7 +12,8 @@ import Footer from "../components/footer";
 import SearchBar from "../components/searchBar"
 import Divider from "@mui/material/Divider"
 import Thumbnail from "../../public/static/images/sample_thumb.png"
-import { DesignCardType } from '../../plugins/type'
+import { DesignCardType, FBCommentType } from '../../plugins/type'
+import FeedbackComment from "../components/feedbackComment";
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -30,6 +31,11 @@ const boxStyle:{[key:string]:string} = {
   top:"0",
   width:'calc(100% - 280px)'
 }
+
+const feedbackComments:FBCommentType[] = [
+  {key:0, user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
+  {key:1, user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
+]
 
 const Home: NextPage = () => {
   return (
@@ -143,7 +149,9 @@ const Home: NextPage = () => {
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
-                }}>みんなのフィードバック</Typography>
+            }}>みんなのフィードバック</Typography>
+            <FeedbackComment comments={feedbackComments}/>
+
             <Typography variant = {"h3"} sx={{
             fontSize:"2rem",
             fontWeight:"bold",
