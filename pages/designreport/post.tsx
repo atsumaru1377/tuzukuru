@@ -67,15 +67,13 @@ const Home: NextPage = () => {
   return (
     <>
      <SiteHeader title="Tuzukuru 続くを作る | Tukurepo Post Page"></SiteHeader>
-      <Box
-        sx={{
-          display:"flex",
-        }}>
+     <Box>
         <SideBar/>
-
         <Box style={boxStyle}>
+        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+          <SearchBar/>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div style={{padding:"32px"}}>
+            <div style={{padding:"0px 32px"}}>
               <Typography variant = "h2" sx={{
                   fontSize:"2rem",
                   fontWeight:"500",
@@ -199,9 +197,9 @@ const Home: NextPage = () => {
             </div>
             <Footer/>
           </form>
+          </div>
         </Box>
-
-      </Box>
+        </Box>
     </>
   )
 }

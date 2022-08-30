@@ -84,7 +84,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="/">
+        <Link href="/underConstruction">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -116,7 +116,7 @@ export default function SideBar() {
         </MenuItem>
         </Link>
         <Divider />
-        <Link href="/">
+        <Link href="/underConstruction">
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
@@ -124,7 +124,7 @@ export default function SideBar() {
           }}>困った時は</ListItemText>
         </MenuItem>
         </Link>
-        <Link href="/">
+        <Link href="/underConstruction">
         <MenuItem>
           <ListItemText  primaryTypographyProps={{
             fontSize:14
@@ -132,7 +132,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="/">
+        <Link href="/underConstruction">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
@@ -140,7 +140,7 @@ export default function SideBar() {
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
-        <Link href="/">
+        <Link href="/underConstruction">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
             fontSize:14
