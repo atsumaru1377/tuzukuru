@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                 <Divider orientation = "vertical" flexItem/>
                 <div style={{width:"50%",maxWidth:"1000px",height:"100%",overflowX:"scroll",display:"flex",flexWrap:"nowrap"}}>
                     <div style={{minWidth:"80px",padding:"32px",textAlign:"center"}}>
-                        <Typography>つくレポ数</Typography>
+                        <Typography>でざレポ数</Typography>
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>25</Typography>
                     </div>
                     <div style={{minWidth:"80px",padding:"32px",textAlign:"center"}}>
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
                   mb:"16px",
                   mt:"64px",
                   pl:"16px"
-                }}>自分のつくレポ</Typography>
+                }}>自分のでざレポ</Typography>
                           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (

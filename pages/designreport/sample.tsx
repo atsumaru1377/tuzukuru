@@ -156,7 +156,7 @@ const Home: NextPage = () => {
             fontSize:"2rem",
             fontWeight:"bold",
             mt:"32px"
-            }}>他のつくレポ</Typography>
+            }}>他のでざレポ</Typography>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
