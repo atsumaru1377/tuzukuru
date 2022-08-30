@@ -127,7 +127,7 @@ const Home: NextPage = () => {
             })}
             </Grid>
             <div style={{display:"flex",justifyContent:"center",marginBottom:"16px"}}>
-            <Button href="/recipe">もっと見る</Button>
+            <Button role="button" href="/recipe">もっと見る</Button>
             </div>
             <Divider sx={{my:"16px"}}></Divider>
             <Typography variant = "h2" sx={{
@@ -140,7 +140,7 @@ const Home: NextPage = () => {
              <Grid container>
               {design.map((data: DesignCardType,index:number) => {
               return (
-                <Grid item xs={12} md= {12} lg={6} xl={4} key={index}>
+                <Grid item xs={12} md= {12} lg={4} xl={4} key={index}>
                   <RepoCard
                   src = {data.src}
                   />
@@ -149,7 +149,7 @@ const Home: NextPage = () => {
               })}
             </Grid>
             <div style={{display:"flex",justifyContent:"center",marginBottom:"16px"}}>
-            <Button href="/designreport">もっと見る</Button>
+            <Button role="button" href="/designreport">もっと見る</Button>
             </div>
             <Footer></Footer>
             </div>

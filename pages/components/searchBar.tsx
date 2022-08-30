@@ -52,7 +52,7 @@ export default function ScrollableTabsButtonAuto() {
           onClick={()=>{window.location.href = "/search"}}
         />
       </Search>
-      <IconButton/>
+      <IconButton role="button"/>
     </Box>
     </Box>
 

@@ -26,17 +26,18 @@ export default function AlignItemsList() {
       setValue(newValue);
     };
   return (
-    <div style={{marginLeft:"16px"}}> 
+    <div style={{marginLeft:"16px"}}>
         <IconButton
-            onClick={handleClick}
-            size="small"
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-         <div style={{background:"white",filter:"drop-shadow(0 0 10px rgba(0,0,0,0.15))",borderRadius:"20px",padding:"8px 16px",display:"flex"}}>
-            <MenuIcon sx={{ width: 32, height: 32 ,mr:"8px"}} />
-            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+          role="button"
+          onClick={handleClick}
+          size="small"
+          aria-controls={open ? 'account-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+        >
+        <div style={{background:"white",filter:"drop-shadow(0 0 10px rgba(0,0,0,0.15))",borderRadius:"20px",padding:"8px 16px",display:"flex"}}>
+          <MenuIcon sx={{ width: 32, height: 32 ,mr:"8px"}} />
+          <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
         </div>
         </IconButton>
 

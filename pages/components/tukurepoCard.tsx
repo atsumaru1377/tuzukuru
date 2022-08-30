@@ -35,12 +35,12 @@ export default function ImgMediaCard(props:Card) {
             mx:"8px"
         }}
         />
-        <Button variant="text"sx={{ml:"8px"}}> 
-            <ChatBubbleIcon sx={{h:"8px",w:"8px",mr:"4px"}} /> 
+        <Button role="button" variant="text"sx={{ml:"8px"}}>
+            <ChatBubbleIcon sx={{h:"8px",w:"8px",mr:"4px"}} />
             <Typography sx={{fontSize:"0.8rem"}}>1000</Typography>
         </Button>
-        <Button variant="text"sx={{mx:"0px"}}> 
-            <FavoriteIcon sx={{h:"8px",w:"8px",mr:"4px"}}/> 
+        <Button role="button" variant="text"sx={{mx:"0px"}}>
+            <FavoriteIcon sx={{h:"8px",w:"8px",mr:"4px"}}/>
             <Typography sx={{fontSize:"0.8rem"}}>3000</Typography>
         </Button>
       </CardActions>
