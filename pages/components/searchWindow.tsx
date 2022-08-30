@@ -87,7 +87,7 @@ export default function searchWindow(){
 				mt:"16px",
 				ml:"16px"
 			}}>その他タグ</Typography>
-			<ChipsArray chips={otherChipData} color="default"></ChipsArray>
+			<ChipsArray chips={otherChipData} color="secondary"></ChipsArray>
 		</div>
 	)
 }

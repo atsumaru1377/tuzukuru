@@ -90,7 +90,7 @@ const Home: NextPage = () => {
                     <div style={{overflow:"scroll",paddingTop:"16px"}}>
                     <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                     <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
-                    <Chip label="ガンプラ"sx={{margin:"4px"}}></Chip>
+                    <Chip label="ガンプラ" color="secondary" sx={{color:"white",margin:"4px"}}></Chip>
                     </div>
                 </div>
                 <div style={{width:"64px"}}></div>

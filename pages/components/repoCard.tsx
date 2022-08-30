@@ -51,8 +51,8 @@ export default function MediaCard(props:Props) {
       <Chip label="初心者" component="a" href="#basic-chip" clickable color="success" sx={{color:"white"}}/>
       <Chip label={props.tool} component="a" href="#basic-chip" clickable color="warning" sx={{color:"white"}}/>
       <Chip label={props.theme1} component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
-      <Chip label={props.theme2} component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
-      <Chip label={props.theme3} component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>
+      <Chip label={props.theme2} component="a" href="#basic-chip" clickable color="secondary" sx={{color:"white"}}/>
+      <Chip label={props.theme3} component="a" href="#basic-chip" clickable color="secondary" sx={{color:"white"}}/>
       <Chip label={props.feature} component="a" href="#basic-chip" clickable color="secondary" sx={{color:"white"}}/>
       </CardActions>
 
