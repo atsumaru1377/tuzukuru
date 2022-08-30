@@ -93,12 +93,14 @@ export default function SideBar() {
         </MenuItem>
         </Link>
         <Divider />
+        <Link href="/designreport">
         <MenuItem>
           <ListItemText
           primaryTypographyProps={{
             fontWeight:"bold"
           }}>でざレポ</ListItemText>
         </MenuItem>
+        </Link>
         <Link href="/designreport">
         <MenuItem>
           <ListItemText primaryTypographyProps={{
