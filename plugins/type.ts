@@ -1,3 +1,5 @@
+import { ObjectHTMLAttributes } from "react";
+
 export type CommuCardType = {
     src:string;
     title:string;
@@ -29,6 +31,7 @@ export type BreadCrumbs ={
 
 export type ChipData = {
     key: number;
+    sx: object;
     label: string;
     variant: "filled" | "outlined";
     icon: string
