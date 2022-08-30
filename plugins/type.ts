@@ -8,6 +8,7 @@ export type CommuCardType = {
     theme3:string;
 }
 export type RecipeCardType = {
+    available: boolean;
     src:string;
     title:string;
     tool:string;

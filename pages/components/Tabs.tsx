@@ -5,13 +5,49 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button'
 import SortIcon from '@mui/icons-material/Sort';
+import {recipeData} from '../../database/recipeData';
+import { RecipeCardType } from '../../plugins/type';
 
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 
+type ToolID = {
+  key : number;
+  tool_name: string;
+  extension: string;
+}
+
+const toolList:ToolID[] = [
+  {key:0, tool_name:"人気", extension:""},
+  {key:1, tool_name:"figma", extension:".svg"},
+  {key:2, tool_name:"AfterEffects", extension:".png"},
+  {key:3, tool_name:"illustrator", extension:".png"},
+  {key:4, tool_name:"indesign", extension:".png"},
+  {key:5, tool_name:"photoshop", extension:".png"},
+  {key:6, tool_name:"Premiere", extension:".png"},
+  {key:7, tool_name:"xd", extension:".png"},
+  {key:8, tool_name:"blender", extension:".svg"},
+  {key:9, tool_name:"word", extension:".svg"},
+  {key:10, tool_name:"excel", extension:".svg"},
+  {key:11, tool_name:"powerpoint", extension:".svg"},
+  {key:12, tool_name:"canva", extension:".svg"},
+];
+
+const imgRef:string = "/static/images/adobelogo/"
+
 export default function ScrollableTabsButtonAuto() {
   const [value, setValue] = React.useState(0);
+  const [data, setData] = React.useState<RecipeCardType[]>(
+    recipeData
+  )
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    console.log(newValue);
+    setData((data)=>(data.map((element)=>{
+      (element.tool == toolList[newValue].tool_name) ? element.available = true : element.available = false;
+      (newValue == 0) ? element.available = true : element.available = false;
+      console.log(element.available);
+      return element
+    })))
     setValue(newValue);
   };
 
@@ -30,18 +66,21 @@ export default function ScrollableTabsButtonAuto() {
         aria-label="design tools tabs"
       >
         <Tab icon = {<LocalFireDepartmentIcon sx={{color:"red"}}/>} label="人気" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/figma.svg" alt = "figma logo" style={{width:"24px",height:"24px"}}/>} label="figma"sx={{width:"144px"}} />
-        <Tab icon= { <img src="/static/images/adobelogo/AfterEffects.png" alt = "aftereffects logo" style={{width:"24px",height:"24px"}}/>} label="After Effects" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/illustrator.png" alt = "illustrator logo" style={{width:"24px",height:"24px"}}/>} label="illustrator" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/indesign.png" alt = "indesign logo" style={{width:"24px",height:"24px"}}/>} label="indesign"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/photoshop.png" alt = "photoshop logo" style={{width:"24px",height:"24px"}}/>} label="photoshop" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/Premiere.png" alt = "Premiere logo" style={{width:"24px",height:"24px"}}/>} label="Premiere" sx={{width:"144px"}}/>
-        <Tab icon = {<img src="/static/images/adobelogo/xd.png" alt = "xd logo" style={{width:"24px",height:"24px"}}/>} label="XD"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/blender.svg" alt = "blender logo" style={{width:"24px",height:"24px"}}/>} label="blender"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/word.svg" alt = "word logo" style={{width:"24px",height:"24px"}}/>} label="word"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/excel.svg" alt = "excel logo" style={{width:"24px",height:"24px"}}/>} label="excel"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/powerpoint.svg" alt = "powerpoint logo" style={{width:"24px",height:"24px"}}/>} label="powerpoint"sx={{width:"144px"}} />
-        <Tab icon = {<img src="/static/images/adobelogo/canva.svg" alt = "canva logo" style={{width:"24px",height:"24px"}}/>} label="canva"sx={{width:"144px"}} />
+        {toolList.map((data: ToolID,index:number) => {
+          if (data.key !== 0) {
+            return (
+              <Tab icon={
+                <img
+                  src={imgRef + data.tool_name + data.extension}
+                  alt={data.tool_name + " logo"}
+                  style={{width:"24px",height:"24px"}}
+                />}
+                  sx={{width:"144px"}}
+                  label={data.tool_name}
+              />
+            )
+          }
+        })};
       </Tabs>
       <Button startIcon={<SortIcon/>}
         size = "large" sx={{

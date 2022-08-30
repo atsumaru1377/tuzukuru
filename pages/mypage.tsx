@@ -49,20 +49,26 @@ const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_4.png"},
 ]
 const recipeData:RecipeCardType[] =[
-  { src:"/static/images/recipe_thumb/sample_1.png",
-  title:"illustratorで柔らかいグラフィックを制作",
-  tool:"illustrator",
-  feature:"丸い",
-  theme1:"ポスター",
-  theme2:"HP",
-  theme3:"LP"},
-  { src:"/static/images/recipe_thumb/sample_2.png",
-  title:"blenderでかわいいシューズを作る",
-  tool:"blender",
-  feature:"グラフィック",
-  theme1:"3D",
-  theme2:"CG",
-  theme3:"可愛い"},
+  {
+    available: true,
+    src:"/static/images/recipe_thumb/sample_1.png",
+    title:"illustratorで柔らかいグラフィックを制作",
+    tool:"illustrator",
+    feature:"丸い",
+    theme1:"ポスター",
+    theme2:"HP",
+    theme3:"LP"
+  },
+  {
+    available: true,
+    src:"/static/images/recipe_thumb/sample_2.png",
+    title:"blenderでかわいいシューズを作る",
+    tool:"blender",
+    feature:"グラフィック",
+    theme1:"3D",
+    theme2:"CG",
+    theme3:"可愛い"
+  },
 ]
 
 const Home: NextPage = () => {
