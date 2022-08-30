@@ -33,7 +33,12 @@ export default function MediaCard(props:Props) {
         position:"relative",
         borderRadius:"24px",
         minWidth:"256px",
-        cursor:"pointer"
+        cursor:"pointer",
+        filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
+        transition: "all .1s ease-out",
+        "&:hover":{
+          filter:"drop-shadow(0 0 10px rgba(0,0,0,.2))",
+        }
     }}>
       <Link href="/recipe/sample">
       <CardMedia
