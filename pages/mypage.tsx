@@ -73,7 +73,7 @@ const Home: NextPage = () => {
         sx={{
           display:"flex",
         }}>
-        <SideBar/>
+        <SideBar page="mypage"/>
         <Box style={boxStyle}>
              <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar/>
@@ -82,7 +82,7 @@ const Home: NextPage = () => {
               secondHref ="/mypage"
               third = ""
               thirdHref=''/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
+            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}} id="#">
                 <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>

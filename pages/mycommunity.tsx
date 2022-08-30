@@ -1,13 +1,14 @@
-import type { NextPage } from 'next'
-import SiteHeader from "../components/siteHeader"
-import SideBar from '../components/globalNav'
-import Box from "@mui/material/Card"
-import Tabs from "../components/Tabs"
-import Card from "../components/commuCard"
-import SearchBar from "../components/searchBar"
-import Grid from "@mui/material/Grid"
+import type { NextPage } from 'next';
+import SiteHeader from "./components/siteHeader";
+import SideBar from './components/globalNav';
+import Box from "@mui/material/Card";
+import Tabs from "./components/Tabs";
+import Card from "./components/commuCard";
+import SearchBar from "./components/searchBar";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import SearchWindow from '../components/searchWindow'
+import SearchWindow from './components/searchWindow';
+import Footer from './components/footer';
 
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"280px",
@@ -60,27 +61,13 @@ const datas : CardData[] = [
   theme1:"ゆるゆる",
   theme2:"優しい",
   theme3:"LP"},
-  { src:"/static/images/community/commu_5.png",
-  title:"動画編集初心者のための部屋",
-  tool:"illustrator",
-  feature:"丸い",
-  theme1:"ゆるゆる",
-  theme2:"優しい",
-  theme3:"LP"},
-  { src:"/static/images/community/commu_6.png",
-  title:"Adobeツールの疑問解消ルーム",
-  tool:"illustrator",
-  feature:"丸い",
-  theme1:"ゆるゆる",
-  theme2:"優しい",
-  theme3:"LP"},
 ]
 const Home: NextPage = () => {
   return (
     <>
     <SiteHeader title="Tuzukuru 続くを作る | community top page "></SiteHeader>
       <Box>
-        <SideBar page="community"/>
+        <SideBar page="mycommunity"/>
         <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
             <SearchBar></SearchBar>
@@ -91,7 +78,7 @@ const Home: NextPage = () => {
                 mt:"32px",
                 mb:"16px",
                 ml:"16px"
-            }}>コミュニティを探す</Typography>
+            }}>マイコミュニティ</Typography>
             <Grid container>
             {datas.map((data: CardData,index:number) => {
             return (
@@ -109,6 +96,7 @@ const Home: NextPage = () => {
               );
             })}
             </Grid>
+            <Footer></Footer>
           </div>
         </Box>
     </Box>
