@@ -7,7 +7,7 @@ const theme = createTheme({
         main: blue[400],
       },
       secondary: {
-        main: grey[400],
+        main: grey[900],
       },
       success:{
         main : "#32C2F6"
@@ -17,7 +17,7 @@ const theme = createTheme({
       },
       info:{
         main:"#36DE58"
-      }
+      },
     },
     breakpoints: {
       values: {
