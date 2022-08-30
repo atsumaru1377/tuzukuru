@@ -38,8 +38,8 @@ export default function MediaCard(props:CommuCardType) {
         <div style={{maxWidth:"100%",overflowY:"scroll",display:"flex"}}>
             <Chip label="初心者" sx={{mx:"8px", color:"white"}}  color="success"></Chip>
             <Chip label="blender"sx={{mx:"8px", color:"white"}} color="warning"></Chip>
-            <Chip label="SF"sx={{mx:"8px", color:"white"}} color = "info"></Chip>
-            <Chip label="CG"sx={{mx:"8px", color:"white"}} color = "info"></Chip>
+            <Chip label="SF"sx={{color:"white",mx:"8px"}} color = "secondary"></Chip>
+            <Chip label="CG"sx={{color:"white",mx:"8px"}} color = "secondary"></Chip>
         </div>
         <div style={{display:"flex",paddingTop:"16px"}}>
             <Avatar alt="Remy Sharp" sx={{mx:"8px"}} src="/static/images/avatar/1.jpg" />
