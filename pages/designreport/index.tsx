@@ -61,7 +61,7 @@ const Home: NextPage = () => {
             <Grid container>
               {datas.map((data: designReport,index:number) => {
               return (
-                <Grid item xs={12} md= {12} lg={6} xl={4} key={index}>
+                <Grid item xs={12} md= {12} lg={3} xl={4} key={index}>
                   <Card
                   src = {data.src}
                   />
