@@ -42,6 +42,7 @@ export type ChipArray = {
 }
 
 export type FBCommentType = {
+    key: number;
 	user: string;
 	time: string;
 	positive: string;

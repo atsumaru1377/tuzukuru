@@ -33,8 +33,8 @@ const boxStyle:{[key:string]:string} = {
 }
 
 const feedbackComments:FBCommentType[] = [
-  { user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
-  { user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
+  {key:0, user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
+  {key:1, user : "Winnie the Pooh", time: "now or never", positive: "good", negative: "bad" },
 ]
 
 const Home: NextPage = () => {

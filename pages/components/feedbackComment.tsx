@@ -20,17 +20,17 @@ export default function AlignItemsList(props:Props) {
   return (
     <List sx={{ width: '100%', minWidth: 360, bgcolor: 'background.paper' }}>
 			<div style={{height:"32px"}}></div>
-			<Paper style={{borderRadius:0, padding:"10px"}}>
+			<Paper style={{borderRadius:0, padding:"10px"}} key="title">
 				<Typography variant = {"h3"} sx={{
 					fontSize:"1.5rem",
 				}}>10件のフィードバック</Typography>
 			</Paper>
-			<Paper style={{borderRadius:0, padding:"10px 0px"}}>
-				<ListItem alignItems='flex-start'>
+			<Paper style={{borderRadius:0, padding:"10px 0px"}} key="do_fb">
+				<ListItem alignItems='flex-start' key="submit">
 						<ListItemAvatar>
 							<Avatar alt="Naoki Kondo" src="/static/images/avatar/1.jpg" />
 						</ListItemAvatar>
-						<ListItem style={{padding:0, width:"100%"}}>
+						<ListItem style={{padding:0, width:"100%"}} key="textfield">
 							<div style={{width:"90%"}}>
 								<TextField color='warning' size="small" sx={{width:"100%"}} label="褒めポイント"></TextField>
 								<div style={{width:"100%", height:"16px"}}></div>
@@ -46,7 +46,7 @@ export default function AlignItemsList(props:Props) {
 
 			{props.comments?.map((data) => {
 				return (
-					<Paper style={{borderRadius:0}}>
+					<Paper style={{borderRadius:0}} key={data.key}>
 						<ListItem alignItems="flex-start">
 							<ListItemAvatar>
 								<Avatar alt={data.user} src="/static/images/avatar/1.jpg" />
