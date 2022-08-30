@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         sx={{
           display:"flex",
         }}>
-        <SideBar/>
+        <SideBar page="404"/>
         <Box style={boxStyle}>
 					<div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
 					<SearchBar/>

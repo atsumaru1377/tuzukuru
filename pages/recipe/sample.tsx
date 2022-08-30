@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       <Box>
       <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
-        <SideBar/>
+        <SideBar page="recipeSample"/>
         <SearchBar/>
         <BreadCrumbs
           second = "レシピ"
