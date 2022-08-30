@@ -27,7 +27,6 @@ export default function AlignItemsList(props:Props) {
 			</Paper>
 			<Paper style={{borderRadius:0, padding:"10px 0px"}}>
 				<ListItem alignItems='flex-start'>
-{/* 					<Typography color="text.secondary">フィードバックをする</Typography> */}
 						<ListItemAvatar>
 							<Avatar alt="Naoki Kondo" src="/static/images/avatar/1.jpg" />
 						</ListItemAvatar>
