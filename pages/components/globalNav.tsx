@@ -63,6 +63,7 @@ export default function SideBar() {
         <Divider />
         <MenuItem>
           <ListItemText
+          sx={{"&:hover":"none"}}
           primaryTypographyProps={{
             fontWeight:"bold"
           }}>レシピ

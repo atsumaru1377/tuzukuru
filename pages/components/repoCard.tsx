@@ -34,6 +34,7 @@ export default function MediaCard(props:Props) {
         borderRadius:"24px",
         minWidth:"256px",
         cursor:"pointer",
+        boxShadow:"none",
         filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
         transition: "all .1s ease-out",
         "&:hover":{
