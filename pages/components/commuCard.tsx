@@ -23,6 +23,7 @@ export default function MediaCard(props:CommuCardType) {
         borderRadius:"20px",
         display:{lg:"flex"},
         cursor:"pointer",
+        boxShadow:"none",
         filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
         transition: "all .1s ease-out",
         "&:hover":{
