@@ -43,7 +43,7 @@ export default function ScrollableTabsButtonAuto() {
         <Tab icon = {<img src="/static/images/adobelogo/powerpoint.svg" alt = "powerpoint logo" style={{width:"24px",height:"24px"}}/>} label="powerpoint"sx={{width:"144px"}} />
         <Tab icon = {<img src="/static/images/adobelogo/canva.svg" alt = "canva logo" style={{width:"24px",height:"24px"}}/>} label="canva"sx={{width:"144px"}} />
       </Tabs>
-      <Button startIcon={<SortIcon/>}
+      <Button role="button" startIcon={<SortIcon/>}
         size = "large" sx={{
         height:"48px",
         padding:'20px',
