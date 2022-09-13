@@ -54,7 +54,7 @@ const boxStyle:{[key:string]:string} = {
 const Home: NextPage = () => {
   return (
     <>
-    <SiteHeader title="Tuzukuru 続くを作る | recipe top page"></SiteHeader>
+    <SiteHeader title="Tuzukuru 続くを作る | Recipe top page"></SiteHeader>
       <Box>
       <Box style={boxStyle}>
         <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
