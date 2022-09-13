@@ -41,7 +41,9 @@ export default function ControlledAccordions() {
           <Typography>
           blenderのアイコンをダブルクリックすると、blenderを起動することができます。開くと右のような画面になります。
           </Typography>
+          <div style={{margin:"16px 0"}}>
           <img src="/static/images/recipe_sample/sample_1.png" alt="blender image" width="80%" />
+          </div>
           </div>
         </AccordionDetails>
       </Accordion>
