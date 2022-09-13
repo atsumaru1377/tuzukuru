@@ -11,3 +11,6 @@ a:after{
 .MuiCardMedia-img{
     object-fit: cover;
 }
+.MuiAccordion-root{
+    border-radius: 15px;
+}
