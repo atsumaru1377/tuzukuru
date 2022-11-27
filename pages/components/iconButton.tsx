@@ -11,6 +11,7 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from "next/link"
+import Box from "@mui/material/Box"
 
 export default function AlignItemsList() {
     const [value, setValue] = React.useState(0);
@@ -34,6 +35,7 @@ export default function AlignItemsList() {
           aria-controls={open ? 'account-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
+          sx={{width:{xs:"0px", sm:"100%"}, visibility:{xs:"hidden", sm:"visible"}, margin:"0px"}}
         >
         <div style={{background:"white",filter:"drop-shadow(0 0 10px rgba(0,0,0,0.15))",borderRadius:"20px",padding:"8px 16px",display:"flex"}}>
           <MenuIcon sx={{ width: 32, height: 32 ,mr:"8px"}} />

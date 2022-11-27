@@ -15,7 +15,7 @@ export default function ControlledAccordions() {
 
   return (
     <div style={{borderRadius:"15px"}}>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} 
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
                 sx = {{
                   boxShadow:"none",
                   filter:"drop-shadow(0 0 15px rgba(0 ,0 ,0 ,.1))",
@@ -37,7 +37,7 @@ export default function ControlledAccordions() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails sx ={{overflow:"hidden"}}>
-          <div style = {{minWidth:"256px",width:"100%",overflow:"hidden"}}> 
+          <div style = {{minWidth:"256px",width:"100%",overflow:"hidden"}}>
           <Typography>
           blenderのアイコンをダブルクリックすると、blenderを起動することができます。開くと右のような画面になります。
           </Typography>

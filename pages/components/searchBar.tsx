@@ -2,7 +2,9 @@ import Box from '@mui/material/Box';
 import {styled , alpha } from "@mui/material/styles"
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import IconButton from "./iconButton"
+import IconButton from "./iconButton";
+import XsHeader from "./xsHeader";
+import { Calculate } from '@mui/icons-material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -40,20 +42,21 @@ const Search = styled('div')(({ theme }) => ({
 export default function ScrollableTabsButtonAuto() {
   return (
     <Box sx={{width:"100%",mt:"32px",maxWidth:"1560px"}}>
-    <Box sx={{ bgcolor: 'white',py:"16px",display:'flex',justifyContent:"space-between",alignItems:'center'}}>
-      <Search sx={{mr:"16px"}}>
-        <SearchIconWrapper>
-        <SearchIcon/>
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="コミュニティ、レシピを探す…"
-          inputProps={{ 'aria-label': 'search' }}
-          sx={{width:"100%",height:"48px"}}
-          onClick={()=>{window.location.href = "/search"}}
-        />
-      </Search>
-      <IconButton/>
-    </Box>
+      <XsHeader/>
+      <Box sx={{width:"100%",bgcolor: 'white',py:"16px",display:'flex',justifyContent:"space-between",alignItems:'center',margin:{xs:"0px 16px"}}}>
+        <Search sx={{mr:"16px", width:{xs:"100%"}}}>
+          <SearchIconWrapper>
+          <SearchIcon/>
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="コミュニティ、レシピを探す…"
+            inputProps={{ 'aria-label': 'search' }}
+            sx={{width:"100%",height:"48px"}}
+            onClick={()=>{window.location.href = "/search"}}
+          />
+        </Search>
+        <IconButton/>
+      </Box>
     </Box>
 
   );

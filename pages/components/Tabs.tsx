@@ -16,13 +16,14 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-    <Box>
+    <Box sx={{width:{xs:"0px", sm:"100%"},height:{xs:"0px", sm:"100%"}, visibility:{xs:"hidden", sm:"visible"}}}>
     <Box sx={{ bgcolor: 'background.paper',pb:"0",display:'flex',justifyContent:"space-between",alignItems:'center'}} >
       <Tabs
         value={value}
         sx={{
             width:"calc(100% - 128px)",
             mb:"0",
+
         }}
         onChange={handleChange}
         variant="scrollable"

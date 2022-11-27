@@ -111,7 +111,7 @@ const Home: NextPage = () => {
           overflowY: "auto",
           right: "0",
           top: "0",
-          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+          width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
           <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
             <SearchBar />
@@ -144,6 +144,7 @@ const Home: NextPage = () => {
               <Button role="button" href="/recipe">もっと見る</Button>
             </div>
             <Divider sx={{ my: "16px" }}></Divider>
+
             <Typography variant="h2" sx={{
               fontSize: "1.5rem",
               fontWeight: "500",
@@ -154,7 +155,7 @@ const Home: NextPage = () => {
             <Grid container>
               {design.map((data: DesignCardType, index: number) => {
                 return (
-                  <Grid item xs={12} md={12} lg={4} xl={4} key={index}>
+                  <Grid item xs={12} md={6} lg={4} xl={4} key={index}>
                     <RepoCard
                       src={data.src}
                     />
