@@ -32,7 +32,7 @@ export default function MediaCard(props:Props) {
         m:"16px",
         position:"relative",
         borderRadius:"24px",
-        minWidth:"256px",
+        maxWidth:"90vw",
         cursor:"pointer",
         boxShadow:"none",
         filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",

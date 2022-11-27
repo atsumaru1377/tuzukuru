@@ -66,12 +66,20 @@ const Home: NextPage = () => {
           display:"flex",
         }}>
         <SideBar/>
-        <Box style={boxStyle}>
-             <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+        <Box sx={{
+          paddingLeft:{xs: "0",sm:"256px"},
+          position: {xs:"relative",sm:"fixed"},
+          height: "100%",
+          overflowY: "auto",
+          right: "0",
+          top: "0",
+          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+        }}>
+            <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
             <SearchBar/>
 						<SearchWindow/>
             <Footer/>
-            </div>
+            </Box>
             </Box>
         </Box>
     </>

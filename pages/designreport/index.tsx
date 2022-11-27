@@ -8,6 +8,8 @@ import SearchBar from "../components/searchBar"
 import Grid from "@mui/material/Grid"
 import Footer from "../components/footer"
 import Typography from "@mui/material/Typography"
+import { AddBox } from '@mui/icons-material'
+
 const boxStyle:{[key:string]:string} = {
   paddingLeft:"256px",
   position:"fixed",
@@ -41,14 +43,22 @@ const datas : designReport[] = [
 const Home: NextPage = () => {
   return (
     <>
-     <SiteHeader title="Tuzukuru 続くを作る | tukurepo top page"></SiteHeader>
+     <SiteHeader title="Tuzukuru 続くを作る | designreport top page"></SiteHeader>
       <Box
         sx={{
           display:"flex"
         }}>
         <SideBar/>
-        <Box style={boxStyle}>
-        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+        <Box sx={{
+          paddingLeft:{xs: "0",sm:"256px"},
+          position: {xs:"relative",sm:"fixed"},
+          height: "100%",
+          overflowY: "auto",
+          right: "0",
+          top: "0",
+          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+        }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{ xs:'0',sm:'0 88px'} }}>
             <SearchBar/>
             <Tabs/>
             <Typography variant = "h2" sx={{
@@ -70,7 +80,7 @@ const Home: NextPage = () => {
               })}
             </Grid>
             <Footer></Footer>
-        </div>
+        </Box>
         </Box>
       </Box>
     </>

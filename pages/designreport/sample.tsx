@@ -43,8 +43,16 @@ const Home: NextPage = () => {
      <SiteHeader title="Tuzukuru 続くを作る | tukurepo of sf-world"></SiteHeader>
       <Box>
         <SideBar/>
-        <Box style={boxStyle}>
-        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+        <Box sx={{
+          paddingLeft:{xs: "0",sm:"256px"},
+          position: {xs:"relative",sm:"fixed"},
+          height: "100%",
+          overflowY: "auto",
+          right: "0",
+          top: "0",
+          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+        }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
           <SearchBar/>
           <BreadCrumbs
             second = "でざレポ"
@@ -126,23 +134,17 @@ const Home: NextPage = () => {
         <div style={{width:"100%",padding:"16px"}}>
                  <Typography sx={{mt:"16px"}}>疑問点1</Typography>
                  <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
+                    ここがわかりませんでした。
                  </Typography>
                  <Divider sx={{my:"16px"}}/>
                  <Typography>疑問点2</Typography>
                  <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
+                   blenderの起動の仕方がわかりませんでした。
                  </Typography>
                  <Divider sx={{my:"16px"}}/>
                  <Typography>疑問点3</Typography>
                  <Typography>
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
-                    Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
+                   全体的に何をすればいいかわからず、このクオリティで良いのかを聞いてみたいです。
                  </Typography>
             </div>
             <Typography variant = {"h3"} sx={{
@@ -169,7 +171,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <Footer/>
-          </div>
+          </Box>
         </Box>
         </Box>
     </>
