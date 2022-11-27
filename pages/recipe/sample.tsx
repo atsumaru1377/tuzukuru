@@ -41,23 +41,22 @@ const recipeData:RecipeCardType[] =[
   theme3:"可愛い"},
 ]
 
-const boxStyle:{[key:string]:string} = {
-  paddingLeft:"500px",
-  position:"fixed",
-  height:"100%",
-  overflowY:"auto",
-  right:"0",
-  top:"0",
-  width:'calc(100% - 300px)',
-  justifyContent:"center"
-}
+
 const Home: NextPage = () => {
   return (
     <>
     <SiteHeader title="Tuzukuru 続くを作る | Recipe top page"></SiteHeader>
       <Box>
-      <Box style={boxStyle}>
-        <div style={{maxWidth:"1560px",margin:"0 auto",padding:"0 88px"}}>
+      <Box sx={{
+          paddingLeft:{xs: "0",sm:"256px"},
+          position: {xs:"relative",sm:"fixed"},
+          height: "100%",
+          overflowY: "auto",
+          right: "0",
+          top: "0",
+          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+        }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
         <SideBar/>
         <SearchBar/>
         <BreadCrumbs
@@ -142,7 +141,7 @@ const Home: NextPage = () => {
               <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
                 <div style={{width:"216px",height:"268px",backgroundColor:"#eeeeee",borderRadius:"15px",textAlign:"center"}}>
                   <AddCircleOutlineIcon sx={{fontSize:"32px",mt:"64px",color:"black"}}/>
-                  <Typography sx={{m:"16px",color:"black"}}>あなたもつくレポを投稿しよう</Typography>
+                  <Typography sx={{m:"16px",color:"black"}}>あなたもでざレポを投稿しよう</Typography>
                 </div>
               </Button>
               </a>
@@ -162,7 +161,7 @@ const Home: NextPage = () => {
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
-                }}>他のデザレポも見る</Typography>
+                }}>他のでざレポも見る</Typography>
           </div>
           <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
           {recipeData.map((data: RecipeCardType,index:number) => {
@@ -181,7 +180,7 @@ const Home: NextPage = () => {
               })}
             </div>
           <Footer/>
-        </div>
+        </Box>
         </Box>
         </Box>
     </>
