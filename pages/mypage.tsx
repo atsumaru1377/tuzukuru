@@ -81,7 +81,7 @@ const Home: NextPage = () => {
           overflowY: "auto",
           right: "0",
           top: "0",
-          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+          width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
             <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
             <SearchBar/>
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
               secondHref ="/mypage"
               third = ""
               thirdHref=''/>
-            <div style={{width:"100%",display:"flex",padding:"16px",alignItems:"center"}}>
+            <Box component="div" elevation={0} sx={{width:"100%",display:{xs:"none", sm:"flex"},padding:"16px",alignItems:"center"}}>
                 <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
@@ -122,7 +122,37 @@ const Home: NextPage = () => {
                     </div>
 
                 </div>
-            </div>
+            </Box>
+            <Box component="div" elevation={0} sx={{width:"100%",display:{xs:"flex", sm:"none"},padding:"16px",flexDirection:"column"}}>
+              <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+                <Avatar sx={{width:60,height:60}}>M</Avatar>
+                <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
+              </Box>
+              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+                <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
+                <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
+                <Chip label="ガンプラ" color="secondary" sx={{color:"white",margin:"4px"}}></Chip>
+              </Box>
+              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+                <Box component="div" elevation={0} sx={{minWidth:"80px",textAlign:"center", padding:"0 16px"}}>
+                  <Typography>でざレポ数</Typography>
+                  <Typography sx={{fontSize:32,fontWeight:"bold"}}>25</Typography>
+                </Box>
+                <Box component="div" elevation={0} sx={{minWidth:"80px",textAlign:"center", padding:"0 16px"}}>
+                  <Typography>レシピ数</Typography>
+                  <Typography sx={{fontSize:32,fontWeight:"bold"}}>45</Typography>
+                </Box>
+                <Box component="div" elevation={0} sx={{minWidth:"80px",textAlign:"center", padding:"0 16px"}}>
+                  <Typography>質問数</Typography>
+                  <Typography sx={{fontSize:32,fontWeight:"bold"}}>12</Typography>
+                </Box>
+                <Box component="div" elevation={0} sx={{minWidth:"80px",textAlign:"center", padding:"0 16px"}}>
+                  <Typography>いいね数</Typography>
+                  <Typography sx={{fontSize:32,fontWeight:"bold"}}>100</Typography>
+                </Box>
+
+              </Box>
+            </Box>
             <Divider/>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
@@ -173,13 +203,14 @@ const Home: NextPage = () => {
                   mt:"64px",
                   pl:"16px"
                 }}>公開したレシピ</Typography>
-                <div style={{
+                <Grid container sx={{
                 display:"flex",
                 flexWrap:"nowrap",
                 overflowY:"scroll"
                 }}>
               {recipeData.map((data: RecipeCardType,index:number) => {
               return (
+                <Grid item key={index}>
                   <RecipeCard
                   src = {data.src}
                   title={data.title}
@@ -188,11 +219,11 @@ const Home: NextPage = () => {
                   theme1={data.theme1}
                   theme2={data.theme2}
                   theme3={data.theme3}
-                  key={index}
                   />
+                  </Grid>
                 );
               })}
-              </div>
+              </Grid>
             <Footer/>
             </Box>
             </Box>

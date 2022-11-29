@@ -48,17 +48,17 @@ const Home: NextPage = () => {
           overflowY: "auto",
           right: "0",
           top: "0",
-          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+          width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0 88px'} }}>
             <SearchBar/>
             <MyPage
             second = "community"
             secondHref ="/community"
             third = "blenderを諦めない"
             thirdHref='community/sample'/>
-            <div role="image" style={{width:"100%",height:"256px",position:"relative",borderRadius:"15px",overflow:"hidden",backgroundImage:"url('/static/images/community/commu_1.png')",backgroundSize:"cover"}}>
-            </div>
+            <Box component="div" elevation={0} role="image" sx={{width:"100%",height:{xs:"120px",sm:"256px"},position:"relative",borderRadius:"15px",overflow:"hidden",backgroundImage:"url('/static/images/community/commu_1.png')",backgroundSize:"cover"}}>
+            </Box>
             <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
                   mt:"16px",
                   pl:"16px",
                   mr:"16px"
-                }}>3582人のメンバー  1.1万人のフォロワー</Typography>
+                }}>358人のメンバー  1.1万人のフォロワー</Typography>
                 <div style={{display:"flex"}}>
                   <Avatar sx={{mx:"16px"}}/>
                   <Divider orientation="vertical" flexItem></Divider>

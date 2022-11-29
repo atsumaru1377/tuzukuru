@@ -17,6 +17,7 @@ import SearchBar from "../components/searchBar"
 import Link from "next/link"
 import Button from "@mui/material/Button"
 import { DesignCardType , RecipeCardType } from '../../plugins/type'
+import Grid from"@mui/material/Grid"
 
 const designData:DesignCardType[] =[
   {src:"/static/images/designReport/tuku_1.png"},
@@ -56,7 +57,7 @@ const Home: NextPage = () => {
           top: "0",
           width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0 88px'} }}>
         <SideBar/>
         <SearchBar/>
         <BreadCrumbs
@@ -64,19 +65,29 @@ const Home: NextPage = () => {
           secondHref ="/recipe"
           third = "SFワールドを作る"
           thirdHref='/recipe/sample'/>
-          <div
-            style={{
+          <Box component="div"
+            sx={{
               display:"flex",
-              maxHeight:"360px"
-            }}>
-            <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail"  style={{maxWidth:"400px",width:"50%",height:"auto",objectFit:"cover",borderRadius:"15px"}}/>
-            <div style={{
-              width:"calc(80% - 320px)",
-              minWidth:"400px",
-              padding:"32px"
+              maxHeight:{xs:"720px",sm:"360px"},
+              flexDirection:{xs:"column", sm:"row"},
+              padding:"16px"
+            }}
+            elevation={0}
+          >
+            <Box
+              elevation={0}
+              component="div"
+              sx={{maxWidth:"400px",height:{xs:"200px", sm:"auto"}, width:{xs:"100%", sm:"50%"},borderRadius:"15px"}}
+            >
+              <img src="/static/images/recipe_thumb/sample_1.png" alt = "thumbnail" style={{height:"100%", width:"100%", objectFit:"cover"}}/>
+            </Box>
+            <Box component="div" elevation={0} sx={{
+              width:{xs:"100%", sm:"calc(80% - 320px)"},
+              minWidth:{sm:"400px"},
+              padding:{xs:"16px 0px", sm:"32px"}
             }}>
               <Typography variant = {"h2"} sx={{
-                fontSize:"2.5rem",
+                fontSize:{xs:"2rem", sm:"2.5rem"},
                 fontWeight:"bold",
                 margin:"8px"
               }}>blenderでリギング入門</Typography>
@@ -107,8 +118,8 @@ const Home: NextPage = () => {
                 my:"16px"
               }}>Blenderのアドオンを使って、サムネイルのようなSFチックな都市を簡単に構築することができます。
               初心者の方にも簡単に制作をすることができるので、是非やってみてください。</Typography>
-            </div>
-          </div>
+            </Box>
+          </Box>
           <div
           style={{
             marginTop:"32px"
@@ -119,12 +130,13 @@ const Home: NextPage = () => {
                   mb:"16px"
                 }}>レシピ</Typography>
           <Accordion />
+
           <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
                 }}>デザレポ</Typography>
-          <div style ={{display:"flex"}}>
+          <Box component="div" elevation={0} sx={{display:{xs:"none",sm:"flex"}}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
@@ -146,7 +158,31 @@ const Home: NextPage = () => {
               </Button>
               </a>
             </Link>
-          </div>
+          </Box>
+          <Box component="div" elevation={0} sx={{display:{xs:"flex",sm:"none"}}}>
+            <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+            <Link href="/tukurepo/post">
+              <a>
+              <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
+                <div style={{width:"216px",height:"268px",backgroundColor:"#eeeeee",borderRadius:"15px",textAlign:"center"}}>
+                  <AddCircleOutlineIcon sx={{fontSize:"32px",mt:"64px",color:"black"}}/>
+                  <Typography sx={{m:"16px",color:"black"}}>あなたもでざレポを投稿しよう</Typography>
+                </div>
+              </Button>
+              </a>
+            </Link>
+            <Divider orientation="vertical" flexItem/>
+            {designData.map((data: DesignCardType,index:number) => {
+            return (
+                <TukuCard
+                src = {data.src}
+                key={index}
+                />
+              );
+            })}
+            </div>
+
+          </Box>
           <Typography variant = {"h3"} sx={{
                   fontSize:"2rem",
                   fontWeight:"bold",
@@ -161,11 +197,12 @@ const Home: NextPage = () => {
                   fontSize:"2rem",
                   fontWeight:"bold",
                   mt:"32px"
-                }}>他のでざレポも見る</Typography>
+                }}>他のレシピも見る</Typography>
           </div>
-          <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+          <Grid container style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
           {recipeData.map((data: RecipeCardType,index:number) => {
               return (
+                <Grid item key={index}>
                   <RecipeCard
                   src = {data.src}
                   title={data.title}
@@ -174,11 +211,11 @@ const Home: NextPage = () => {
                   theme1={data.theme1}
                   theme2={data.theme2}
                   theme3={data.theme3}
-                  key={index}
                   />
+                </Grid>
                 );
               })}
-            </div>
+          </Grid>
           <Footer/>
         </Box>
         </Box>

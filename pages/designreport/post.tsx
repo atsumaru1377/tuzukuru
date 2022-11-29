@@ -76,7 +76,7 @@ const Home: NextPage = () => {
           overflowY: "auto",
           right: "0",
           top: "0",
-          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+          width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
         <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
           <SearchBar/>
@@ -88,8 +88,8 @@ const Home: NextPage = () => {
                   my:"32px"
               }}>でざレポを投稿する</Typography>
 
-              <div style={{display:"flex", justifyContent:"space-between"}}>
-                <div style={{width:"48%"}}>
+              <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", flexDirection:{xs:"column", sm:"row"}}}>
+                <Box component="div" elevation={0} sx={{width:{xs:"100%", sm:"calc(50%-32px)"}}}>
                   <Typography  sx={{
                       fontWeight:"bold",
                       fontSize:"1.5rem",
@@ -117,9 +117,9 @@ const Home: NextPage = () => {
                       </div>
                     </div>
                   </Button>
-                </div>
+                </Box>
 
-                <div style={{width:"48%"}}>
+                <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", flexDirection:{xs:"column", sm:"row"}}}>
                   <Typography  sx={{
                     fontWeight:"bold",
                     fontSize:"1.5rem",
@@ -130,8 +130,8 @@ const Home: NextPage = () => {
                     <ImageIcon sx={{fontSize:"64px" ,color:"white"}}/>
                     </div>
                   </div>
-                </div>
-              </div>
+                </Box>
+              </Box>
 
               <Typography  sx={{
                   fontWeight:"bold",

@@ -239,22 +239,29 @@ export default function XsHeader() {
 							fontWeight:"bold"
 						}}>アカウントメニュー</ListItemText>
 					</MenuItem>
-					<MenuItem>
-						<ListItemIcon>
-							<Settings fontSize="small" />
-						</ListItemIcon>
-						<ListItemText primaryTypographyProps={{
+					<Link href="/mypage">
+						<MenuItem>
+							<ListItemText primaryTypographyProps={{
 								fontSize:14
-							}}sx={{py:"4px"}}>Settings</ListItemText>
-					</MenuItem>
-					<MenuItem>
-						<ListItemIcon>
-							<Logout fontSize="small" />
-						</ListItemIcon>
-						<ListItemText primaryTypographyProps={{
+							}}sx={{py:"4px"}}>マイページ</ListItemText>
+							<KeyboardArrowRightIcon/>
+						</MenuItem>
+					</Link>
+					<Link href="/underConstruction">
+						<MenuItem>
+							<ListItemText primaryTypographyProps={{
+								fontSize:14
+							}}sx={{py:"4px"}}>Setting</ListItemText>
+							<KeyboardArrowRightIcon/>
+						</MenuItem>
+					</Link>
+					<Link href="/underConstruction">
+						<MenuItem>
+							<ListItemText primaryTypographyProps={{
 								fontSize:14
 							}}sx={{py:"4px"}}>Logout</ListItemText>
-					</MenuItem>
+						</MenuItem>
+					</Link>
 				</Box>
 			</Menu>
 		</Paper>
