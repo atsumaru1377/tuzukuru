@@ -49,11 +49,16 @@ export default function MediaCard(props:Props) {
       />
       </Link>
       <CardContent sx={{px:"16px",pb:"0",pt:"16px"}}>
-        <Typography gutterBottom variant="h5" component="div" sx={{whiteSpace:{md:"normal",lg:"nowrap"},overflowY:"scroll"}}>
+        <Typography gutterBottom variant="h5" component="div"
+          sx={{whiteSpace:{md:"normal",lg:"nowrap"},
+          overflowY:"scroll",
+          "::-webkit-scrollbar" : {display:"none"}
+          }}>
+
           {props.title}
         </Typography>
       </CardContent>
-      <CardActions sx={{px:"16px",overflowY:"scroll"}}>
+      <CardActions sx={{px:"16px",overflowY:"scroll", "::-webkit-scrollbar" : {display:"none"}}}>
       <Chip label="初心者" component="a" href="#basic-chip" clickable color="success" sx={{color:"white"}}/>
       <Chip label={props.tool} component="a" href="#basic-chip" clickable color="warning" sx={{color:"white"}}/>
       <Chip label={props.theme1} component="a" href="#basic-chip" clickable color="info" sx={{color:"white"}}/>

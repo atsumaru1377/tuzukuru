@@ -137,7 +137,7 @@ const Home: NextPage = () => {
                   mt:"32px"
                 }}>デザレポ</Typography>
           <Box component="div" elevation={0} sx={{display:{xs:"none",sm:"flex"}}}>
-            <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll",marginRight:"16px"}}>
+            <div style={{display:"flex",flexWrap:"nowrap",width:"80%",overflow:"scroll hidden",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
                 <TukuCard
@@ -160,7 +160,7 @@ const Home: NextPage = () => {
             </Link>
           </Box>
           <Box component="div" elevation={0} sx={{display:{xs:"flex",sm:"none"}}}>
-            <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+            <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
             <Link href="/tukurepo/post">
               <a>
               <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
@@ -199,7 +199,7 @@ const Home: NextPage = () => {
                   mt:"32px"
                 }}>他のレシピも見る</Typography>
           </div>
-          <Grid container style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+          <Grid container style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
           {recipeData.map((data: RecipeCardType,index:number) => {
               return (
                 <Grid item key={index}>

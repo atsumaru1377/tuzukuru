@@ -108,7 +108,7 @@ const Home: NextPage = () => {
                   mt:"32px",
                   pl:"16px"
                 }}>みんなの作った報告</Typography>
-               <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+               <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
                {designData.map((data: DesignCardType,index:number) => {
             return (
                 <TukuCard

@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               }}>でざレポを投稿する</Typography>
 
               <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", flexDirection:{xs:"column", sm:"row"}}}>
-                <Box component="div" elevation={0} sx={{width:{xs:"100%", sm:"calc(50%-32px)"}}}>
+                <Box component="div" elevation={0} sx={{width:{xs:"100%", sm:"45%"}}}>
                   <Typography  sx={{
                       fontWeight:"bold",
                       fontSize:"1.5rem",
@@ -119,7 +119,7 @@ const Home: NextPage = () => {
                   </Button>
                 </Box>
 
-                <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", flexDirection:{xs:"column", sm:"row"}}}>
+                <Box component="div" elevation={0} sx={{width:{xs:"100%", sm:"45%"}, display:"flex", justifyContent:"space-between", flexDirection:"column"}}>
                   <Typography  sx={{
                     fontWeight:"bold",
                     fontSize:"1.5rem",

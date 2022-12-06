@@ -9,6 +9,7 @@ import Divider from "@mui/material/Divider"
 import {useState} from 'react';
 import Link from "next/link"
 import {CommuCardType} from "../../plugins/type"
+import Box from "@mui/material/Box"
 
 export default function MediaCard(props:CommuCardType) {
     const [isActive, setIsActive] = useState(false);
@@ -42,12 +43,12 @@ export default function MediaCard(props:CommuCardType) {
         <Typography gutterBottom variant="h3" sx={{fontSize:"24px",fontWeight:"bold"}} component="div">
           {props.title}
         </Typography>
-        <div style={{maxWidth:"100%",overflowY:"scroll",display:"flex"}}>
+        <Box component="div" sx={{maxWidth:"100%",overflowY:"scroll",display:"flex", "::-webkit-scrollbar" : {display:"none"}}}>
             <Chip label="初心者" sx={{mx:"8px", color:"white"}}  color="success"></Chip>
             <Chip label="blender"sx={{mx:"8px", color:"white"}} color="warning"></Chip>
             <Chip label="SF"sx={{color:"white",mx:"8px"}} color = "secondary"></Chip>
             <Chip label="CG"sx={{color:"white",mx:"8px"}} color = "secondary"></Chip>
-        </div>
+        </Box>
         <div style={{display:"flex",paddingTop:"16px"}}>
             <Avatar alt="Remy Sharp" sx={{mx:"8px"}} src="/static/images/avatar/1.jpg" />
             <Divider sx={{mx:"8px"}} orientation="vertical" flexItem />

@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             </Box>
           </Box>
           <div>
-            <Grid container style={{display:"flex",flexWrap:"nowrap",overflow:"scroll",marginRight:"16px", width:"100%"}}>
+            <Grid container style={{display:"flex",flexWrap:"nowrap",overflow:"scroll hidden",marginRight:"16px", width:"100%"}}>
               <Grid item>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
             fontWeight:"bold",
             mt:"32px"
             }}>他のでざレポ</Typography>
-            <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+            <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
                 <RepoCard

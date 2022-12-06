@@ -24,7 +24,7 @@ export default function SideBar() {
       left:0,
       zIndex:"1200",
       position:"fixed",
-      overflow:'scroll',
+      overflow:'hidden scroll',
       display:{xs:"none",sm:"block"}
       }}>
       <div style={{height:"32px"}}></div>

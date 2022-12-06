@@ -95,15 +95,15 @@ const Home: NextPage = () => {
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
                     <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
-                    <div style={{overflow:"scroll",paddingTop:"16px"}}>
+                    <Box component="div" elevation={0} sx={{overflow:"scroll",paddingTop:"16px", "::-webkit-scrollbar" : {display:"none"}}}>
                     <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                     <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                     <Chip label="ガンプラ" color="secondary" sx={{color:"white",margin:"4px"}}></Chip>
-                    </div>
+                    </Box>
                 </div>
                 <div style={{width:"64px"}}></div>
                 <Divider orientation = "vertical" flexItem/>
-                <div style={{width:"50%",maxWidth:"1000px",height:"100%",overflowX:"scroll",display:"flex",flexWrap:"nowrap"}}>
+                <Box component="div" elevation={0} sx={{width:"50%",maxWidth:"1000px",height:"100%",overflowX:"scroll",display:"flex",flexWrap:"nowrap", "::-webkit-scrollbar" : {display:"none"}}}>
                     <div style={{minWidth:"80px",padding:"32px",textAlign:"center"}}>
                         <Typography>でざレポ数</Typography>
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>25</Typography>
@@ -121,19 +121,19 @@ const Home: NextPage = () => {
                         <Typography sx={{fontSize:32,fontWeight:"bold"}}>100</Typography>
                     </div>
 
-                </div>
+                </Box>
             </Box>
             <Box component="div" elevation={0} sx={{width:"100%",display:{xs:"flex", sm:"none"},padding:"16px",flexDirection:"column"}}>
               <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"90%", marginBottom:"16px"}}>
                 <Avatar sx={{width:60,height:60}}>M</Avatar>
                 <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
               </Box>
-              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px", "::-webkit-scrollbar" : {display:"none"}}}>
                 <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                 <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                 <Chip label="ガンプラ" color="secondary" sx={{color:"white",margin:"4px"}}></Chip>
               </Box>
-              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+              <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px","::-webkit-scrollbar" : {display:"none"}}}>
                 <Box component="div" elevation={0} sx={{minWidth:"80px",textAlign:"center", padding:"0 16px"}}>
                   <Typography>でざレポ数</Typography>
                   <Typography sx={{fontSize:32,fontWeight:"bold"}}>25</Typography>
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
                   mt:"64px",
                   pl:"16px"
                 }}>自分のでざレポ</Typography>
-                          <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll",marginRight:"16px"}}>
+                          <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
             {designData.map((data: DesignCardType,index:number) => {
             return (
                 <RepoCard
@@ -206,7 +206,7 @@ const Home: NextPage = () => {
                 <Grid container sx={{
                 display:"flex",
                 flexWrap:"nowrap",
-                overflowY:"scroll"
+                overflow:"scroll hidden"
                 }}>
               {recipeData.map((data: RecipeCardType,index:number) => {
               return (
