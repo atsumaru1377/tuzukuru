@@ -83,7 +83,7 @@ const Home: NextPage = () => {
           top: "0",
           width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-            <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
+            <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0 88px'} }}>
             <SearchBar/>
             <MyPage
               second = "マイページ"
@@ -124,8 +124,8 @@ const Home: NextPage = () => {
                 </Box>
             </Box>
             <Box component="div" elevation={0} sx={{width:"100%",display:{xs:"flex", sm:"none"},padding:"16px",flexDirection:"column"}}>
-              <Box component="div" elevation={0} sx={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"90%", marginBottom:"16px"}}>
-                <Avatar sx={{width:60,height:60}}>M</Avatar>
+              <Box component="div" elevation={0} sx={{display:"flex", alignItems:"center", width:"90%", marginBottom:"16px"}}>
+                <Avatar sx={{width:60,height:60, marginRight:"16px"}}>M</Avatar>
                 <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
               </Box>
               <Box component="div" elevation={0} sx={{display:"flex", overflow:"scroll", alignItems:"center", width:"90%", marginBottom:"16px", "::-webkit-scrollbar" : {display:"none"}}}>

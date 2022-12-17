@@ -78,7 +78,7 @@ const Home: NextPage = () => {
           top: "0",
           width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
+        <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0 88px'} }}>
           <SearchBar/>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div style={{padding:"0px 32px"}}>

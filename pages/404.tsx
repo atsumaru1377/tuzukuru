@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           top: "0",
           width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-					<Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0px',sm:'0px 88px'} }}>
+					<Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0px 88px'} }}>
             <SearchBar/>
               <Box sx={{height:"60vh", display:"flex",justifyContent:"center",alignItems:"center", boxShadow:"none"}}>
                 <div>

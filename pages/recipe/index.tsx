@@ -128,9 +128,9 @@ const Home: NextPage = () => {
           overflowY: "auto",
           right: "0",
           top: "0",
-          width:{xs:"100%",sm:'calc(100% - 280px)'} 
+          width:{xs:"100%",sm:'calc(100% - 280px)'}
         }}>
-            <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0',sm:'0 88px'} }}>
+            <Box sx={{ maxWidth: "1560px", margin: "0 auto", p:{xs:'0 16px',sm:'0 88px'} }}>
             <SearchBar/>
             <Tabs/>
             <Typography variant = "h2" sx={{
@@ -144,7 +144,7 @@ const Home: NextPage = () => {
             {datas.map((data: CardData,index:number) => {
             return (
               <Grid item md= {12} lg={6} xl={4} key={index}>
-                <Card 
+                <Card
                 src = {data.src}
                 title={data.title}
                 tool={data.tool}

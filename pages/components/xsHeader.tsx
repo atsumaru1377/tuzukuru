@@ -30,7 +30,7 @@ export default function XsHeader() {
 	};
   return (
 		<Paper
-			style={{margin:"8px 8px", padding:"16px"}}
+			style={{margin:"0px", padding:"16px"}}
 			sx={{width:{sm:"0px"},height:{sm:"0px"}, visibility:{xs:'visible',sm:'hidden'}, padding:"8px", display:'flex',justifyContent:"space-between",alignItems:'center',filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",borderRadius:"24px"}}
 			elevation={0}
 			>
