@@ -94,7 +94,7 @@ const Home: NextPage = () => {
                 <Avatar sx={{width:130,height:130}}>M</Avatar>
                 <div style={{width:"32px"}}></div>
                 <div style={{padding:"16px"}}>
-                    <Typography variant="h2" sx={{fontWeight:"500",fontSize:"48px",minWidth:"250px"}}>近藤なおき</Typography>
+                    <Typography variant="h2" sx={{fontWeight:"500",fontSize:{xs:"32px",sm:"48px"},minWidth:"250px"}}>近藤なおき</Typography>
                     <Box component="div" elevation={0} sx={{overflow:"scroll",paddingTop:"16px", "::-webkit-scrollbar" : {display:"none"}}}>
                     <Chip label="After Effects" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
                     <Chip label="blender" color = "success" sx={{color:"white",margin:"4px"}}></Chip>
