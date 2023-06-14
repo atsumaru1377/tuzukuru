@@ -148,7 +148,7 @@ const Home: NextPage = () => {
             })}
             </div>
             <Divider orientation="vertical" flexItem/>
-            <Link href="/tukurepo/post">
+            <Link href="/designreport/post">
               <a>
               <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
                 <div style={{width:"216px",height:"268px",backgroundColor:"#eeeeee",borderRadius:"15px",textAlign:"center"}}>
