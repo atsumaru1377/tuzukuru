@@ -31,9 +31,7 @@ export default function SideBar() {
       <MenuList>
         <MenuItem aria-label="logo">
         <Link href="/">
-          <a>
           <img src="/logo.svg" alt= "Tuzukuru Logo" ></img>
-          </a>
         </Link>
         </MenuItem>
         <Box
@@ -46,18 +44,13 @@ export default function SideBar() {
         <Link href ="/mypage">
         <MenuItem alia-label="マイコミュニティ">
           <ListItemText
-          primaryTypographyProps={{
-            fontSize:16,
-            fontWeight:"bold"
-          }}>マイコミュニティ</ListItemText>
+          slotProps={{ primary: { sx: { fontSize: 16, fontWeight: "bold" } } }}>マイコミュニティ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/community">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -65,32 +58,24 @@ export default function SideBar() {
         <MenuItem>
           <ListItemText
           sx={{"&:hover":"none"}}
-          primaryTypographyProps={{
-            fontWeight:"bold"
-          }}>レシピ
+          slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>レシピ
           </ListItemText>
         </MenuItem>
         <Link href="/recipe">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/mypage">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/underConstruction">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -98,24 +83,18 @@ export default function SideBar() {
         <Link href="/designreport">
         <MenuItem>
           <ListItemText
-          primaryTypographyProps={{
-            fontWeight:"bold"
-          }}>でざレポ</ListItemText>
+          slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>でざレポ</ListItemText>
         </MenuItem>
         </Link>
         <Link href="/designreport">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/designreport/post">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
@@ -123,32 +102,24 @@ export default function SideBar() {
         <Link href="/underConstruction">
         <MenuItem>
           <ListItemText
-          primaryTypographyProps={{
-            fontWeight:"bold"
-          }}>困った時は</ListItemText>
+          slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>困った時は</ListItemText>
         </MenuItem>
         </Link>
         <Link href="/underConstruction">
         <MenuItem>
-          <ListItemText  primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
+          <ListItemText  slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/underConstruction">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
         </Link>
         <Link href="/underConstruction">
         <MenuItem>
-          <ListItemText primaryTypographyProps={{
-            fontSize:14
-          }}sx={{py:"4px"}}>よくある質問</ListItemText>
+          <ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>よくある質問</ListItemText>
           <KeyboardArrowRightIcon/>
         </MenuItem>
          </Link>

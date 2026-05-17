@@ -85,7 +85,7 @@ export default function AlignItemsList(props:Props) {
 												component="span"
 												variant="body2"
 												color="warning.main"
-												fontWeight="bold"
+												sx={{ fontWeight: "bold" }}
 											>
 											{"褒めポイント:"}
 											</Typography>
@@ -99,7 +99,7 @@ export default function AlignItemsList(props:Props) {
 												component="span"
 												variant="body2"
 												color="primary.main"
-												fontWeight="bold"
+												sx={{ fontWeight: "bold" }}
 											>
 											{"改善ポイント:"}
 											</Typography>
@@ -115,7 +115,7 @@ export default function AlignItemsList(props:Props) {
 				);
 			})}
 			<Paper style={{borderRadius:0, padding:"10px 20px"}} elevation={0}>
-				<Typography color="primary.main" textAlign={{xs:"left", sm:"right"}}>全て見る</Typography>
+				<Typography color="primary.main" sx={{ textAlign: { xs: "left", sm: "right" } }}>全て見る</Typography>
 			</Paper>
     </List>
   );

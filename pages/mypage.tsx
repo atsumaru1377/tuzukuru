@@ -164,7 +164,7 @@ const Home: NextPage = () => {
             <Grid container>
             {commuData.map((data: CommuCardType,index:number) => {
             return (
-              <Grid item md={12}lg= {12}xl={6} key={index}>
+              <Grid size={{ md: 12, lg: 12, xl: 6 }} key={index}>
                 <CommuCard
                 src = {data.src}
                 title={data.title}
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
                 }}>
               {recipeData.map((data: RecipeCardType,index:number) => {
               return (
-                <Grid item key={index}>
+                <Grid key={index}>
                   <RecipeCard
                   src = {data.src}
                   title={data.title}

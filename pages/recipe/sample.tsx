@@ -10,7 +10,7 @@ import Accordion from "../components/accordion"
 import TukuCard from "../components/tukurepoCard"
 import RecipeCard from "../components/repoCard"
 import Divider from '@mui/material/Divider';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import Footer from "../components/footer";
 import Comment from "../components/comment";
 import SearchBar from "../components/searchBar"
@@ -149,27 +149,23 @@ const Home: NextPage = () => {
             </div>
             <Divider orientation="vertical" flexItem/>
             <Link href="/designreport/post">
-              <a>
               <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
                 <div style={{width:"216px",height:"268px",backgroundColor:"#eeeeee",borderRadius:"15px",textAlign:"center"}}>
                   <AddCircleOutlineIcon sx={{fontSize:"32px",mt:"64px",color:"black"}}/>
                   <Typography sx={{m:"16px",color:"black"}}>あなたもでざレポを投稿しよう</Typography>
                 </div>
               </Button>
-              </a>
             </Link>
           </Box>
           <Box component="div" elevation={0} sx={{display:{xs:"flex",sm:"none"}}}>
             <div style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
             <Link href="/tukurepo/post">
-              <a>
               <Button sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"16px"}}>
                 <div style={{width:"216px",height:"268px",backgroundColor:"#eeeeee",borderRadius:"15px",textAlign:"center"}}>
                   <AddCircleOutlineIcon sx={{fontSize:"32px",mt:"64px",color:"black"}}/>
                   <Typography sx={{m:"16px",color:"black"}}>あなたもでざレポを投稿しよう</Typography>
                 </div>
               </Button>
-              </a>
             </Link>
             <Divider orientation="vertical" flexItem/>
             {designData.map((data: DesignCardType,index:number) => {
@@ -202,7 +198,7 @@ const Home: NextPage = () => {
           <Grid container style={{display:"flex",flexWrap:"nowrap",width:"100%",overflow:"scroll hidden",marginRight:"16px"}}>
           {recipeData.map((data: RecipeCardType,index:number) => {
               return (
-                <Grid item key={index}>
+                <Grid key={index}>
                   <RecipeCard
                   src = {data.src}
                   title={data.title}

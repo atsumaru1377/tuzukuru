@@ -10,12 +10,10 @@ export default function AlignItemsList() {
             <Divider></Divider>
                 <Box sx={{width:"100%",padding:"32px"}}>
                     <Link href="/">
-                        <a>
                         <Box sx={{display:"flex",justifyContent:"center",alignItems:"end"}}>
                         <img src="/logo_Footer.svg" alt="logo" />
                         <Divider orientation="vertical" sx={{mx:"16px"}}/>
                         </Box>
-                        </a>
                     </Link>
                 </Box>
 

@@ -116,27 +116,27 @@ const Home: NextPage = () => {
           </Box>
           <div>
             <Grid container style={{display:"flex",flexWrap:"nowrap",overflow:"scroll hidden",marginRight:"16px", width:"100%"}}>
-              <Grid item>
+              <Grid>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
                 </Box>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
                 </Box>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
                 </Box>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
                 </Box>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Box component="div" elevation={0} sx={{borderRadius:"15px",marginRight:"8px", height:"250px", width:"250px"}}>
                   <img src="/static/images/sample_tukurepo.jpg" alt = "tukurepo image" height="250" width="250" style={{objectFit:"cover"}}/>
                 </Box>

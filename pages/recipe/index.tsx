@@ -143,7 +143,7 @@ const Home: NextPage = () => {
             <Grid container>
             {datas.map((data: CardData,index:number) => {
             return (
-              <Grid item md= {12} lg={6} xl={4} key={index}>
+              <Grid size={{ md: 12, lg: 6, xl: 4 }} key={index}>
                 <Card
                 src = {data.src}
                 title={data.title}

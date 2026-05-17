@@ -35,9 +35,7 @@ export default function XsHeader() {
 			elevation={0}
 			>
 			<Link href="/">
-				<a>
 				<img src="/logo.svg" alt= "Tuzukuru Logo" ></img>
-				</a>
 			</Link>
 			<IconButton
 					role="button"
@@ -58,20 +56,22 @@ export default function XsHeader() {
 				open={open}
 				onClose={handleClose}
 				onClick={handleClose}
-				PaperProps={{
-					elevation: 2,
-					sx: {
-						overflow: 'visible',
-						mt: 1.5,
-						'& .MuiAvatar-root': {
-							width: 32,
-							height: 32,
+				slotProps={{
+					paper: {
+						elevation: 2,
+						sx: {
+							overflow: 'visible',
+							mt: 1.5,
+							'& .MuiAvatar-root': {
+								width: 32,
+								height: 32,
+							},
+							width: "100%",
+							height: "100%",
+							filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
+							borderRadius:"24px",
+							overflowY:"scroll"
 						},
-						width: "100%",
-						height: "100%",
-						filter:"drop-shadow(0 0 15px rgba(0,0,0,.1))",
-						borderRadius:"24px",
-						overflowY:"scroll"
 					},
 				}}
 				transformOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -92,9 +92,7 @@ export default function XsHeader() {
 						overflowY:"scroll" }}
 					>
 					<Link href="/">
-						<a>
 						<img src="/logo.svg" alt= "Tuzukuru Logo" ></img>
-						</a>
 					</Link>
 					<IconButton
 							role="button"
@@ -122,18 +120,13 @@ export default function XsHeader() {
 					<Link href ="/mypage">
 						<MenuItem alia-label="マイコミュニティ">
 							<ListItemText
-							primaryTypographyProps={{
-								fontSize:16,
-								fontWeight:"bold"
-							}}>マイコミュニティ</ListItemText>
+							slotProps={{ primary: { sx: { fontSize: 16, fontWeight: "bold" } } }}>マイコミュニティ</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/community">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>コミュニティを探す</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
@@ -142,32 +135,24 @@ export default function XsHeader() {
 					<MenuItem>
 						<ListItemText
 						sx={{"&:hover":"none"}}
-						primaryTypographyProps={{
-							fontWeight:"bold"
-						}}>レシピ
+						slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>レシピ
 						</ListItemText>
 					</MenuItem>
 					<Link href="/recipe">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>みんなのレシピ</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/mypage">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>お気に入りのレシピ</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>レシピを投稿する</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
@@ -176,24 +161,18 @@ export default function XsHeader() {
 					<Link href="/designreport">
 						<MenuItem>
 							<ListItemText
-							primaryTypographyProps={{
-								fontWeight:"bold"
-							}}>でざレポ</ListItemText>
+							slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>でざレポ</ListItemText>
 						</MenuItem>
 					</Link>
 					<Link href="/designreport">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>みんなのでざレポを見る</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/designreport/post">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>でざレポを投稿する</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
@@ -202,32 +181,24 @@ export default function XsHeader() {
 					<Link href="/underConstruction">
 						<MenuItem>
 							<ListItemText
-							primaryTypographyProps={{
-								fontWeight:"bold"
-							}}>困った時は</ListItemText>
+							slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>困った時は</ListItemText>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText  primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
+							<ListItemText  slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>デザインを勉強する</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>ツールの使い方を見る</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>よくある質問</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>よくある質問</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
@@ -235,31 +206,23 @@ export default function XsHeader() {
 
 					<MenuItem>
 						<ListItemText
-						primaryTypographyProps={{
-							fontWeight:"bold"
-						}}>アカウントメニュー</ListItemText>
+						slotProps={{ primary: { sx: { fontWeight: "bold" } } }}>アカウントメニュー</ListItemText>
 					</MenuItem>
 					<Link href="/mypage">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>マイページ</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>マイページ</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>Setting</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>Setting</ListItemText>
 							<KeyboardArrowRightIcon/>
 						</MenuItem>
 					</Link>
 					<Link href="/underConstruction">
 						<MenuItem>
-							<ListItemText primaryTypographyProps={{
-								fontSize:14
-							}}sx={{py:"4px"}}>Logout</ListItemText>
+							<ListItemText slotProps={{ primary: { sx: { fontSize: 14 } } }}sx={{py:"4px"}}>Logout</ListItemText>
 						</MenuItem>
 					</Link>
 				</Box>
